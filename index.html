@@ -1,11 +1,147 @@
 <!doctype html>
 <html lang="ko">
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>아임웹 상품 상세 효과 라이브러리</title>
-<main>
-  <h1>아임웹 상품 상세 효과 라이브러리</h1>
-  <p><a href="./imweb-effects.js">공통 라이브러리</a> · <a href="./kazak.js">카작 템플릿</a></p>
-  <p>상품 상세설명에서 효과를 쓸 영역에 <code>data-imweb-fx="1"</code>을 붙이고, 그 안의 요소에 <code>data-fx="fade-up"</code> 또는 <code>data-fx="zoom-in"</code>을 지정합니다.</p>
-</main>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>스크롤 효과 사용법 · nayoonk</title>
+  <style>
+    :root { color-scheme: light; --ink: #182820; --paper: #f6f5ef; --line: #c8d0c5; --accent: #15553c; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 Pretendard, "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif; word-break: keep-all; }
+    main, header, footer { width: min(100% - 40px, 960px); margin: auto; }
+    header, footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px 24px; padding: 18px 0; }
+    header { border-bottom: 1px solid var(--line); }
+    nav { display: flex; flex-wrap: wrap; gap: 16px; }
+    a { color: var(--accent); text-underline-offset: .2em; }
+    nav a { font-size: .9rem; }
+    a:focus-visible, button:focus-visible { outline: 3px solid #ad4b1b; outline-offset: 3px; }
+    .lead { padding: clamp(36px, 7vw, 70px) 0 28px; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2, h3 { line-height: 1.16; letter-spacing: -.045em; }
+    h1 { font-size: clamp(2.4rem, 7vw, 4.8rem); }
+    h2 { margin-bottom: 12px; font-size: clamp(1.5rem, 4vw, 2rem); }
+    h3 { font: 700 1.1rem/1.3 ui-monospace, monospace; }
+    .lead p { margin-top: 16px; max-width: 44em; }
+    section { padding: 32px 0; border-top: 1px solid var(--line); }
+    code { font: .9em/1.5 ui-monospace, Consolas, monospace; overflow-wrap: anywhere; }
+    .snippet { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding: 16px; margin-top: 14px; border-radius: 10px; background: #e8ebe3; }
+    .snippet code { flex: 1 1 28ch; min-width: 0; }
+    .install { background: var(--ink); color: white; }
+    button { font: inherit; font-size: .84rem; color: inherit; border: 1px solid currentColor; cursor: pointer; padding: 5px 12px; border-radius: 20px; background: transparent; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 18px; margin-top: 22px; }
+    .card { min-width: 0; border: 1px solid var(--line); border-radius: 14px; overflow: hidden; background: white; }
+    .card-body { padding: 18px; }
+    .card-body p { margin-top: 5px; font-size: .94rem; }
+    .card .snippet { margin: 12px 0 0; padding: 10px 12px; }
+    .stage { position: relative; display: grid; place-items: center; height: clamp(104px, 16vw, 156px); overflow: hidden; background: var(--tint); }
+    .shape { display: block; width: 62px; height: 62px; position: relative; }
+    .shape::before, .shape::after { content: ""; position: absolute; inset: 0; background: var(--shape); }
+    .poppy { --tint: #f8ded2; --shape: #a4371b; }
+    .poppy .shape::before { transform: rotate(45deg); }
+    .poppy .shape::after { inset: 18%; background: var(--tint); transform: rotate(45deg); }
+    .leaf { --tint: #dbebd4; --shape: #25623d; }
+    .leaf .shape::before { border-radius: 70% 0; }
+    .leaf .shape::after { inset: 34% 9%; background: var(--tint); border-radius: 100% 0; transform: rotate(-35deg); }
+    .ring { --tint: #e0e5fa; --shape: #45548e; }
+    .ring .shape::before, .ring .shape::after { border-radius: 50%; }
+    .ring .shape::after { inset: 27%; background: var(--tint); }
+    .fold { --tint: #f3e7c5; --shape: #845600; }
+    .fold .shape::before { inset: 0 51% 0 0; transform: skewY(18deg); }
+    .fold .shape::after { inset: 0 0 0 51%; transform: skewY(-18deg); }
+    .replay { position: absolute; bottom: 9px; right: 10px; background: var(--tint); color: var(--ink); }
+    .card:not(:has(.aos-init)) .replay { display: none; }
+    footer { color: var(--accent); border-top: 1px solid var(--line); }
+    .sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+    @media (prefers-reduced-motion: reduce) { .replay { display: none; } }
+  </style>
+  <script defer src="./imweb-effects.js"></script>
+</head>
+<body>
+  <header>
+    <strong>nayoonk / 아임웹</strong>
+    <nav aria-label="사용법 목차"><a href="#install">설치</a><a href="#examples">효과 예시</a><a href="#options">속도 조절</a></nav>
+  </header>
+  <main>
+    <div class="lead">
+      <h1>스크롤 효과 사용법</h1>
+      <p>아임웹에 라이브러리를 한 번 연결하세요. 다음 상품부터는 사진이나 문구의 HTML 태그에 <code>data-aos</code> 속성을 붙이면 화면에 들어올 때 움직입니다.</p>
+    </div>
+    <section id="install">
+      <h2>처음 한 번 설치</h2>
+      <p>디자인 모드에서 상품 상세페이지의 <strong>코드 위젯</strong>에 아래 한 줄을 넣고 저장하세요. 적용한 상품을 미리보기에서 확인한 뒤 게시하세요.</p>
+      <div class="snippet install"><code>&lt;script defer src="https://nayoonkyung0913.github.io/nayoonk/imweb-effects.js"&gt;&lt;/script&gt;</code><button hidden type="button" data-copy>코드 복사</button></div>
+    </section>
+    <section id="examples">
+      <h2>상품마다 효과 고르기</h2>
+      <p>상품 상세설명의 <strong>HTML 코드 보기(&lt;/&gt;)</strong>에서, 원하는 요소의 여는 태그에 아래 속성을 붙이세요.</p>
+      <div class="snippet"><code>&lt;h2 data-aos="fade-up"&gt;우리 상품 이야기&lt;/h2&gt;</code><button hidden type="button" data-copy>예시 복사</button></div>
+      <div class="grid">
+        <article class="card">
+          <div class="stage poppy"><span aria-hidden="true" class="shape" data-aos="fade-up" data-aos-duration="650"></span><button hidden class="replay" type="button" aria-label="fade-up 다시 보기">↻ 다시 보기</button></div>
+          <div class="card-body"><h3>fade-up</h3><p>제목이 아래에서 서서히 올라옵니다.</p><div class="snippet"><code>data-aos="fade-up"</code><button hidden type="button" data-copy>속성 복사</button></div></div>
+        </article>
+        <article class="card">
+          <div class="stage leaf"><span aria-hidden="true" class="shape" data-aos="zoom-in" data-aos-duration="650"></span><button hidden class="replay" type="button" aria-label="zoom-in 다시 보기">↻ 다시 보기</button></div>
+          <div class="card-body"><h3>zoom-in</h3><p>작게 보이던 상품 사진이 원래 크기로 커집니다.</p><div class="snippet"><code>data-aos="zoom-in"</code><button hidden type="button" data-copy>속성 복사</button></div></div>
+        </article>
+        <article class="card">
+          <div class="stage ring"><span aria-hidden="true" class="shape" data-aos="fade-right" data-aos-duration="650"></span><button hidden class="replay" type="button" aria-label="fade-right 다시 보기">↻ 다시 보기</button></div>
+          <div class="card-body"><h3>fade-right</h3><p>왼쪽에서 오른쪽으로 이동하며 나타납니다.</p><div class="snippet"><code>data-aos="fade-right"</code><button hidden type="button" data-copy>속성 복사</button></div></div>
+        </article>
+        <article class="card">
+          <div class="stage fold"><span aria-hidden="true" class="shape" data-aos="flip-up" data-aos-duration="650"></span><button hidden class="replay" type="button" aria-label="flip-up 다시 보기">↻ 다시 보기</button></div>
+          <div class="card-body"><h3>flip-up</h3><p>접힌 카드가 위로 펼쳐지듯 돌아옵니다.</p><div class="snippet"><code>data-aos="flip-up"</code><button hidden type="button" data-copy>속성 복사</button></div></div>
+        </article>
+      </div>
+    </section>
+    <section id="options">
+      <h2>속도와 시작 시점 조절</h2>
+      <p>아래 사진은 화면에 들어온 뒤 150ms를 기다렸다가 700ms 동안 확대됩니다. 사진 주소와 설명은 실제 상품에 맞게 바꾸세요.</p>
+      <div class="snippet"><code>&lt;img src="상품사진.jpg" alt="상품 사진" data-aos="zoom-in" data-aos-delay="150" data-aos-duration="700"&gt;</code><button hidden type="button" data-copy>예시 복사</button></div>
+    </section>
+    <section>
+      <h2>카작 전용 갤러리</h2>
+      <p>카작 갤러리를 사용하는 상세설명은 기존 <code>article.kz-story</code>에 <code>data-imweb-fx="1" data-imweb-template="kazak"</code>을 유지하세요.</p>
+    </section>
+  </main>
+  <footer><a href="https://github.com/michalsnik/aos/tree/v2.3.4#-how-to-use-it">AOS 2.3.4 전체 효과와 옵션 ↗</a><a href="https://github.com/nayoonkyung0913/nayoonk">라이브러리 저장소 ↗</a></footer>
+  <p class="sr" role="status" id="status"></p>
+  <script>
+    const statusText = document.getElementById("status");
+    for (const button of document.querySelectorAll("[data-copy]")) {
+      button.hidden = false;
+      button.addEventListener("click", async () => {
+        const code = button.parentElement.querySelector("code");
+        try {
+          await navigator.clipboard.writeText(code.textContent);
+          statusText.textContent = "코드를 복사했습니다.";
+          const label = button.dataset.label || button.textContent;
+          button.dataset.label = label;
+          button.textContent = "복사 완료";
+          setTimeout(() => { button.textContent = label; }, 1400);
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = window.getSelection();
+          selection.removeAllRanges();
+          selection.addRange(range);
+          statusText.textContent = "코드를 선택했습니다. 복사 명령을 사용하세요.";
+        }
+      });
+    }
+    for (const button of document.querySelectorAll(".replay")) {
+      button.hidden = false;
+      button.addEventListener("click", () => {
+        if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+        const shape = button.parentElement.querySelector(".shape");
+        if (!shape.classList.contains("aos-animate")) return;
+        shape.style.transition = "none";
+        shape.classList.remove("aos-animate");
+        shape.getBoundingClientRect();
+        shape.style.removeProperty("transition");
+        requestAnimationFrame(() => shape.classList.add("aos-animate"));
+      });
+    }
+  </script>
+</body>
 </html>
