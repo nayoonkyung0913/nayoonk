@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>스크롤 장면 · 이미지 띠 | nayoonk</title>
+  <script defer src="./imweb-effects.js"></script>
+  <style>
+    *{box-sizing:border-box}body{margin:0;color:#26201d;background:#fffcf7;font-family:Pretendard,system-ui,"Malgun Gothic",sans-serif;line-height:1.65;word-break:keep-all}
+    main,header{max-width:900px;margin:auto;padding:18px max(20px,4vw)}header{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #d7cec0;font-size:.9rem}
+    a{color:#7e3521;text-underline-offset:.2em}h1,h2{line-height:1.1;letter-spacing:-.06em}h1{font-size:clamp(2rem,5.5vw,4rem);margin:36px 0 12px}h2{font-size:clamp(1.5rem,3.3vw,2.4rem);margin:24px 0 10px}
+    section{margin:44px 0}p{max-width:62ch;margin:10px 0 18px}pre{overflow-x:auto;background:#302723;color:#fff4df;padding:16px;border-radius:8px;line-height:1.6}code{font-size:.9em}
+    .fanbox{--imweb-sequence-bg:#f7dbb9;background:var(--imweb-sequence-bg)}.fanbox img{display:block;width:100%;height:auto}
+    .strip img{max-width:260px;height:auto}.strip{--imweb-marquee-width:220px}
+    .copy{font:inherit;font-size:.85rem;cursor:pointer;border:1px solid #8b6551;background:white;color:#663c27;border-radius:24px;padding:5px 14px}
+    :focus-visible{outline:3px solid #075b91;outline-offset:3px}footer{margin:48px 0 20px}
+  </style>
+</head>
+<body>
+  <header><a href="./">← 공통 위젯 설치 방법</a><a href="#marquee">이미지 띠로 이동 ↓</a></header>
+  <main>
+    <h1>스크롤 장면과 이미지 띠</h1>
+    <p>아래로 스크롤하면 부채가 펼쳐지고, 위로 돌아가면 같은 장면이 거꾸로 재생됩니다.</p>
+    <div class="fanbox" data-imweb-motion="sequence" data-frame-src="./examples/fan/{frame}.svg" data-frame-count="32" data-frame-pad="2">
+      <img src="./examples/fan/01.svg" width="800" height="440" alt="화면을 내리는 만큼 펼쳐지는 종이 부채">
+    </div>
+    <section>
+      <h2>내 상품 사진으로 장면 만들기</h2>
+      <p>예제에는 부채가 펼쳐지는 장면 32장을 사용했습니다. 사진이 몇 장이면 아래처럼 재생 순서대로 넣으세요. 각 주소를 아임웹에 올린 이미지 주소로 바꾸면 됩니다.</p>
+      <pre><code id="sequence">&lt;div data-imweb-motion="sequence"&gt;
+  &lt;img src="첫번째사진.webp" alt="제품 뚜껑이 열리는 모습"&gt;
+  &lt;img src="두번째사진.webp" alt="" loading="lazy"&gt;
+  &lt;img src="세번째사진.webp" alt="" loading="lazy"&gt;
+&lt;/div&gt;</code></pre>
+      <button hidden class="copy" data-copy="sequence">장면 코드 복사</button>
+      <details><summary>번호가 붙은 연속 사진이 많을 때</summary>
+        <p>예제처럼 01부터 32까지 번호가 붙은 이미지는 파일 주소 규칙과 개수만 적으면 됩니다. <code>{frame}</code>은 스크롤 위치에 따라 바뀝니다.</p>
+        <pre><code id="pattern">&lt;div data-imweb-motion="sequence"
+     data-frame-src="https://nayoonkyung0913.github.io/nayoonk/examples/fan/{frame}.svg"
+     data-frame-count="32" data-frame-pad="2"&gt;
+  &lt;img src="https://nayoonkyung0913.github.io/nayoonk/examples/fan/01.svg" alt="부채가 펼쳐지는 모습"&gt;
+&lt;/div&gt;</code></pre><button hidden class="copy" data-copy="pattern">부채 예제 복사</button>
+      </details>
+    </section>
+    <section id="marquee">
+      <h2>자동으로 흐르는 이미지 띠</h2>
+      <p>상품 사진을 가로로 이어 보여줍니다. 일시정지한 뒤 앞뒤 사진을 직접 넘길 수 있어요.</p>
+      <div class="strip" data-imweb-motion="marquee">
+        <img src="./examples/fan/01.svg" alt="접힌 종이 부채" width="800" height="440">
+        <img src="./examples/fan/10.svg" alt="조금 열린 부채" width="800" height="440">
+        <img src="./examples/fan/21.svg" alt="반쯤 펼쳐진 부채" width="800" height="440">
+        <img src="./examples/fan/32.svg" alt="활짝 펼쳐진 부채" width="800" height="440">
+      </div>
+      <pre><code id="filmstrip">&lt;div data-imweb-motion="marquee"&gt;
+  &lt;img src="첫번째제품.jpg" alt="첫 번째 제품"&gt;
+  &lt;img src="두번째제품.jpg" alt="두 번째 제품"&gt;
+  &lt;img src="세번째제품.jpg" alt="세 번째 제품"&gt;
+&lt;/div&gt;</code></pre><button hidden class="copy" data-copy="filmstrip">이미지 띠 코드 복사</button>
+    </section>
+    <footer><a href="./">등장 효과와 설치 코드 보기</a></footer>
+  </main>
+  <script>
+    for (const button of document.querySelectorAll("[data-copy]")) {
+      button.hidden = false;
+      button.onclick = async () => {
+        const code = document.getElementById(button.dataset.copy);
+        try {
+          await navigator.clipboard.writeText(code.textContent);
+          const label = button.dataset.label || button.textContent;
+          button.dataset.label = label;
+          button.textContent = "복사 완료";
+          setTimeout(() => { button.textContent = label; }, 1300);
+        } catch {
+          const range = document.createRange();
+          range.selectNodeContents(code);
+          const selection = getSelection();
+          selection.removeAllRanges(); selection.addRange(range);
+        }
+      };
+    }
+  </script>
+</body>
+</html>

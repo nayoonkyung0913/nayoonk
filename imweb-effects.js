@@ -6,12 +6,13 @@
   const here = document.currentScript.src;
   const scope = '[data-imweb-fx="1"]';
   const effect = '[data-fx="fade-up"],[data-fx="zoom-in"]';
-  const template = 'article.kz-story[data-kz-story][data-imweb-template="kazak"]';
+  const template = "article.kz-story[data-kz-story]";
+  const scenes = new Map([["sequence", "sequence.js"], ["marquee", "filmstrip.js"]]);
+  const modules = new Set();
   const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
   const waiting = new Set();
   const played = new WeakMap();
   const animations = new Map();
-  let plugin = null;
   let aosTask = null;
   let aosAPI = null;
   let refreshFrame = 0;
@@ -63,6 +64,21 @@
   }
 
   function inScope(el) { return el.isConnected && el.closest(scope); }
+  function wantsKazak(el) {
+    if (!el.matches(template)) return false;
+    if (el.hasAttribute("data-imweb-template")) return el.dataset.imwebTemplate === "kazak" && !!inScope(el);
+    // The original product was saved before template opt-in existed.
+    return new URLSearchParams(location.search).get("idx") === "156";
+  }
+  window[Symbol.for("mines.imweb.wantsKazak")] = wantsKazak;
+  function loadModule(file) {
+    if (!file || modules.has(file)) return;
+    modules.add(file);
+    const script = document.createElement("script");
+    script.src = new URL(file, here).href;
+    script.onerror = () => { modules.delete(file); script.remove(); };
+    document.head.appendChild(script);
+  }
   function render(el) {
     if (!inScope(el) || !el.matches(effect) || motion.matches || !el.animate) return;
     const name = el.dataset.fx;
@@ -88,19 +104,15 @@
 
   function register(el) {
     if (el.hasAttribute("data-aos")) ensureAos();
+    loadModule(scenes.get(el.dataset.imwebMotion));
+    if (wantsKazak(el) && !window[Symbol.for("kazak.imweb.product156.widget")]) loadModule("kazak.js");
     if (!inScope(el)) return;
-    if (el.matches(template) && !plugin) {
-      plugin = document.createElement("script");
-      plugin.src = new URL("kazak.js", here).href;
-      plugin.onerror = () => { plugin.remove(); plugin = null; };
-      document.head.appendChild(plugin);
-    }
     if (io && !motion.matches && !el.hasAttribute("data-aos") && el.matches(effect) && played.get(el) !== el.dataset.fx && !waiting.has(el)) {
       waiting.add(el);
       io.observe(el);
     }
   }
-  const candidates = "[data-aos]," + effect + "," + template;
+  const candidates = "[data-aos],[data-imweb-motion]," + effect + "," + template;
   function scan(node) {
     if (node.nodeType !== 1 || !node.isConnected) return;
     if (node.matches(candidates)) register(node);
@@ -129,7 +141,8 @@
     if (cleanup) prune();
   });
   watcher.observe(document.documentElement, {childList: true, subtree: true, attributes: true,
-    attributeFilter: ["data-imweb-fx", "data-imweb-template", "data-fx", "data-kz-story","data-aos","data-aos-offset","data-aos-anchor","data-aos-anchor-placement","data-aos-once"]});
+    attributeFilter: ["data-imweb-fx", "data-imweb-template", "data-imweb-motion", "data-fx", "data-kz-story","data-aos","data-aos-offset","data-aos-anchor","data-aos-anchor-placement","data-aos-once"]});
+  window.addEventListener("popstate", () => document.querySelectorAll(template).forEach(register));
   const updateMotion = () => { prune(); if (!motion.matches) scan(document.documentElement); };
   if (motion.addEventListener) motion.addEventListener("change", updateMotion);
   else if (motion.addListener) motion.addListener(updateMotion);
