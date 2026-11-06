@@ -455,3 +455,19 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll { height: 135svh; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage { height: 78svh; }
 }
+
+/* Keep process photos and captions together in the middle of the page. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered > .wrap { width: min(1320px, 90%); margin-inline: auto; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2.4cqw, 34px); margin: clamp(32px, 4cqw, 60px) auto 0; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps article { min-width: 0; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps .photo { width: 100%; height: auto; aspect-ratio: 4/3; overflow: hidden; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps .photo img { width: 100%; height: 100%; object-fit: cover; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 { display: flex; align-items: baseline; gap: .4em; border-top: 1px solid currentColor; padding: 12px 0 0; margin: 14px 0 0; font-size: clamp(20px, 2.1cqw, 32px); }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps small { font-size: .65em; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making { margin-top: clamp(54px, 7cqw, 100px); }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making > :is(h3,p) { text-align: center; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making-grid { width: 100%; margin-inline: auto; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core [data-image-slot="milk-base"] > img { object-fit: contain; }
+@container kz-detail (max-width: 700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps { grid-template-columns: minmax(0,1fr); gap: 32px; max-width: 500px; }
+}

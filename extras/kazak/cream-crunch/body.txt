@@ -53,21 +53,21 @@
 			</div>
 			<div class="kz-size-grid">
 				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-small"><span class="kz-asset-placeholder">소용량 패키지 컷</span></div>
+					<div class="kz-asset" data-image-slot="size-small"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-f7f5fd85.png" loading="lazy" alt="카작 피스타치오 소용량 150g 용기"></div>
 
 					<h3>소용량 &middot; 150g</h3>
 
 					<p>가볍게 맛보고 싶을 때</p>
 				</article>
 				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-medium"><span class="kz-asset-placeholder">중용량 패키지 컷</span></div>
+					<div class="kz-asset" data-image-slot="size-medium"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-44339059.png" loading="lazy" alt="카작 피스타치오 중용량 450g 용기"></div>
 
 					<h3>중용량 &middot; 450g</h3>
 
 					<p>일상에서 여러 디저트에 곁들일 때</p>
 				</article>
 				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-business"><span class="kz-asset-placeholder">사업자용 패키지 컷</span></div>
+					<div class="kz-asset" data-image-slot="size-business"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-business-0725e405.png" loading="lazy" alt="카작 피스타치오 사업자용 4.5kg 용기"></div>
 
 					<h3>대용량 &middot; 4.5kg</h3>
 
@@ -91,7 +91,7 @@
 			<br>두 가지 핵심 재료.</h2>
 		<div class="ingredients">
 			<article class="ingredient">
-				<div class="kz-asset" data-image-slot="milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/milk-base.png" alt="우유빛 베이스의 일렁이는 질감" class="fr-fic fr-dii"></div>
+				<div class="kz-asset" data-image-slot="milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-cutout-95c126ac.png" alt="부드럽게 겹쳐 쌓은 우유 베이스" class="fr-fic fr-dii"></div>
 
 				<h3>진한 우유 베이스</h3>
 
@@ -106,14 +106,14 @@
 			</article>
 		</div>
 	</section>
-	<section class="process">
+	<section class="process kz-making-centered" id="kz-making">
 		<div class="wrap">
 
 			<p class="eyebrow">MAKING KAZAK</p>
 
 			<h2 class="title">좋은 재료에서
 				<br>특별한 한 스푼까지.</h2>
-			<div class="process-grid">
+			<div class="kz-steps">
 				<article>
 					<div class="photo kz-asset" data-image-slot="process-milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/process-milk-base.png" alt="우유 베이스 준비 컷" class="fr-fic fr-dii"></div>
 
@@ -276,18 +276,6 @@
 					</div>
 				</article>
 			</div>
-			<article class="kz-spoon">
-				<div class="kz-asset" data-image-slot="spoon-straight-from-jar"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/spoon-straight-from-jar.png" alt="스푼에 듬뿍 담긴 피스타치오 카다이프 스프레드" class="fr-fic fr-dii"></div>
-				<div>
-
-					<p class="kz-recipe-script" lang="en">Straight from the jar</p>
-
-					<h3>그냥 한 스푼,
-						<br>이대로 맛있게.</h3>
-
-					<p class="copy">크리미한 스프레드와 카다이프의 바삭한 결을 한입에 즐겨보세요.</p>
-				</div>
-			</article>
 		</div>
 	</section>
 	<section class="flavors" id="kz-flavors">
