@@ -42,41 +42,35 @@
 				<button aria-pressed="false" class="motion" type="button">움직임 멈추기</button>
 			</div></div>
 	</section>
-	<section aria-labelledby="kz-size-title" class="kz-size-comparison" id="kz-sizes">
-		<div class="wrap">
-			<div class="center">
-
-				<p class="eyebrow" lang="en">FIND YOUR SIZE</p>
-
-				<h2 class="title" id="kz-size-title">먹는 방식에 맞춰,
-					<br>세 가지 용량.</h2>
-			</div>
-			<div class="kz-size-grid">
-				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-small"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-f7f5fd85.png" loading="lazy" alt="카작 피스타치오 소용량 150g 용기"></div>
-
-					<h3>소용량 &middot; 150g</h3>
-
-					<p>가볍게 맛보고 싶을 때</p>
-				</article>
-				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-medium"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-44339059.png" loading="lazy" alt="카작 피스타치오 중용량 450g 용기"></div>
-
-					<h3>중용량 &middot; 450g</h3>
-
-					<p>일상에서 여러 디저트에 곁들일 때</p>
-				</article>
-				<article class="kz-size-card">
-					<div class="kz-asset" data-image-slot="size-business"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-business-0725e405.png" loading="lazy" alt="카작 피스타치오 사업자용 4.5kg 용기"></div>
-
-					<h3>대용량 &middot; 4.5kg</h3>
-
-					<p>사업자용</p>
-
-					<p>카페나 베이커리 메뉴에 활용할 때</p>
-				</article>
-			</div></div>
-	</section>
+	<section aria-labelledby="kz-size-title" class="kz-size-comparison kz-size-guide" id="kz-sizes">
+  <div class="wrap">
+    <header class="kz-size-head">
+      <p class="eyebrow" lang="en">FIND YOUR SIZE</p>
+      <h2 class="title" id="kz-size-title">나에게 맞는 카작은?</h2>
+      <p class="kz-size-swipe">옆으로 넘겨 용량을 비교하세요 →</p>
+    </header>
+    <div class="kz-size-grid" tabindex="0" role="region" aria-label="세 가지 용량 비교">
+      <article class="kz-size-card">
+        <h3>150<small>g</small></h3>
+        <div class="kz-asset" data-image-slot="size-small"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-f7f5fd85.png" loading="lazy" alt="카작 피스타치오 소용량 150g 용기"></div>
+        <h4>처음 맛보는 한 병</h4>
+        <p>좋아하는 맛을 가볍게 시작하고 싶을 때.</p>
+      </article>
+      <article class="kz-size-card">
+        <h3>450<small>g</small></h3>
+        <div class="kz-asset" data-image-slot="size-medium"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-44339059.png" loading="lazy" alt="카작 피스타치오 중용량 450g 용기"></div>
+        <h4>매일 즐기는 한 병</h4>
+        <p>아침 토스트부터 오후 와플까지, 자주 꺼내 먹을 때.</p>
+      </article>
+      <article class="kz-size-card">
+        <h3>4.5<small>kg</small></h3>
+        <div class="kz-asset" data-image-slot="size-business"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-business-0725e405.png" loading="lazy" alt="카작 피스타치오 사업자용 4.5kg 용기"></div>
+        <h4>매장에서 쓰는 대용량</h4>
+        <p>카페나 베이커리에서 여러 메뉴에 넉넉히 쓸 때.</p>
+      </article>
+    </div>
+  </div>
+</section>
 	<section class="texture kz-spoon-scroll" id="kz-texture" aria-labelledby="kz-spoon-title">
         <div class="kz-spoon-stage">
             <h2 class="title" id="kz-spoon-title">크림 사이사이,<br>바삭한 카다이프.</h2>
