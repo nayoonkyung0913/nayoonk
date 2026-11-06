@@ -1,0 +1,10 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>카작 스프레드 · 상세페이지 미리보기</title><style>body{margin:0}</style><body><main></main>
+<script defer src="../../loader/1.0.0/kazak-loader.js"></script>
+<script>
+  fetch("body.txt").then(response => {
+    if (!response.ok) throw new Error("본문을 불러올 수 없습니다.");
+    return response.text();
+  }).then(body => { document.querySelector("main").innerHTML = body; })
+    .catch(() => { document.querySelector("main").textContent = "본문을 불러올 수 없습니다."; });
+</script>
+</body></html>

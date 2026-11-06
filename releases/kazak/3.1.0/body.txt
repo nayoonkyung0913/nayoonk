@@ -1,0 +1,754 @@
+<div data-kazak-version="3.1.0">
+  <section class="kz-cover" aria-labelledby="kz-cover-title">
+    <div class="kz-cover-inner">
+      <div class="kz-cover-copy">
+        <p class="kz-wordmark" lang="en">KAZAK</p>
+        <h1 id="kz-cover-title">부드러움에<br>바삭함을 더해.</h1>
+        <p class="kz-deck">크림 속에 카다이프를 담은<br>다섯 가지 디저트 스프레드.</p>
+        <a class="kz-taste-link" href="#kz-flavors">다섯 가지 맛 보기 <span aria-hidden="true">↓</span></a>
+      </div>
+      <figure class="kz-cover-art"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/31.png" alt="카작 두바이 피스타치오 스프레드 제품 병"></figure>
+    </div>
+  </section>
+  <section class="kz-texture-scene" id="kz-texture" aria-labelledby="kz-texture-title">
+    <div class="kz-texture-heading">
+      <h2 id="kz-texture-title">크림 사이사이,<br>바삭한 카다이프.</h2>
+      <span lang="en">Cream &amp; crunch</span>
+    </div>
+    <figure class="kz-texture-frame"><img src="https://nayoonkyung0913.github.io/nayoonk/releases/kazak/3.1.0/kazak-pistachio-spoon.jpg" width="1672" height="941" alt="피스타치오 크림에 감싸인 짧은 카다이프 조각을 스푼에 담은 연출 이미지"></figure>
+  </section>
+  <section class="kz-tasting" id="kz-flavors">
+		<div class="wrap">
+			<div class="center">
+
+				<p class="eyebrow">Tasting menu</p>
+
+				<h2 class="title">어떤 맛으로
+					<br>시작해볼까요?</h2>
+			</div>
+			<div aria-label="카작 맛 선택" class="tabbar">
+				<button aria-controls="kz-panel-0" aria-selected="true" data-flavor="0" id="kz-tab-0" tabindex="0" type="button">피스타치오</button>
+				<button aria-controls="kz-panel-1" aria-selected="false" data-flavor="1" id="kz-tab-1" tabindex="-1" type="button">황치즈</button>
+				<button aria-controls="kz-panel-2" aria-selected="false" data-flavor="2" id="kz-tab-2" tabindex="-1" type="button">딸기우유</button>
+				<button aria-controls="kz-panel-3" aria-selected="false" data-flavor="3" id="kz-tab-3" tabindex="-1" type="button">헤이즐넛</button>
+				<button aria-controls="kz-panel-4" aria-selected="false" data-flavor="4" id="kz-tab-4" tabindex="-1" type="button">시나몬쿠키</button>
+			</div>
+			<div class="flavor-stage">
+				<article aria-labelledby="kz-tab-0" class="flavor-panel" data-color="#e8edbd" id="kz-panel-0">
+					<div class="kz-flavor-visual">
+						<div class="photo" style="aspect-ratio:363/355;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/31.png" alt="피스타치오" class="fr-fic fr-dii"></div>
+						<div class="kz-tasting-texture"><img loading="lazy" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-pistachio.png" alt="피스타치오 스프레드의 실제 질감"></div></div>
+					<div>
+
+						<p class="en">PISTACHIO</p>
+
+						<h3>피스타치오</h3>
+
+						<p class="copy">고소하고 진한 풍미</p>
+
+						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+					</div>
+				</article>
+				<article aria-labelledby="kz-tab-1" class="flavor-panel" data-color="#ffd45e" id="kz-panel-1">
+					<div class="kz-flavor-visual">
+						<div class="photo" style="aspect-ratio:363/356;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/27.png" alt="황치즈" class="fr-fic fr-dii"></div>
+						<div class="kz-tasting-texture"><img loading="lazy" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-cheese.png" alt="황치즈 스프레드의 실제 질감"></div></div>
+					<div>
+
+						<p class="en">YELLOW CHEESE</p>
+
+						<h3>황치즈</h3>
+
+						<p class="copy">짭조름하고 깊은 맛</p>
+
+						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+					</div>
+				</article>
+				<article aria-labelledby="kz-tab-2" class="flavor-panel" data-color="#f9c9d7" id="kz-panel-2">
+					<div class="kz-flavor-visual">
+						<div class="photo" style="aspect-ratio:363/355;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/29.png" alt="딸기우유" class="fr-fic fr-dii"></div>
+						<div class="kz-tasting-texture"><img loading="lazy" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-strawberry.png" alt="딸기우유 스프레드의 실제 질감"></div></div>
+					<div>
+
+						<p class="en">STRAWBERRY MILK</p>
+
+						<h3>딸기우유</h3>
+
+						<p class="copy">달콤하고 부드러운 맛</p>
+
+						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+					</div>
+				</article>
+				<article aria-labelledby="kz-tab-3" class="flavor-panel" data-color="#db9f7d" id="kz-panel-3">
+					<div class="kz-flavor-visual">
+						<div class="photo" style="aspect-ratio:363/350;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/30.png" alt="헤이즐넛" class="fr-fic fr-dii"></div>
+						<div class="kz-tasting-texture"><img loading="lazy" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-hazelnut.png" alt="헤이즐넛 스프레드의 실제 질감"></div></div>
+					<div>
+
+						<p class="en">HAZELNUT</p>
+
+						<h3>헤이즐넛</h3>
+
+						<p class="copy">진하고 풍부한 초콜릿 풍미</p>
+
+						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+					</div>
+				</article>
+				<article aria-labelledby="kz-tab-4" class="flavor-panel" data-color="#e6c5a2" id="kz-panel-4">
+					<div class="kz-flavor-visual">
+						<div class="photo" style="aspect-ratio:363/350;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/28.png" alt="시나몬쿠키" class="fr-fic fr-dii"></div>
+						<div class="kz-tasting-texture"><img loading="lazy" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-cinnamon.png" alt="시나몬쿠키 스프레드의 실제 질감"></div></div>
+					<div>
+
+						<p class="en">CINNAMON COOKIE</p>
+
+						<h3>시나몬쿠키</h3>
+
+						<p class="copy">향긋하고 달콤한 맛</p>
+
+						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+					</div>
+				</article>
+			</div></div>
+	</section>
+  <section class="kz-serving" id="kz-recipes"><div class="wrap">
+    <p class="kz-script" lang="en">Serving suggestions</p>
+    <h2 class="title">빵 위에 한 스푼.</h2>
+    <div class="kz-serving-grid"><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/33.png" alt="식빵 & 베이글" loading="lazy"><h3>식빵 &amp; 베이글</h3><p class="copy">노릇하게 구운 빵 위에 카작을 넉넉하게 발라보세요.</p></article><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-pastry.png" alt="카작 스프레드를 곁들인 소금빵과 크루아상" loading="lazy"><h3>소금빵 &amp; 크루아상</h3><p class="copy">겹겹이 바삭한 결 사이에 카작을 듬뿍.</p></article></div>
+    <details class="kz-more"><summary>디저트 활용법 더 보기</summary><div class="kz-serving-grid"><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-waffle.png" alt="크림과 카작을 채운 반달 와플" loading="lazy"><h3>접어 먹는 와플</h3><p class="copy">얇고 바삭한 와플을 반으로 접어 한입 가득.</p></article><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-ice-cream.png" alt="아이스크림 위 카작 토핑" loading="lazy"><h3>아이스크림</h3><p class="copy">차가운 아이스크림 위에 바삭한 한 스푼.</p></article><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-yogurt.png" alt="요거트 볼 위 카작 토핑" loading="lazy"><h3>요거트</h3><p class="copy">꾸덕한 요거트에 카작을 얹어 가볍게.</p></article><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-bingsu.png" alt="고운 우유눈꽃빙수와 카작" loading="lazy"><h3>우유눈꽃빙수</h3><p class="copy">사르르 녹는 우유얼음에 카작을 곁들여보세요.</p></article><article class="kz-serving-card"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-crackers.png" alt="시나몬쿠키 카작 스프레드를 올린 크래커" loading="lazy"><h3>크래커</h3><p class="copy">바삭한 크래커 위에 카작을 얹어 한입씩.</p></article></div></details>
+  </div></section>
+  <section aria-label="카작 연출 이미지 갤러리" class="gallery">
+		<div aria-label="가로 이미지 갤러리" class="gallery-track" tabindex="0">
+			<div class="gallery-belt">
+				<div class="gallery-group">
+					<figure class="gallery-card">
+						<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/24.png" alt="다섯 가지 카작" class="fr-fic fr-dii"></div>
+					</figure>
+					<figure class="gallery-card">
+						<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/25.png" alt="카작 피스타치오와 딸기우유" class="fr-fic fr-dii"></div>
+					</figure>
+					<figure class="gallery-card">
+						<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/26.png" alt="황치즈 토스트와 헤이즐넛 아이스크림" class="fr-fic fr-dii"></div>
+					</figure>
+				</div></div></div>
+		<div class="gallery-controls"><span>SPREAD. CRUNCH. ENJOY.</span>
+			<div>
+				<button aria-label="이전 이미지" data-slide="-1" type="button">&larr;</button>
+				<button aria-label="다음 이미지" data-slide="1" type="button">&rarr;</button>
+				<button aria-pressed="false" class="motion" type="button">움직임 멈추기</button>
+			</div></div>
+	</section>
+  <section aria-labelledby="kz-core-title" class="wrap pad center kz-core" id="kz-ingredients">
+
+		<p class="eyebrow" lang="en">THE KAZAK BASE</p>
+
+		<h2 class="title" id="kz-core-title">맛을 채우는
+			<br>두 가지 핵심 재료.</h2>
+		<div class="ingredients">
+			<article class="ingredient">
+				<div class="kz-asset" data-image-slot="milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/milk-base.png" alt="우유빛 베이스의 일렁이는 질감" class="fr-fic fr-dii"></div>
+
+				<h3>진한 우유 베이스</h3>
+
+				<p>고소한 풍미와 크리미한 질감의 스프레드 베이스.</p>
+			</article>
+			<article class="ingredient">
+				<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/22.png" alt="가느다란 카다이프" class="fr-fic fr-dii"></div>
+
+				<h3>카다이프</h3>
+
+				<p>부드러운 스프레드 사이에 살아있는 가볍고 바삭한 결.</p>
+			</article>
+		</div>
+	</section>
+  <section class="process">
+		<div class="wrap">
+
+			<p class="eyebrow">MAKING KAZAK</p>
+
+			<h2 class="title">좋은 재료에서
+				<br>특별한 한 스푼까지.</h2>
+			<div class="process-grid">
+				<article>
+					<div class="photo kz-asset" data-image-slot="process-milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/process-milk-base.png" alt="우유 베이스 준비 컷" class="fr-fic fr-dii"></div>
+
+					<h3><small>01 /&nbsp;</small>우유 베이스 준비</h3>
+				</article>
+				<article>
+					<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/4.png" alt="카다이프 준비" class="fr-fic fr-dii"></div>
+
+					<h3><small>02 /&nbsp;</small>카다이프 준비</h3>
+				</article>
+				<article>
+					<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/5.png" alt="재료 배합" class="fr-fic fr-dii"></div>
+
+					<h3><small>03 /&nbsp;</small>재료 배합</h3>
+				</article>
+			</div>
+			</div></section>
+  <section aria-labelledby="kz-size-title" class="kz-size-comparison" id="kz-sizes">
+		<div class="wrap">
+			<div class="center">
+
+				<p class="eyebrow" lang="en">FIND YOUR SIZE</p>
+
+				<h2 class="title" id="kz-size-title">먹는 방식에 맞춰,
+					<br>세 가지 용량.</h2>
+			</div>
+			<div class="kz-size-grid">
+				<article class="kz-size-card">
+
+
+					<h3>소용량 &middot; 150g</h3>
+
+					<p>가볍게 맛보고 싶을 때</p>
+				</article>
+				<article class="kz-size-card">
+
+
+					<h3>중용량 &middot; 450g</h3>
+
+					<p>일상에서 여러 디저트에 곁들일 때</p>
+				</article>
+				<article class="kz-size-card">
+
+
+					<h3>대용량 &middot; 4.5kg</h3>
+
+					<p>사업자용</p>
+
+					<p>카페나 베이커리 메뉴에 활용할 때</p>
+				</article>
+			</div></div>
+	</section>
+  <div class="kz-product-info">
+		<section aria-labelledby="kz-info-title" class="kz-info" id="kz-info">
+			<div class="kz-info-head">
+
+				<h2 id="kz-info-title">상품정보</h2>
+
+				<p>맛별 원재료와 영양정보</p>
+			</div>
+			<div class="kz-info-list">
+				<details class="kz-label">
+					<summary>피스타치오</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>제품명</dt>
+								<dd>카작 두바이 피스타치오</dd>
+							</div>
+							<div>
+								<dt>식품유형</dt>
+								<dd>당류가공품(살균제품)</dd>
+							</div>
+							<div>
+								<dt>총내용량</dt>
+								<dd>450g</dd>
+							</div>
+							<div>
+								<dt>품목보고번호</dt>
+								<dd>2025050374540</dd>
+							</div>
+							<div>
+								<dt>원재료명</dt>
+								<dd>미네스 스프레드 베이스[설탕, 채종유(호주산), 혼합전지분유(네덜란드산), 혼합탈지분유(네덜란드산), 대두레시틴], 볶음피스타치오(미국산), 카다이프[밀가루, 정제수](원산지:튀르키예산), 대두레시틴(대두:브라질산), 혼합제제(프로필렌글리콜, 정제수, 홍화황색소, 치자청색소, 구연산삼나트륨), 복합강황추출물</dd>
+							</div>
+							<div>
+								<dt>알레르기 표시</dt>
+								<dd>대두, 밀, 우유 함유. 이 제품은 계란을 사용한 제품과 같은 제조시설에서 제조하고있습니다.</dd>
+							</div>
+							<div>
+								<dt>제조원 및 유통전문판매원</dt>
+								<dd>주식회사 미네스 / 경기도 남양주시 화도읍 비룡로 524번길42-1</dd>
+							</div>
+							<div>
+								<dt>포장재질</dt>
+								<dd>용기-PET, 뚜껑-PP</dd>
+							</div>
+						</dl>
+
+						<table class="kz-nutrition">
+							<caption>피스타치오 영양정보 &middot; 100g당 485kcal</caption>
+							<thead>
+								<tr>
+									<th scope="col">영양성분</th>
+									<th scope="col">100g당</th>
+									<th scope="col">기준치 비율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">나트륨</th>
+									<td>140mg</td>
+									<td>7%</td>
+								</tr>
+								<tr>
+									<th scope="row">탄수화물</th>
+									<td>52g</td>
+									<td>16%</td>
+								</tr>
+								<tr>
+									<th scope="row">당류</th>
+									<td>36g</td>
+									<td>36%</td>
+								</tr>
+								<tr>
+									<th scope="row">콜레스테롤</th>
+									<td>10mg</td>
+									<td>3%</td>
+								</tr>
+								<tr>
+									<th scope="row">지방</th>
+									<td>26g</td>
+									<td>48%</td>
+								</tr>
+								<tr>
+									<th scope="row">트랜스지방</th>
+									<td>0g</td>
+									<td>&mdash;</td>
+								</tr>
+								<tr>
+									<th scope="row">포화지방</th>
+									<td>3.8g</td>
+									<td>25%</td>
+								</tr>
+								<tr>
+									<th scope="row">단백질</th>
+									<td>13g</td>
+									<td>24%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="kz-note">1일 영양성분 기준치에 대한 비율(%)은 2,000kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</p>
+
+						<p class="kz-note">부정&middot;불량식품 신고는 국번없이 1399</p>
+					</div>
+				</details>
+				<details class="kz-label">
+					<summary>황치즈</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>제품명</dt>
+								<dd>카작 황치즈</dd>
+							</div>
+							<div>
+								<dt>식품유형</dt>
+								<dd>당류가공품(살균제품)</dd>
+							</div>
+							<div>
+								<dt>총내용량</dt>
+								<dd>450g</dd>
+							</div>
+							<div>
+								<dt>품목보고번호</dt>
+								<dd>2025050374543</dd>
+							</div>
+							<div>
+								<dt>원재료명</dt>
+								<dd>미네스 스프레드 베이스[설탕, 채종유(호주산), 혼합전지분유(네덜란드산), 혼합탈지분유(네덜란드산), 레시틴], 카다이프[밀가루, 정제수](원산지:튀르키예), 황치즈맛분말[물엿, 식물성유지{야자경화유100%(외국산:인도네시아, 말레이시아, 필리핀 등)}, 가공유장분1{농축유청(국산), 유청분말(외국산:미국, 프랑스, 체코등)}, 정제소금(국내산), 치자황색소], 채종유(호주산), 대두레시틴, 복합강황추출물</dd>
+							</div>
+							<div>
+								<dt>알레르기 표시</dt>
+								<dd>대두, 밀, 우유 함유. 이 제품은 계란을 사용한 제품과 같은 제조시설에서 제조하고있습니다.</dd>
+							</div>
+							<div>
+								<dt>제조원 및 유통전문판매원</dt>
+								<dd>주식회사 미네스 / 경기도 남양주시 화도읍 비룡로 524번길42-1, 1층 일부</dd>
+							</div>
+							<div>
+								<dt>포장재질</dt>
+								<dd>용기-PET, 뚜껑-PP</dd>
+							</div>
+						</dl>
+
+						<table class="kz-nutrition">
+							<caption>황치즈 영양정보 &middot; 100g당 465kcal</caption>
+							<thead>
+								<tr>
+									<th scope="col">영양성분</th>
+									<th scope="col">100g당</th>
+									<th scope="col">기준치 비율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">나트륨</th>
+									<td>410mg</td>
+									<td>21%</td>
+								</tr>
+								<tr>
+									<th scope="row">탄수화물</th>
+									<td>64g</td>
+									<td>20%</td>
+								</tr>
+								<tr>
+									<th scope="row">당류</th>
+									<td>45g</td>
+									<td>45%</td>
+								</tr>
+								<tr>
+									<th scope="row">콜레스테롤</th>
+									<td>10mg</td>
+									<td>3%</td>
+								</tr>
+								<tr>
+									<th scope="row">지방</th>
+									<td>25g</td>
+									<td>46%</td>
+								</tr>
+								<tr>
+									<th scope="row">트랜스지방</th>
+									<td>0g</td>
+									<td>&mdash;</td>
+								</tr>
+								<tr>
+									<th scope="row">포화지방</th>
+									<td>4.6g</td>
+									<td>31%</td>
+								</tr>
+								<tr>
+									<th scope="row">단백질</th>
+									<td>8g</td>
+									<td>15%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="kz-note">1일 영양성분 기준치에 대한 비율(%)은 2,000kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</p>
+					</div>
+				</details>
+				<details class="kz-label">
+					<summary>딸기우유</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>제품명</dt>
+								<dd>카작 딸기우유</dd>
+							</div>
+							<div>
+								<dt>식품유형</dt>
+								<dd>당류가공품(살균제품)</dd>
+							</div>
+							<div>
+								<dt>총내용량</dt>
+								<dd>450g</dd>
+							</div>
+							<div>
+								<dt>품목보고번호</dt>
+								<dd>2025050374555</dd>
+							</div>
+							<div>
+								<dt>원재료명</dt>
+								<dd>미네스 스프레드 베이스[설탕, 채종유(호주산), 혼합전지분유(네덜란드산), 혼합탈지분유(네덜란드산), 레시틴], 카다이프[밀가루, 정제수](원산지:튀르키예), 채종유(호주산), 딸기과즙분말30[덱스트린, 딸기과즙고형분(딸기:국산, 딸기100%)], 향료(딸기향), 향료(밀크향), 대두레시틴, 락색소, 복합강황추출물</dd>
+							</div>
+							<div>
+								<dt>알레르기 표시</dt>
+								<dd>대두, 밀, 우유 함유. 이 제품은 계란을 사용한 제품과 같은 제조시설에서 제조하고있습니다.</dd>
+							</div>
+							<div>
+								<dt>제조원 및 유통전문판매원</dt>
+								<dd>주식회사 미네스 / 경기도 남양주시 화도읍 비룡로 524번길42-1, 1층 일부</dd>
+							</div>
+							<div>
+								<dt>포장재질</dt>
+								<dd>용기 PET, 뚜껑 PP</dd>
+							</div>
+						</dl>
+
+						<table class="kz-nutrition">
+							<caption>딸기우유 영양정보 &middot; 100g당 500kcal</caption>
+							<thead>
+								<tr>
+									<th scope="col">영양성분</th>
+									<th scope="col">100g당</th>
+									<th scope="col">기준치 비율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">나트륨</th>
+									<td>170mg</td>
+									<td>9%</td>
+								</tr>
+								<tr>
+									<th scope="row">탄수화물</th>
+									<td>58g</td>
+									<td>18%</td>
+								</tr>
+								<tr>
+									<th scope="row">당류</th>
+									<td>45g</td>
+									<td>45%</td>
+								</tr>
+								<tr>
+									<th scope="row">콜레스테롤</th>
+									<td>10mg</td>
+									<td>3%</td>
+								</tr>
+								<tr>
+									<th scope="row">지방</th>
+									<td>26g</td>
+									<td>48%</td>
+								</tr>
+								<tr>
+									<th scope="row">트랜스지방</th>
+									<td>0g</td>
+									<td>&mdash;</td>
+								</tr>
+								<tr>
+									<th scope="row">포화지방</th>
+									<td>3.7g</td>
+									<td>25%</td>
+								</tr>
+								<tr>
+									<th scope="row">단백질</th>
+									<td>8g</td>
+									<td>15%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="kz-note">1일 영양성분 기준치에 대한 비율(%)은 2,000kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</p>
+
+						<p class="kz-note">부정&middot;불량식품 신고는 국번없이 1399</p>
+					</div>
+				</details>
+				<details class="kz-label">
+					<summary>헤이즐넛</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>제품명</dt>
+								<dd>카작 헤이즐넛</dd>
+							</div>
+							<div>
+								<dt>식품유형</dt>
+								<dd>당류가공품(살균제품)</dd>
+							</div>
+							<div>
+								<dt>총내용량</dt>
+								<dd>450g</dd>
+							</div>
+							<div>
+								<dt>품목보고번호</dt>
+								<dd>2025050374541</dd>
+							</div>
+							<div>
+								<dt>원재료명</dt>
+								<dd>미네스 스프레드 베이스[설탕, 채종유(호주산), 혼합전지분유(네덜란드산), 혼합탈지분유(네덜란드산), 레시틴], 카다이프[밀가루, 정제수](원산지:튀르키예), 볶음헤이즐넛(튀르키예산), 코코아 파우더(싱가포르산), 대두레시틴, 혼합제제(프로필렌글리콜, 정제수, 합성향료, 주정, 천연향료, 글리세린, 카라멜색소Ⅲ, 카라멜색소Ⅳ, 트리아세틴), 복합강황추출물</dd>
+							</div>
+							<div>
+								<dt>알레르기 표시</dt>
+								<dd>대두, 밀, 우유 함유. 이 제품은 계란을 사용한 제품과 같은 제조시설에서 제조하고있습니다.</dd>
+							</div>
+							<div>
+								<dt>제조원 및 유통전문판매원</dt>
+								<dd>주식회사 미네스 / 경기도 남양주시 화도읍 비룡로 524번길42-1, 1층 일부</dd>
+							</div>
+							<div>
+								<dt>포장재질</dt>
+								<dd>용기-PET, 뚜껑-PP</dd>
+							</div>
+						</dl>
+
+						<table class="kz-nutrition">
+							<caption>헤이즐넛 영양정보 &middot; 100g당 480kcal</caption>
+							<thead>
+								<tr>
+									<th scope="col">영양성분</th>
+									<th scope="col">100g당</th>
+									<th scope="col">기준치 비율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">나트륨</th>
+									<td>160mg</td>
+									<td>8%</td>
+								</tr>
+								<tr>
+									<th scope="row">탄수화물</th>
+									<td>53g</td>
+									<td>16%</td>
+								</tr>
+								<tr>
+									<th scope="row">당류</th>
+									<td>41g</td>
+									<td>41%</td>
+								</tr>
+								<tr>
+									<th scope="row">콜레스테롤</th>
+									<td>10mg</td>
+									<td>3%</td>
+								</tr>
+								<tr>
+									<th scope="row">지방</th>
+									<td>26g</td>
+									<td>48%</td>
+								</tr>
+								<tr>
+									<th scope="row">트랜스지방</th>
+									<td>0g</td>
+									<td>&mdash;</td>
+								</tr>
+								<tr>
+									<th scope="row">포화지방</th>
+									<td>3.4g</td>
+									<td>23%</td>
+								</tr>
+								<tr>
+									<th scope="row">단백질</th>
+									<td>10g</td>
+									<td>18%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="kz-note">1일 영양성분 기준치에 대한 비율(%)은 2,000kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</p>
+
+						<p class="kz-note">부정&middot;불량식품 신고는 국번없이 1399</p>
+					</div>
+				</details>
+				<details class="kz-label">
+					<summary>시나몬쿠키</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>제품명</dt>
+								<dd>카작 시나몬쿠키</dd>
+							</div>
+							<div>
+								<dt>식품유형</dt>
+								<dd>당류가공품(살균제품)</dd>
+							</div>
+							<div>
+								<dt>총내용량</dt>
+								<dd>450g</dd>
+							</div>
+							<div>
+								<dt>품목보고번호</dt>
+								<dd>2025050374546</dd>
+							</div>
+							<div>
+								<dt>원재료명</dt>
+								<dd>미네스 스프레드 베이스[설탕, 채종유(호주산), 혼합전지분유(네덜란드산), 혼합탈지분유(네덜란드산), 레시틴], 과자[벨기에산/밀가루, 설탕, 식물성유지(팜유, 채종유), 설탕시럽, 팽창제(탄산수소나트륨), 대두분말, 정제소금, 계피], 카다이프[밀가루, 정제수](원산지:튀르키예), 채종유(호주산), 대두레시틴, 복합강황추출물</dd>
+							</div>
+							<div>
+								<dt>알레르기 표시</dt>
+								<dd>대두, 밀, 우유 함유. 이 제품은 계란을 사용한 제품과 같은 제조시설에서 제조하고있습니다.</dd>
+							</div>
+							<div>
+								<dt>제조원 및 유통전문판매원</dt>
+								<dd>주식회사 미네스 / 경기도 남양주시 화도읍 비룡로 524번길42-1, 1층 일부</dd>
+							</div>
+							<div>
+								<dt>포장재질</dt>
+								<dd>용기-PET, 뚜껑-PP</dd>
+							</div>
+						</dl>
+
+						<table class="kz-nutrition">
+							<caption>시나몬쿠키 영양정보 &middot; 100g당 495kcal</caption>
+							<thead>
+								<tr>
+									<th scope="col">영양성분</th>
+									<th scope="col">100g당</th>
+									<th scope="col">기준치 비율</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<th scope="row">나트륨</th>
+									<td>230mg</td>
+									<td>12%</td>
+								</tr>
+								<tr>
+									<th scope="row">탄수화물</th>
+									<td>61g</td>
+									<td>19%</td>
+								</tr>
+								<tr>
+									<th scope="row">당류</th>
+									<td>40g</td>
+									<td>40%</td>
+								</tr>
+								<tr>
+									<th scope="row">콜레스테롤</th>
+									<td>5mg</td>
+									<td>2%</td>
+								</tr>
+								<tr>
+									<th scope="row">지방</th>
+									<td>25g</td>
+									<td>46%</td>
+								</tr>
+								<tr>
+									<th scope="row">트랜스지방</th>
+									<td>0g</td>
+									<td>&mdash;</td>
+								</tr>
+								<tr>
+									<th scope="row">포화지방</th>
+									<td>5g</td>
+									<td>33%</td>
+								</tr>
+								<tr>
+									<th scope="row">단백질</th>
+									<td>7g</td>
+									<td>13%</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<p class="kz-note">1일 영양성분 기준치에 대한 비율(%)은 2,000kcal 기준이므로 개인의 필요 열량에 따라 다를 수 있습니다.</p>
+
+						<p class="kz-note">부정&middot;불량식품 신고는 국번없이 1399</p>
+					</div>
+				</details>
+				<details class="kz-label">
+					<summary>보관 및 섭취 안내</summary>
+					<div class="kz-label-body">
+
+						<dl class="kz-specs">
+							<div>
+								<dt>소비기한</dt>
+								<dd>별도 표기일까지</dd>
+							</div>
+							<div>
+								<dt>보관 방법</dt>
+								<dd>직사광선을 받지 아니하는 서늘한 곳에서 보관하십시오. (개봉 후 냉장보관)</dd>
+							</div>
+							<div>
+								<dt>반품 및 교환</dt>
+								<dd>판매원 및 구입처. 본 제품은 공정거래위원회 고시 소비자 분쟁해결 기준에 의거 구입처에서 교환 또는 환불 받을 수 있습니다.</dd>
+							</div>
+							<div>
+								<dt>소비자 상담실</dt>
+								<dd>070-8806-8331</dd>
+							</div>
+						</dl>
+
+						<p><strong>섭취 시 주의사항</strong></p>
+
+						<ul class="kz-cautions">
+							<li>개봉 시 내용물이 튀어 나올 수 있습니다.</li>
+							<li>개봉 시 포장재질이 날카로우니 주의하십시오.</li>
+							<li>포장 용기가 변형, 팽창, 손상되었거나 내용물이 변질되었을 경우 음용하지 마십시오.</li>
+							<li>품질 변화의 우려가 있으므로 전자레인지 또는 불에 직접 데우지 마십시오.</li>
+							<li>개봉 후에는 반드시 냉장보관하시고, 뚜껑을 잘 닫아 보관하시기 바랍니다.</li>
+							<li>개봉 후에는 가급적 빠른 시일 내에 섭취하시기 바랍니다.</li>
+							<li>원료 특성 상 기름분리가 될 수 있으나 안심하시고 섞어 섭취하시기 바랍니다.</li>
+						</ul>
+					</div>
+				</details>
+			</div>
+		</section>
+	</div></div>
