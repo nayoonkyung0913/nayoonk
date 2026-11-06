@@ -47,10 +47,12 @@
 #kz-v3 .recipe:nth-child(odd){grid-template-columns:1fr 1.1fr}#kz-v3 .recipe:nth-child(odd) .photo{order:2}#kz-v3 .recipe-card{background:#ffed88;padding:40px;transform:rotate(var(--card-rotate,4deg));transition:transform .35s}#kz-v3 .recipe:nth-child(odd) .recipe-card{--card-rotate:-4deg;background:#f9cbb9}#kz-v3 .recipe:hover .recipe-card{transform:rotate(0deg)}#kz-v3 .recipe h3{font-size:clamp(26px,3.2vw,45px);line-height:1.2;letter-spacing:-.04em}#kz-v3 .recipe .copy{font-size:15px;margin-top:18px}
 #kz-v3 .flavors{padding:200px 0;transition:background .5s;background:var(--flavor-bg,#e8edbd)}#kz-v3 .tabbar{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:35px auto 50px}#kz-v3 .tabbar button{background:none;border:1px solid #2c1a1155;border-radius:999px;padding:12px 22px;font-size:14px}#kz-v3 .tabbar button[aria-selected=true]{background:var(--ink);color:var(--cream);border-color:var(--ink)}#kz-v3 .flavor-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10%;margin-bottom:45px}#kz-v3 .flavor-panel .photo{max-width:480px;margin:auto;transform:rotate(-4deg);transition:transform .5s}#kz-v3 .flavor-panel .photo:hover{transform:rotate(0deg) scale(1.03)}#kz-v3 .flavor-panel h3{font-size:clamp(36px,6vw,80px);letter-spacing:-.06em;line-height:1.15}#kz-v3 .flavor-panel .en{font-size:13px;letter-spacing:.13em;margin-bottom:20px}#kz-v3 .flavor-panel[hidden]{display:none!important}
 /* 맛을 바꿔도 가장 큰 패널의 높이를 유지합니다. */
-#kz-v3.enhanced .flavor-stage{display:grid;min-width:0}
-#kz-v3.enhanced .flavor-stage>.flavor-panel{grid-area:1/1;min-width:0}
-#kz-v3.enhanced .flavor-stage>.flavor-panel[hidden]{display:grid!important;visibility:hidden;pointer-events:none}
-#kz-v3 .tabbar{display:none}#kz-v3.enhanced .tabbar{display:flex}
+#kz-v3 .kz-flavors-ready .flavor-stage{display:grid;min-width:0}
+#kz-v3 .kz-flavors-ready .flavor-stage>.flavor-panel{grid-area:1/1;min-width:0}
+#kz-v3 .kz-flavors-ready .flavor-stage>.flavor-panel[hidden]{display:grid!important;visibility:hidden;pointer-events:none}
+#kz-v3 .tabbar{display:none}
+#kz-v3 .kz-flavors-ready .tabbar{display:flex!important}
+#kz-v3 .kz-flavors-ready .tabbar [data-flavor]{display:inline-flex!important;align-items:center;justify-content:center}
 /* 상품정보: 원본 접이식 표 */
 #kz-v3 .kz-product-info {
   --kz-ink: #271d17;
@@ -99,24 +101,95 @@
   #kz-v3 .kz-product-info .kz-info {grid-template-columns:1fr;}
 }
 #kz-v3 .enter{animation:kz-enter .8s ease-out both}@keyframes kz-enter{from{opacity:.25;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@container kz-detail (max-width: 700px) {#kz-v3 .pad{padding:70px 0}#kz-v3 .hero{height:860px;min-height:0;max-height:none}#kz-v3 .hero-type{top:14%;font-size:18cqw}#kz-v3 .hero-art{top:36%;width:235px;transform:translateY(clamp(0px,var(--hy,0px),30px)) rotate(var(--hr,-7deg))}#kz-v3 .hero-caption{bottom:5%}#kz-v3 .intro{padding:70px 6% 40px}#kz-v3 .title{font-size:clamp(34px,9.5cqw,46px)}#kz-v3 .copy{font-size:18px;line-height:1.65}#kz-v3 .gallery-card{width:72cqw}#kz-v3 .gallery{padding-bottom:45px}#kz-v3 .ingredients{grid-template-columns:1fr;gap:45px;margin-top:35px}#kz-v3 .ingredient .photo{max-width:380px;margin:auto}#kz-v3 .ingredient strong{font-size:48px}#kz-v3 .process{padding:65px 0}#kz-v3 .process-grid{grid-template-columns:1fr;gap:35px}#kz-v3 .process-grid h3{font-size:25px}#kz-v3 .recipes{padding:65px 0}#kz-v3 .recipe,#kz-v3 .recipe:nth-child(odd){grid-template-columns:1fr;gap:32px;margin-top:52px}#kz-v3 .recipe:nth-child(odd) .photo{order:0}#kz-v3 .recipe-card{padding:27px;width:90%;margin:auto}#kz-v3 .flavors{padding:65px 0}#kz-v3 .tabbar{gap:7px;margin:25px auto 35px}#kz-v3 .tabbar button{font-size:16px;min-height:44px;padding:9px 14px}#kz-v3 .flavor-panel{grid-template-columns:1fr;gap:35px;text-align:center}#kz-v3 .flavor-panel .photo{width:80%;max-width:340px}#kz-v3 .flavor-panel h3{font-size:40px}#kz-v3 .brandbar{font-size:12px;letter-spacing:.08em;align-items:center;gap:8px}#kz-v3 .brandbar b{font-size:23px}
-  #kz-v3 .eyebrow{font-size:15px;letter-spacing:.10em}
-  #kz-v3 .hero-caption h1{font-size:clamp(24px,6.5cqw,31px)}
-  #kz-v3 .hero-caption a{font-size:14px}
-  #kz-v3 .flavor-links a{font-size:15px}
-  #kz-v3 .gallery-controls{font-size:14px}
-  #kz-v3 .gallery-controls button{display:none!important}
-  #kz-v3 .ingredient p,#kz-v3 .recipe .copy{font-size:18px;line-height:1.65}
-  #kz-v3 .recipe h3{font-size:clamp(28px,7.7cqw,36px)}
-  #kz-v3 .recipe>.photo{width:90%;margin-inline:auto}
-  #kz-v3 .note,#kz-v3 .flavor-panel .en,#kz-v3 .process-grid small{font-size:15px}
-  #kz-v3 .kz-product-info .kz-info{grid-template-columns:1fr}
-  #kz-v3 .kz-product-info .kz-info-head p,#kz-v3 .kz-product-info .kz-label-body p{font-size:17px}
-  #kz-v3 .kz-product-info .kz-label summary{font-size:20px}
-  #kz-v3 .kz-product-info .kz-specs > div{font-size:16px}
-  #kz-v3 .kz-product-info .kz-nutrition,#kz-v3 .kz-product-info .kz-label-body .kz-note{font-size:15px}
-  #kz-v3 .texture-sticky{padding-top:38px}
-  #kz-v3 .texture-photo{height:clamp(180px,34svh,300px);margin-top:clamp(12px,4cqw,24px)}
+/* A narrow product slot can also occur in the desktop storefront. */
+@container kz-detail (max-width: 700px) {
+  #kz-v3 .ingredients,
+  #kz-v3 .process-grid,
+  #kz-v3 .recipe,
+  #kz-v3 .recipe:nth-child(odd),
+  #kz-v3 .flavor-panel,
+  #kz-v3 .kz-product-info .kz-info { grid-template-columns: minmax(0, 1fr); }
+  #kz-v3 .recipe:nth-child(odd) .photo { order: 0; }
+  #kz-v3 .flavor-panel { text-align: center; }
+}
+
+/* Mobile layout follows the viewport even if the theme overrides container styles. */
+@media (max-width: 767px) {
+  #kz-v3 .wrap { width: 88%; min-width: 0; }
+  #kz-v3 .pad { padding: 64px 0; }
+  #kz-v3 .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: clamp(20px, 7vw, 48px);
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: clamp(68px, 21vw, 130px) 4% 48px;
+  }
+  #kz-v3 .brandbar { font-size: 12px; letter-spacing: .08em; align-items: center; gap: 8px; }
+  #kz-v3 .brandbar b { font-size: 23px; }
+  #kz-v3 .hero-type { position: static; font-size: min(17vw, 120px); font-size: min(17vw, 19cqw, 120px); }
+  #kz-v3 .hero-art {
+    position: relative;
+    top: auto;
+    width: clamp(140px, 60%, 320px);
+    transform: translateY(clamp(0px, var(--hy, 0px), 14px)) rotate(var(--hr, -7deg));
+  }
+  #kz-v3 .hero-caption { position: static; }
+  #kz-v3 .hero-caption h1 { font-size: clamp(21px, 6vw, 31px); }
+  #kz-v3 .hero-caption a { font-size: 14px; }
+  #kz-v3 .intro { padding: 70px 6% 40px; }
+  #kz-v3 .eyebrow { font-size: 15px; letter-spacing: .10em; }
+  #kz-v3 .title { font-size: clamp(29px, 8.5vw, 46px); }
+  #kz-v3 .copy { font-size: 17px; line-height: 1.65; }
+  #kz-v3 .flavor-links a { font-size: 15px; }
+
+  #kz-v3 .gallery { padding-bottom: 45px; }
+  #kz-v3 .gallery-card { width: 72vw; width: min(72vw, 72cqw); }
+  #kz-v3 .gallery-controls { font-size: 14px; }
+  #kz-v3 .gallery-controls button { display: none !important; }
+
+  #kz-v3 .ingredients { grid-template-columns: minmax(0, 1fr); gap: 45px; margin-top: 35px; }
+  #kz-v3 .ingredient .photo { max-width: 380px; margin: auto; }
+  #kz-v3 .ingredient strong { font-size: 48px; }
+  #kz-v3 .ingredient p,
+  #kz-v3 .recipe .copy { font-size: 17px; line-height: 1.65; }
+  #kz-v3 .texture-sticky { padding-top: 38px; }
+  #kz-v3 .texture-photo {
+    height: clamp(180px, 34vh, 300px);
+    height: clamp(180px, 34svh, 300px);
+    margin-top: clamp(12px, 4vw, 24px);
+  }
+  #kz-v3 .process,
+  #kz-v3 .recipes,
+  #kz-v3 .flavors { padding: 65px 0; }
+  #kz-v3 .process-grid { grid-template-columns: minmax(0, 1fr); gap: 35px; }
+  #kz-v3 .process-grid h3 { font-size: 25px; }
+  #kz-v3 .recipe,
+  #kz-v3 .recipe:nth-child(odd) { grid-template-columns: minmax(0, 1fr); gap: 32px; margin-top: 52px; }
+  #kz-v3 .recipe:nth-child(odd) .photo { order: 0; }
+  #kz-v3 .recipe > .photo { width: 90%; margin-inline: auto; }
+  #kz-v3 .recipe-card { padding: 27px; width: 90%; margin: auto; }
+  #kz-v3 .recipe h3 { font-size: clamp(25px, 7vw, 36px); }
+
+  #kz-v3 .tabbar { gap: 7px; margin: 25px auto 35px; }
+  #kz-v3 .tabbar button { font-size: 15px; min-height: 44px; padding: 9px 13px; }
+  #kz-v3 .flavor-panel { grid-template-columns: minmax(0, 1fr); gap: 26px; text-align: center; }
+  #kz-v3 .flavor-panel .photo { width: 80%; max-width: 340px; }
+  #kz-v3 .flavor-panel h3 { font-size: clamp(30px, 8.6vw, 40px); }
+  #kz-v3 .note,
+  #kz-v3 .flavor-panel .en,
+  #kz-v3 .process-grid small { font-size: 15px; }
+
+  #kz-v3 .kz-product-info .kz-info { grid-template-columns: minmax(0, 1fr); }
+  #kz-v3 .kz-product-info .kz-info-head p,
+  #kz-v3 .kz-product-info .kz-label-body p { font-size: 16px; }
+  #kz-v3 .kz-product-info .kz-label summary { font-size: 20px; }
+  #kz-v3 .kz-product-info .kz-specs > div { font-size: 15px; }
+  #kz-v3 .kz-product-info .kz-label-body .kz-note { font-size: 14px; }
+  #kz-v3 .kz-product-info .kz-nutrition { font-size: clamp(12px, 3.6vw, 15px); overflow-wrap: anywhere; }
 }
 @media(prefers-reduced-motion:reduce){#kz-v3 *,#kz-v3 *::before,#kz-v3 *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}#kz-v3 .hero-art{transform:rotate(-5deg)}#kz-v3 .texture-photo .photo{transform:none;will-change:auto}}
 
@@ -124,12 +197,18 @@
 <script>
 (function(){
 'use strict';
-function initialize(root) {
-if (root.dataset.ready) return;
-root.dataset.ready = '1';
-root.classList.add('enhanced');
-var media=matchMedia('(prefers-reduced-motion: reduce)'),paused=media.matches,raf=0;
-var hero=root.querySelector('.hero'),art=root.querySelector('.hero-art'),photo=root.querySelector('.texture-photo'),flavors=root.querySelector('.flavors'),tabs=Array.from(root.querySelectorAll('[data-flavor]')),panels=Array.from(root.querySelectorAll('.flavor-panel')),track=root.querySelector('.gallery-track'),motion=root.querySelector('.motion');
+var media = matchMedia('(prefers-reduced-motion: reduce)');
+var readyTabs = new WeakSet();
+var readyEffects = new WeakSet();
+
+function initializeFlavors(root) {
+var flavors = root.querySelector('.flavors');
+if (!flavors) return;
+var tabbar = flavors.querySelector('.tabbar');
+if (!tabbar || readyTabs.has(tabbar)) return;
+var tabs = Array.from(tabbar.querySelectorAll('[data-flavor]'));
+var panels = Array.from(flavors.querySelectorAll('.flavor-panel'));
+if (!tabs.length || tabs.length !== panels.length) return;
 var activeFlavor = 0;
 var flavorTimer;
 function restartFlavorRotation() {
@@ -138,8 +217,9 @@ function restartFlavorRotation() {
   flavorTimer = setInterval(function () {
     if (!root.isConnected) { clearInterval(flavorTimer); return; }
     var bounds = flavors.getBoundingClientRect();
-    var keyboardTab = flavors.querySelector('[data-flavor]:focus-visible');
-    if (paused || document.hidden || keyboardTab ||
+    var keyboardTab = document.activeElement;
+    var keyboardSelecting = tabs.indexOf(keyboardTab) !== -1 && keyboardTab.matches(':focus-visible');
+    if (media.matches || root.classList.contains('is-paused') || document.hidden || keyboardSelecting ||
         bounds.bottom <= 0 || bounds.top >= innerHeight) return;
     choose((activeFlavor + 1) % tabs.length, false);
   }, 2000);
@@ -159,6 +239,31 @@ function choose(index, focus) {
 }
 choose(0, false);
 tabs.forEach(function(t,i){t.addEventListener('click',function(){choose(i,false);});t.addEventListener('keydown',function(e){var n=i;if(e.key==='ArrowRight')n=(i+1)%tabs.length;else if(e.key==='ArrowLeft')n=(i+tabs.length-1)%tabs.length;else if(e.key==='Home')n=0;else if(e.key==='End')n=tabs.length-1;else return;e.preventDefault();choose(n,true);});});
+readyTabs.add(tabbar);
+flavors.classList.add('kz-flavors-ready');
+}
+
+function initializeEffects(root) {
+if (readyEffects.has(root)) return;
+var hero = root.querySelector('.hero');
+var art = root.querySelector('.hero-art');
+var photo = root.querySelector('.texture-photo');
+var track = root.querySelector('.gallery-track');
+var motion = root.querySelector('.motion');
+var belt = track && track.querySelector('.gallery-belt');
+var galleryGroup = belt && belt.querySelector('.gallery-group');
+if (!hero || !art || !photo || !motion || !galleryGroup || !galleryGroup.children.length) return;
+
+if (!belt.querySelector('.gallery-group[aria-hidden="true"]')) {
+  var galleryCopy = galleryGroup.cloneNode(true);
+  galleryCopy.setAttribute('aria-hidden', 'true');
+  galleryCopy.querySelectorAll('img').forEach(function (image) { image.alt = ''; });
+  galleryGroup.after(galleryCopy);
+}
+readyEffects.add(root);
+root.classList.add('enhanced');
+var paused = media.matches;
+var raf = 0;
 var recipePhotos = Array.from(root.querySelectorAll("[data-recipe-direction]"));
 function paint() {
   raf = 0;
@@ -191,9 +296,8 @@ function paint() {
   });
 }
 function schedule(){if(!raf&&!paused)raf=requestAnimationFrame(paint);}window.addEventListener('scroll',schedule,{passive:true});window.addEventListener('resize',schedule,{passive:true});
-function sync(){root.classList.toggle('is-paused',paused);motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'움직임 켜기':'움직임 멈추기';if(paused){art.style.setProperty('--hy','0px');art.style.setProperty('--hr','-7deg');photo.style.setProperty('--ts','1');}else schedule();}motion.addEventListener('click',function(){paused=!paused;sync();});media.addEventListener('change',function(e){paused=e.matches;sync();});sync();
-var belt = track.querySelector('.gallery-belt');
-var galleryCards = track.querySelector('.gallery-group').children;
+function sync(){root.classList.toggle('is-paused',paused);motion.setAttribute('aria-pressed',String(paused));motion.textContent=paused?'움직임 켜기':'움직임 멈추기';if(paused){art.style.setProperty('--hy','0px');art.style.setProperty('--hr','-7deg');photo.style.setProperty('--ts','1');}else schedule();}motion.addEventListener('click',function(){paused=!paused;sync();});var onMotionChange=function(e){paused=e.matches;sync();};if(media.addEventListener)media.addEventListener('change',onMotionChange);else if(media.addListener)media.addListener(onMotionChange);sync();
+var galleryCards = galleryGroup.children;
 root.querySelectorAll('[data-slide]').forEach(function (button) {
   button.addEventListener('click', function () {
     var direction = Number(button.dataset.slide);
@@ -209,30 +313,31 @@ root.querySelectorAll('[data-slide]').forEach(function (button) {
 root.addEventListener('click',function(e){var a=e.target.closest('a[href^="#kz-"]');if(!a)return;var t=root.querySelector(a.getAttribute('href'));if(t){e.preventDefault();t.scrollIntoView({behavior:paused?'auto':'smooth',block:'start'});}});
 if('IntersectionObserver'in window){var ob=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){if(!paused)e.target.classList.add('enter');ob.unobserve(e.target);}});},{threshold:.15});root.querySelectorAll('.ingredient,.process-grid article,.recipe-card').forEach(function(e){ob.observe(e);});}
 }
-function start() {
-  var root = document.getElementById('kz-v3');
-  if (!root) return false;
-  if (root.dataset.ready) return true;
-  var galleryGroup = root.querySelector('.gallery-belt > .gallery-group');
-  var flavorCount = root.querySelectorAll('[data-flavor]').length;
-  if (!galleryGroup || !galleryGroup.children.length || !flavorCount ||
-      flavorCount !== root.querySelectorAll('.flavor-panel').length ||
-      !root.querySelector('.motion') || !root.querySelector('.hero-art') ||
-      !root.querySelector('.texture-photo')) return false;
+function initialize(root) {
+  initializeFlavors(root);
+  initializeEffects(root);
+}
 
-  var galleryCopy = galleryGroup.cloneNode(true);
-  galleryCopy.setAttribute('aria-hidden', 'true');
-  galleryCopy.querySelectorAll('img').forEach(function (image) { image.alt = ''; });
-  galleryGroup.after(galleryCopy);
-  initialize(root);
-  return true;
-}
-if (!start()) {
-  var observer = new MutationObserver(function () {
-    if (start()) observer.disconnect();
+var rootSelector = '[id="kz-v3"]';
+document.querySelectorAll(rootSelector).forEach(initialize);
+// Imweb can insert the mobile copy after the desktop copy is already present.
+var observer = new MutationObserver(function (records) {
+  var roots = new Set();
+  records.forEach(function (record) {
+    if (!record.addedNodes.length) return;
+    var parentRoot = record.target.closest && record.target.closest(rootSelector);
+    if (parentRoot) roots.add(parentRoot);
+    record.addedNodes.forEach(function (node) {
+      if (node.nodeType !== 1) return;
+      if (node.matches(rootSelector)) roots.add(node);
+      node.querySelectorAll(rootSelector).forEach(function (root) { roots.add(root); });
+    });
   });
-  observer.observe(document.documentElement, {childList: true, subtree: true});
-  window.setTimeout(function () { observer.disconnect(); }, 20000);
-}
+  roots.forEach(function (root) { if (root.isConnected) initialize(root); });
+});
+observer.observe(document.documentElement, {childList: true, subtree: true});
 })();
 </script>
+
+
+
