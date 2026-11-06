@@ -96,7 +96,7 @@
 /* 상품정보: 원본 접이식 표 */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info {
   --kz-ink: #271d17;
-  --kz-cream: var(--kz-yellow-bg);
+  --kz-info-background: #fff;
   --kz-red: #d94720;
   --kz-gutter: clamp(18px, 4.8%, 84px);
   container: kz-product-info / inline-size;
@@ -111,7 +111,7 @@
   font-weight: 780; font-size: clamp(36px,5.6cqw,85px); line-height: 1; letter-spacing: -.08em; color: var(--kz-ink);
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-dot { color: var(--kz-red); }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info { display: grid; grid-template-columns: minmax(0,1fr); gap: clamp(28px,5cqw,78px); padding: clamp(56px,7cqw,110px) var(--kz-gutter); background: var(--kz-cream); }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info { display: grid; grid-template-columns: minmax(0,1fr); gap: clamp(28px,5cqw,78px); padding: clamp(56px,7cqw,110px) var(--kz-gutter); background: var(--kz-info-background); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-head p { margin-top: 15px; font-size: clamp(16px,1.45cqw,22px); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-list { width: min(100%, 820px); justify-self: center; min-width: 0; border-top: 1px solid var(--kz-ink); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-label { margin: 0; border-bottom: 1px solid #bfb399; }
