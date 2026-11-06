@@ -91,14 +91,14 @@
 			<br>두 가지 핵심 재료.</h2>
 		<div class="ingredients">
 			<article class="ingredient">
-				<div class="kz-asset" data-image-slot="milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-cutout-95c126ac.png" alt="부드럽게 겹쳐 쌓은 우유 베이스" class="fr-fic fr-dii"></div>
+				<div class="kz-ingredient-cutout" data-image-slot="milk-base"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-cutout-95c126ac.png" alt="부드럽게 겹쳐 쌓은 우유 베이스" class="fr-fic fr-dii"></div>
 
 				<h3>진한 우유 베이스</h3>
 
 				<p>고소한 풍미와 크리미한 질감의 스프레드 베이스.</p>
 			</article>
 			<article class="ingredient">
-				<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/22.png" alt="가느다란 카다이프" class="fr-fic fr-dii"></div>
+				<div class="kz-ingredient-cutout"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-kataifi-cutout-af0e7e6a.png" alt="소복하게 쌓인 구운 카다이프" class="fr-fic fr-dii"></div>
 
 				<h3>카다이프</h3>
 

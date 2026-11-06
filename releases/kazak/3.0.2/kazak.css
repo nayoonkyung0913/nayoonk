@@ -180,8 +180,8 @@
   align-content: start;
   gap: 12px;
   padding: clamp(16px, 3cqw, 34px);
-  background: #fff6d4;
-  border-top: 3px solid var(--ink);
+  background: transparent;
+  border: 0;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card h3,
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card h3,
@@ -233,8 +233,7 @@
   max-width: none;
   aspect-ratio: 4 / 3;
   overflow: hidden;
-  border-radius: clamp(10px, 2cqw, 24px);
-  background: #fff6da;
+  background: transparent;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient img { transition: transform .6s cubic-bezier(.2,.7,.25,1); }
 @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
@@ -471,3 +470,22 @@
 @container kz-detail (max-width: 700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps { grid-template-columns: minmax(0,1fr); gap: 32px; max-width: 500px; }
 }
+
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .kz-ingredient-cutout {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: transparent;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .kz-ingredient-cutout > img {
+  position: static;
+  display: block;
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+/* Balance the visible ingredient area, accounting for each PNG's clear edges. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout[data-image-slot="milk-base"] > img { width: 70%; }
