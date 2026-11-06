@@ -527,10 +527,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card { grid-column:auto; animation:none; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset { aspect-ratio:4 / 5; max-height:37svh; }
   @container kz-detail (max-width:760px) {
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {grid-template-columns:repeat(6,minmax(0,1fr));}
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card {grid-column:span 2;}
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card:nth-child(n+4) {grid-column:span 3;}
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-asset {aspect-ratio:1.5; max-height:14svh;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70cqw;width:max-content;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card {grid-column:auto;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card:nth-child(n+4) {grid-column:auto;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-asset {aspect-ratio:1.5; max-height:34svh;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy {padding:6px;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy h3 {font-size:clamp(16px,4.2cqw,23px);}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy p {margin-top:4px;font-size:13px;line-height:1.35;}
@@ -584,4 +584,17 @@
   clip-path: inset(0 0 0 83.96%);
   transform-origin: 84% 50%;
   transform: translate(-48%, -60%) scaleX(2.2);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-pistachio-panorama-"] {
+  width:109%;
+  top:calc(50% + clamp(10px,1.8svh,20px));
+  transform:translate(-18%,-53%);
+}
+@container kz-detail (max-width:760px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-rail-line {display:block;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-rail-title {text-align:center;font-size:clamp(32px,9cqw,60px);}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-grid {
+    display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70cqw;overflow-x:auto;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-card {grid-column:auto;}
 }
