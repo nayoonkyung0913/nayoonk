@@ -493,8 +493,11 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout[data-image-slot="milk-base"] > img { width: 70%; }
 
 /* Full spoon, ingredient detail, and scroll-driven flavor tasting strip. */
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll .kz-spoon-image { width:min(90%,1400px,146svh); aspect-ratio:auto }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img { object-fit:contain; max-height:52svh }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage .title {position:absolute;top:clamp(16px,5svh,64px);left:0;z-index:1}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll .kz-spoon-image {position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;margin:0;pointer-events:none}
+/* The visible cream mound is centered at (24%, 61%) in this PNG. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img {position:absolute;left:50%;top:50%;width:clamp(112%,176svh,178%);max-width:none;height:auto;max-height:none;transform:translate(-24%,-61%)}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-spoon-scroll .kz-spoon-stage {height:90svh;min-height:400px;padding:0}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient h3, :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 {font-weight:800}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 {border:0; padding-top:0}
 @media (hover:hover) and (pointer:fine) {
