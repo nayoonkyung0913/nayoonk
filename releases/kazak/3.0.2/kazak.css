@@ -507,9 +507,16 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story h3.kz-rail-title {font-weight:800;font-size:clamp(50px,8cqw,112px);line-height:1.04;letter-spacing:-.065em;margin:0}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .eyebrow {margin-bottom:.8em}
 @media (min-height:560px) and (prefers-reduced-motion:no-preference) {
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story {height:340svh}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story {
+    height:340svh;
+    width:100cqw;
+    margin-inline:calc((100% - 100cqw) / 2);
+  }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-stage {position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:clip}
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-title {transform:translateX(var(--heading-x,0px))}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-stage > :is(.kz-rail-title, .eyebrow) {
+    text-align:left;
+    transform:translateX(max(0px,var(--rail-x,0px)));
+  }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {display:flex;width:max-content;gap:clamp(12px,2cqw,32px);margin:clamp(15px,3svh,36px) 0 0;transform:translateX(var(--rail-x,0px))}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card {width:min(72cqw,39rem,62svh);flex:none;animation:none}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset {max-height:35svh}
@@ -540,4 +547,24 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card:last-child {
     scroll-snap-align: end;
   }
+}
+/* Keep the approved food photograph intact and lengthen only the silver neck. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"]) {
+  --studio-spoon-width: 88%;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-spoon-texture-studio-"] {
+  width: var(--studio-spoon-width);
+  clip-path: inset(0 16% 0 0);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"])::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--studio-spoon-width);
+  aspect-ratio: 3 / 2;
+  background: url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-spoon-texture-studio-223c194b.png") center / contain no-repeat;
+  clip-path: inset(0 0 0 83.96%);
+  transform-origin: 84% 50%;
+  transform: translate(-48%, -60%) scaleX(1.8);
 }

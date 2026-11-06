@@ -183,8 +183,8 @@
         const progress = clamp(-rect.top / (rect.height - stage.offsetHeight));
         const start = stage.clientWidth;
         const end = Math.min(0, start - rail.scrollWidth);
-        stage.style.setProperty("--heading-x", (start * (1 - clamp(progress / .48))) + "px");
-        stage.style.setProperty("--rail-x", (start + (end - start) * clamp(progress / .95)) + "px");
+        const railX = start + (end - start) * clamp(progress / .95);
+        stage.style.setProperty("--rail-x", railX + "px");
       }
       recipes.forEach((image, i) => {
         const progress = clamp((height - boxes[i].top) / (height + boxes[i].height));
