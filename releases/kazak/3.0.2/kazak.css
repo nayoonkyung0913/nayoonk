@@ -295,14 +295,6 @@
   margin-inline: auto;
   padding-inline-end: 24%;
 }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-visual::before {
-  content: "";
-  position: absolute;
-  inset: 4% 4% 5% 9%;
-  border-radius: 49% 51% 44% 56% / 56% 42% 58% 44%;
-  background: radial-gradient(ellipse at 38% 28%, #fffbebcf, #fff9df66 57%, #fff9df00 73%);
-  pointer-events: none;
-}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel .kz-flavor-visual .photo { width: 100%; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-garnish {
   position: absolute;
@@ -310,10 +302,7 @@
   inset: auto 0 -3% auto;
   width: 53%;
   aspect-ratio: 1;
-  border-radius: 50%;
-  border: 1px solid #fff9e9;
-  background: radial-gradient(circle at 38% 28%, #fffbebd9, #fff7d15e 75%);
-  box-shadow: 0 10px 30px #39251529, inset 0 0 0 5px #fff9e854;
+  border: 1px solid transparent;
   pointer-events: none;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-garnish > img {
