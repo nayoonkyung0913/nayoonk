@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jua&display=swap");
+@font-face { font-family:"Allura"; src:url("fonts/allura.ttf") format("truetype"); font-weight:400; font-display:swap }
+@font-face { font-family:"Gowun Batang"; src:url("fonts/gowunbatang.ttf") format("truetype"); font-weight:700; font-display:swap }
 @font-face { font-family: "Kazak Pretendard 3.0.2"; src: url("../3.0.1/pretendard-variable.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 /* Only the marked description extends beyond the shop's content column. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] {
@@ -489,3 +491,28 @@
 }
 /* Balance the visible ingredient area, accounting for each PNG's clear edges. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout[data-image-slot="milk-base"] > img { width: 70%; }
+
+/* Full spoon, ingredient detail, and scroll-driven flavor tasting strip. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll .kz-spoon-image { width:min(90%,1400px,146svh); aspect-ratio:auto }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img { object-fit:contain; max-height:52svh }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient h3, :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 {font-weight:800}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 {border:0; padding-top:0}
+@media (hover:hover) and (pointer:fine) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout > img {transition:transform .32s ease; transform-origin:center bottom}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout:hover > img {transform:scale(1.12)}
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story h3.kz-rail-title {font-weight:800;font-size:clamp(50px,8cqw,112px);line-height:1.04;letter-spacing:-.065em;margin:0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .eyebrow {margin-bottom:.8em}
+@media (min-height:560px) and (prefers-reduced-motion:no-preference) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story {height:340svh}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-stage {position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:clip}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-title {transform:translateX(var(--heading-x,0px))}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {display:flex;width:max-content;gap:clamp(12px,2cqw,32px);margin:clamp(15px,3svh,36px) 0 0;transform:translateX(var(--rail-x,0px))}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card {width:min(72cqw,39rem,62svh);flex:none;animation:none}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset {max-height:35svh}
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-list {width:min(90%,1420px);margin-inline:auto}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-script {font:400 clamp(64px,8cqw,122px)/1.02 "Allura","Segoe Script",cursive;letter-spacing:-.025em}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe-card .kz-recipe-script {font-size:clamp(50px,6.3cqw,94px)}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .title, :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe h3 {font-family:"Gowun Batang","Batang",serif;font-weight:700}
+@media(prefers-reduced-motion:reduce){:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout > img {transition:none}}

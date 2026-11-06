@@ -54,6 +54,9 @@
   function mount(root) {
     const get = s => root.querySelector(s);
     const hero = get(".hero"), art = get(".hero-art"), photo = get(".texture-photo");
+    const story = root.querySelector(".kz-flavor-story");
+    const stage = story?.querySelector(".kz-rail-stage");
+    const rail = story?.querySelector(".kz-making-grid");
     const spoonScene = photo?.closest(".kz-spoon-scroll");
     const track = get(".gallery-track"), flavors = get(".flavors");
     const belt = track?.querySelector(".gallery-belt");
@@ -168,12 +171,20 @@
       if (spoonScene) {
         const scene = spoonScene.getBoundingClientRect();
         const stage = photo.parentElement.getBoundingClientRect();
-        const progress = clamp(-scene.top / Math.max(1, scene.height - stage.height));
+        const progress = clamp(-scene.top / Math.max(1, (scene.height - stage.height) * .82));
         const travel = (scene.width + t.width) / 2;
         photo.style.setProperty("--spoon-x", (travel * (1 - progress)).toFixed(2) + "px");
       } else {
         const p = clamp((height * .95 - t.top) / (height * .60));
         photo.style.setProperty("--ts", String(.62 + p * (2 - p) * .46));
+      }
+      if (stage && rail && stage.offsetHeight < story.offsetHeight) {
+        const rect = story.getBoundingClientRect();
+        const progress = clamp(-rect.top / (rect.height - stage.offsetHeight));
+        const start = stage.clientWidth;
+        const end = Math.min(0, start - rail.scrollWidth);
+        stage.style.setProperty("--heading-x", (start * (1 - clamp(progress / .48))) + "px");
+        stage.style.setProperty("--rail-x", (start + (end - start) * clamp(progress / .95)) + "px");
       }
       recipes.forEach((image, i) => {
         const progress = clamp((height - boxes[i].top) / (height + boxes[i].height));

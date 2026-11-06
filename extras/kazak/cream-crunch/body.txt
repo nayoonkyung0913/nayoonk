@@ -80,7 +80,7 @@
 	<section class="texture kz-spoon-scroll" id="kz-texture" aria-labelledby="kz-spoon-title">
         <div class="kz-spoon-stage">
             <h2 class="title" id="kz-spoon-title">크림 사이사이,<br>바삭한 카다이프.</h2>
-            <div class="texture-photo kz-spoon-image"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-pistachio-spoon.png" alt="피스타치오 크림에 감싸인 카다이프 조각이 담긴 스푼" width="1672" height="941"></div>
+            <div class="texture-photo kz-spoon-image"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-long-spoon-b5fd038d.png" alt="피스타치오 크림에 감싸인 카다이프 조각이 담긴 스푼" width="1774" height="887"></div>
         </div>
     </section>
 	<section aria-labelledby="kz-core-title" class="wrap pad center kz-core" id="kz-ingredients">
@@ -130,11 +130,11 @@
 					<h3><small>03 /&nbsp;</small>재료 배합</h3>
 				</article>
 			</div>
-			<div class="kz-making">
+			<div class="kz-making kz-flavor-story"><div class="kz-rail-stage">
 
 				<p class="eyebrow" lang="en">FIVE FLAVORS, ONE CRUNCH</p>
 
-				<h3>같은 바삭함, 다섯 가지 풍미.</h3>
+				<h3 class="kz-rail-title">같은 바삭함, 다섯 가지 풍미.</h3>
 				<div class="kz-making-grid">
 					<article class="kz-making-card" style="--kz-making-color:#e3e8bb;">
 						<div class="kz-asset" data-image-slot="making-pistachio"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-pistachio.png" alt="피스타치오 재료 배합 컷" class="fr-fic fr-dii"></div>
@@ -181,7 +181,7 @@
 							<p>우유 베이스 <span>+</span> 카다이프 <span>+</span> 계피가 들어간 쿠키</p>
 						</div>
 					</article>
-				</div></div></div>
+				</div></div></div></div>
 	</section>
 	<div aria-hidden="true" class="kz-milk-wave">
 		<br>
