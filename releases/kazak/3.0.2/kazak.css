@@ -550,21 +550,23 @@
 }
 /* Keep the approved food photograph intact and lengthen only the silver neck. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"]) {
-  --studio-spoon-width: 88%;
+  --studio-spoon-width: 78%;
+  --studio-spoon-top: calc(50% + clamp(10px, 1.8svh, 20px));
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-spoon-texture-studio-"] {
   width: var(--studio-spoon-width);
+  top: var(--studio-spoon-top);
   clip-path: inset(0 16% 0 0);
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"])::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: var(--studio-spoon-top);
   left: 50%;
   width: var(--studio-spoon-width);
   aspect-ratio: 3 / 2;
   background: url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-spoon-texture-studio-223c194b.png") center / contain no-repeat;
   clip-path: inset(0 0 0 83.96%);
   transform-origin: 84% 50%;
-  transform: translate(-48%, -60%) scaleX(1.8);
+  transform: translate(-48%, -60%) scaleX(2);
 }
