@@ -699,3 +699,20 @@
     font-size: min(8.5cqw,40px);
   }
 }
+
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {
+  display: grid;
+  grid-template-columns: 59% 41%;
+  align-items: end;
+  padding: 0;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair > .kz-jar-small {
+  /* Align the visible bases inside the two differently padded transparent PNGs. */
+  transform: translateY(8.5%);
+}
