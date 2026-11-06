@@ -636,3 +636,7 @@
     height: clamp(245px, 23cqw, 340px);
   }
 }
+/* Match the cinnamon spread's beige tone while keeping its photographed texture. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card [data-image-slot="making-cinnamon"] > img {
+  filter: saturate(.24) contrast(.94) brightness(1.2);
+}
