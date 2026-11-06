@@ -103,19 +103,18 @@
 				<br>특별한 한 스푼까지.</h2>
 			<div class="process-grid">
 				<article>
+					<div class="photo kz-asset" data-image-slot="process-milk-base"><span class="kz-asset-placeholder">우유 베이스 준비 컷</span></div>
+					<h3><small>01 /&nbsp;</small>우유 베이스 준비</h3>
+				</article>
+				<article>
 					<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/4.png" alt="카다이프 준비" class="fr-fic fr-dii"></div>
 
-					<h3><small>01 /&nbsp;</small>카다이프 준비</h3>
+					<h3><small>02 /&nbsp;</small>카다이프 준비</h3>
 				</article>
 				<article>
 					<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/5.png" alt="재료 배합" class="fr-fic fr-dii"></div>
 
-					<h3><small>02 /&nbsp;</small>재료 배합</h3>
-				</article>
-				<article>
-					<div class="photo"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/6.png" alt="카작 완성" class="fr-fic fr-dii"></div>
-
-					<h3><small>03 /&nbsp;</small>카작 완성</h3>
+					<h3><small>03 /&nbsp;</small>재료 배합</h3>
 				</article>
 			</div>
       <div class="kz-making">
@@ -161,9 +160,7 @@
       </div>
 		</div>
 	</section>
-  <div class="kz-milk-wave" aria-hidden="true">
-    <div class="kz-asset " data-image-slot="milk-wave"><span class="kz-asset-placeholder">우유빛 물결 가로 배너</span></div>
-  </div>
+  <div class="kz-milk-wave" aria-hidden="true"></div>
 	<div aria-hidden="true" class="ticker">
 		<div class="ticker-run"><span>JUST SPREAD. ENJOY THE CRUNCH. ✳&nbsp;</span><span>JUST SPREAD. ENJOY THE CRUNCH. ✳&nbsp;</span><span>JUST SPREAD. ENJOY THE CRUNCH. ✳&nbsp;</span><span>JUST SPREAD. ENJOY THE CRUNCH. ✳&nbsp;</span></div></div>
   <section class="recipes" id="kz-recipes" aria-labelledby="kz-recipes-title">
