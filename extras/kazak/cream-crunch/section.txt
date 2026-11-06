@@ -2,7 +2,7 @@
   <h2 style="margin:0 6% clamp(16px,3vw,40px); color:inherit; font-family:inherit; font-size:clamp(32px,5.5vw,72px); font-weight:800; letter-spacing:-0.055em; line-height:1.15; text-align:left;">
     크림 사이사이,<br>바삭한 카다이프.
   </h2>
-  <img src="https://nayoonkyung0913.github.io/nayoonk/extras/kazak/cream-crunch/kazak-pistachio-spoon.png"
+  <img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-pistachio-spoon.png"
        alt="피스타치오 크림에 감싸인 카다이프 조각이 보이는 스푼 한 가득"
        width="1672" height="941" loading="lazy" decoding="async"
        style="display:block; width:100%; max-width:1120px; height:auto; margin:0 0 0 auto; border:0;">
