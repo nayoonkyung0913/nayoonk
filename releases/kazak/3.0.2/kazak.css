@@ -326,7 +326,42 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) {
     grid-template-columns: minmax(0, 56fr) minmax(0, 44fr);
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3 { padding-inline: clamp(24px, 7cqw, 130px); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process {
+    --kz-process-inset: clamp(24px, 5.5cqw, 130px);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process > .wrap > :is(.eyebrow, .title),
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > :is(.eyebrow, h3) {
+    margin-inline-start: calc(var(--kz-process-inset) + (100% - 100cqw) / 2);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3 { padding-inline: var(--kz-process-inset); }
+
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] :is(.kz-size-comparison, .recipes) > .wrap {
+    width: min(1720px, calc(100% - 2 * clamp(18px, 3.2cqw, 60px)));
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card { padding: clamp(12px, 2cqw, 32px); }
+
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture-photo {
+    width: min(100%, 1220px);
+    height: clamp(320px, 81svh, 820px);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture-photo .photo { width: 100%; height: 94%; }
+
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-grid,
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list {
+    width: 100cqw;
+    margin-inline: calc((100% - 100cqw) / 2);
+  }
+
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(odd) {
+    grid-template-columns: minmax(0, 54fr) minmax(0, 46fr);
+    gap: 0;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(even) {
+    grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+    gap: 0;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe-card { margin-inline: clamp(22px, 5.5cqw, 100px); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe > .kz-asset img { object-fit: contain; }
 }
 
 @container kz-detail (min-width: 1100px) {
