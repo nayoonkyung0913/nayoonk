@@ -665,26 +665,3 @@
   inset: auto;
   width: 100%;
 }
-
-@container kz-detail (min-width:1024px) {
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps {
-    --step-gap: clamp(44px,4.6cqw,72px);
-    column-gap: var(--step-gap);
-  }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps article {
-    position: relative;
-  }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps article:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: calc(100% + 8px);
-    top: 0;
-    margin-top: 37.5%;
-    transform: translateY(-50%);
-    width: calc(var(--step-gap) - 16px);
-    height: 12px;
-    background: #e94619;
-    clip-path: polygon(0 42%,calc(100% - 8px) 42%,calc(100% - 12px) 0,calc(100% - 9px) 0,100% 50%,calc(100% - 9px) 100%,calc(100% - 12px) 100%,calc(100% - 8px) 58%,0 58%);
-    pointer-events: none;
-  }
-}
