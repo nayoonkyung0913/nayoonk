@@ -215,7 +215,7 @@
 					</div>
 				</article>
 				<article class="recipe">
-					<div class="kz-asset photo" data-image-slot="recipe-waffle" data-recipe-direction="1"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/recipe-waffle.png" alt="크림과 카작을 채운 반달 와플" class="fr-fic fr-dii"></div>
+					<div class="kz-asset photo" data-image-slot="recipe-waffle" data-recipe-direction="1"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-waffle-pistachio-8e570448.png" alt="피스타치오 카다이프 크림을 채운 반달 와플" class="fr-fic fr-dii"></div>
 					<div class="recipe-card">
 
 						<p class="kz-recipe-script" lang="en">with waffle</p>

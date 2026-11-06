@@ -615,7 +615,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-head .title {margin:.12em 0 0;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-swipe {display:none;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card {text-align:center;align-items:start;justify-items:center;gap:0;padding:10px 8px;}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h3 {font-size:clamp(60px,7.6cqw,108px);font-weight:850;letter-spacing:-.075em;line-height:1;color:#a33212;white-space:nowrap;}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h3 {font-size:clamp(60px,7.6cqw,108px);font-weight:850;letter-spacing:-.075em;line-height:1;color:#e94619;white-space:nowrap;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h3 small {font-size:.43em;margin-left:.1em;letter-spacing:-.04em;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {width:100%;height:clamp(150px,19cqw,260px);margin:12px 0 16px;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h4 {font-size:clamp(20px,2.1cqw,30px);font-weight:800;line-height:1.25;}
@@ -634,5 +634,22 @@
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {
     height: clamp(245px, 23cqw, 340px);
+  }
+}
+
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors :is(.flavor-panel h3, .tabbar button) {
+  font-weight:800;
+}
+@container kz-detail (min-width:1024px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel {
+    grid-template-columns:minmax(0,1.17fr) minmax(0,1fr);
+    column-gap:6%;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-flavor-visual {
+    max-width:650px;
+    padding-inline-end:10%;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel .kz-flavor-visual .photo {
+    max-width:590px;
   }
 }
