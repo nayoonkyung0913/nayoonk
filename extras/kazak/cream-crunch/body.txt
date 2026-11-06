@@ -167,7 +167,7 @@
 						</div>
 					</article>
 					<article class="kz-making-card" style="--kz-making-color:#ecd1a7;">
-						<div class="kz-asset" data-image-slot="making-cinnamon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/making-cinnamon.png" alt="시나몬쿠키 재료 배합 컷" class="fr-fic fr-dii"></div>
+						<div class="kz-asset" data-image-slot="making-cinnamon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-cinnamon-caramel-5d23fb31.png" alt="시나몬쿠키 재료 배합 컷" class="fr-fic fr-dii"></div>
 						<div class="kz-making-copy">
 
 							<h3>시나몬쿠키</h3>

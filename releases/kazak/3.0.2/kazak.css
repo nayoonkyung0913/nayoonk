@@ -609,7 +609,7 @@
     transform:translate(-48%,-60%);
   }
 }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {background:#fff;color:#3c281a;}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {background:#ffffe6;color:#3c281a;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide > .wrap {width:min(92%,1320px);margin-inline:auto;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-head {text-align:center;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-head .title {margin:.12em 0 0;}
@@ -635,8 +635,4 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {
     height: clamp(245px, 23cqw, 340px);
   }
-}
-/* Match the cinnamon spread's beige tone while keeping its photographed texture. */
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card [data-image-slot="making-cinnamon"] > img {
-  filter: saturate(.24) contrast(.94) brightness(1.2);
 }
