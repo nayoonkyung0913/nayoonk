@@ -519,3 +519,5 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe-card .kz-recipe-script {font-size:clamp(50px,6.3cqw,94px)}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .title, :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe h3 {font-family:"Gowun Batang","Batang",serif;font-weight:700}
 @media(prefers-reduced-motion:reduce){:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout > img {transition:none}}
+/* Center the cream on the new spoon photograph while showing the rim. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-spoon-texture-"] { width:104%; transform:translate(-48%,-60%); }
