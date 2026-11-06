@@ -47,7 +47,39 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture-photo .photo{width:92%;height:90%;aspect-ratio:auto;background-size:contain;background-position:center bottom;transform:scale(var(--ts,1));transform-origin:center bottom;will-change:transform}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture h2,:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture .eyebrow{position:relative;z-index:2}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredients{display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:60px;align-items:center}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient h3{font-size:25px;margin-top:20px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient strong{font-size:60px;letter-spacing:-.06em;color:var(--orange)}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient p{font-size:15px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .note{font-size:12px;opacity:.65;margin-top:25px}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{background:#ffd9c7;padding:190px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;margin-top:50px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid .photo{aspect-ratio:16/10;background-size:cover}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3{font-size:22px;margin-top:18px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid small{font-size:12px;letter-spacing:.1em}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{background:#ffd9c7;padding:190px 0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid {
+  display: grid;
+  gap: clamp(30px, 5.2cqw, 76px);
+  margin-top: clamp(30px, 5cqw, 64px);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(18px, 4cqw, 58px);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid .photo {
+  grid-area: 1 / 2;
+  aspect-ratio: 16 / 10;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3 {
+  grid-area: 1 / 1;
+  font-size: clamp(22px, 3.3cqw, 47px);
+  line-height: 1.14;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) .photo { grid-column: 1; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) h3 { grid-column: 2; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: clamp(12px, 1.4cqw, 18px);
+  letter-spacing: .12em;
+}
+
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ticker{overflow:hidden;background:var(--red);color:var(--cream);padding:23px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ticker-run{display:flex;width:max-content;animation:kazak-3-0-2-ticker 30s linear infinite}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ticker span{font-size:clamp(30px,5vw,60px);font-weight:800;letter-spacing:-.04em;white-space:nowrap;padding-right:50px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ticker:hover .ticker-run,:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .ticker-run{animation-play-state:paused}@keyframes kazak-3-0-2-ticker{to{transform:translateX(-50%)}}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes{padding:100px 0;background:#fff8da;background-image:radial-gradient(#e6c4a3 .8px,transparent .8px);background-size:20px 20px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe{display:grid;grid-template-columns:1.1fr 1fr;gap:9%;align-items:center;margin-top:80px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe>.photo{aspect-ratio:4/3;background-size:cover;background-position:center;transform:rotate(var(--kz-recipe-angle,0deg));transform-origin:center}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .recipe>.photo{transform:none}
@@ -107,7 +139,7 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info {grid-template-columns:1fr;}
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .enter{animation:kazak-3-0-2-enter .8s ease-out both}@keyframes kazak-3-0-2-enter{from{opacity:.25;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
-@container kz-detail (max-width: 700px) {:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .pad{padding:70px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero{height:860px;min-height:0;max-height:none}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-type{top:14%;font-size:18cqw}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-art{top:36%;width:235px;transform:translateY(clamp(0px,var(--hy,0px),30px)) rotate(var(--hr,-7deg))}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-caption{bottom:5%}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .intro{padding:70px 6% 40px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .title{font-size:clamp(34px,9.5cqw,46px)}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .copy{font-size:18px;line-height:1.65}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-card{width:72cqw}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery{padding-bottom:45px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredients{grid-template-columns:1fr;gap:45px;margin-top:35px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient .photo{max-width:380px;margin:auto}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient strong{font-size:48px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid{grid-template-columns:1fr;gap:35px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3{font-size:25px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe,:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe:nth-child(odd){grid-template-columns:1fr;gap:32px;margin-top:52px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe:nth-child(odd) .photo{order:0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe-card{padding:27px;width:90%;margin:auto}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .tabbar{gap:7px;margin:25px auto 35px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .tabbar button{font-size:16px;min-height:44px;padding:9px 14px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel{grid-template-columns:1fr;gap:35px;text-align:center}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel .photo{width:80%;max-width:340px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel h3{font-size:40px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .brandbar{font-size:12px;letter-spacing:.08em;align-items:center;gap:8px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .brandbar b{font-size:23px}
+@container kz-detail (max-width: 700px) {:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .pad{padding:70px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero{height:860px;min-height:0;max-height:none}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-type{top:14%;font-size:18cqw}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-art{top:36%;width:235px;transform:translateY(clamp(0px,var(--hy,0px),30px)) rotate(var(--hr,-7deg))}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-caption{bottom:5%}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .intro{padding:70px 6% 40px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .title{font-size:clamp(34px,9.5cqw,46px)}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .copy{font-size:18px;line-height:1.65}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-card{width:72cqw}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery{padding-bottom:45px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredients{grid-template-columns:1fr;gap:45px;margin-top:35px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient .photo{max-width:380px;margin:auto}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient strong{font-size:48px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe,:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe:nth-child(odd){grid-template-columns:1fr;gap:32px;margin-top:52px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe:nth-child(odd) .photo{order:0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipe-card{padding:27px;width:90%;margin:auto}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors{padding:65px 0}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .tabbar{gap:7px;margin:25px auto 35px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .tabbar button{font-size:16px;min-height:44px;padding:9px 14px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel{grid-template-columns:1fr;gap:35px;text-align:center}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel .photo{width:80%;max-width:340px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel h3{font-size:40px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .brandbar{font-size:12px;letter-spacing:.08em;align-items:center;gap:8px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .brandbar b{font-size:23px}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .eyebrow{font-size:15px;letter-spacing:.10em}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-caption h1{font-size:clamp(24px,6.5cqw,31px)}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-caption a{font-size:14px}
@@ -216,43 +248,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-copy { padding: 20px; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-copy p { margin-top: 8px; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-copy p span { padding: 0 .12em; }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave {
-  position: relative;
-  isolation: isolate;
-  overflow: hidden;
-  height: clamp(132px, 24cqw, 370px);
-  background: linear-gradient(174deg, #d8c6aa, #f6e9d2 38%, #fff9ec);
-}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave::before,
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave::after {
-  content: "";
-  position: absolute;
-  width: 142%;
-  height: 115%;
-  left: -21%;
-  border-radius: 48% 54% 43% 56% / 43% 51% 42% 57%;
-  animation: kazak-3-0-2-milk-drift 10s ease-in-out infinite alternate;
-}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave::before {
-  top: 7%;
-  background: radial-gradient(ellipse at 36% 12%, #fffdf8 5%, #fcf4e3 42%, #e6d7bd 79%);
-  box-shadow: 0 -7px 22px #fff9, 0 10px 26px #8b6d4b28;
-  transform: rotate(-6deg);
-}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave::after {
-  top: 38%;
-  background: radial-gradient(ellipse at 70% 12%, #fffdf6 14%, #f4e6cd 60%, #d8c6a8 100%);
-  box-shadow: 0 -5px 12px #fff8, 0 -13px 30px #8c6c4940;
-  transform: rotate(6deg);
-  animation-duration: 13s;
-  animation-direction: alternate-reverse;
-}
-@keyframes kazak-3-0-2-milk-drift {
-  from { translate: -5% 2%; rotate: -3deg; }
-  to { translate: 5% -7%; rotate: 3deg; }
-}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-milk-wave::before,
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-milk-wave::after { animation-play-state: paused; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-milk-wave { display: none !important; }
 
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-script {
   font-family: "Caveat", "Brush Script MT", "Segoe Script", cursive;
@@ -326,6 +322,19 @@
 }
 
 @container kz-detail (max-width: 700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article,
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(n) h3 { grid-area: 1 / 1; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(n) .photo {
+    grid-area: 2 / 1;
+    width: 92%;
+    justify-self: end;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) .photo { justify-self: start; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid small { display: inline; margin-inline-end: 6px; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-grid,
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-grid,
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon { grid-template-columns: minmax(0, 1fr); }
