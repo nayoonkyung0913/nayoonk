@@ -508,18 +508,33 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .eyebrow {margin-bottom:.8em}
 @media (min-height:560px) and (prefers-reduced-motion:no-preference) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story {
-    height:340svh;
+    height:220svh;
     width:100cqw;
     margin-inline:calc((100% - 100cqw) / 2);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-stage {position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:clip}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-rail-stage > :is(.kz-rail-title, .eyebrow) {
-    text-align:left;
-    transform:translateX(max(0px,var(--rail-x,0px)));
+    text-align:center;
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {display:flex;width:max-content;gap:clamp(12px,2cqw,32px);margin:clamp(15px,3svh,36px) 0 0;transform:translateX(var(--rail-x,0px))}
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card {width:min(72cqw,39rem,62svh);flex:none;animation:none}
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset {max-height:35svh}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:clamp(6px,1cqw,18px);
+    margin:clamp(12px,2.5svh,32px) 0 0;
+    transform:translateX(var(--rail-x,0px));
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card { grid-column:auto; animation:none; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset { aspect-ratio:4 / 5; max-height:37svh; }
+  @container kz-detail (max-width:760px) {
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {grid-template-columns:repeat(6,minmax(0,1fr));}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card {grid-column:span 2;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card:nth-child(n+4) {grid-column:span 3;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-asset {aspect-ratio:1.5; max-height:14svh;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy {padding:6px;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy h3 {font-size:clamp(16px,4.2cqw,23px);}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy p {margin-top:4px;font-size:13px;line-height:1.35;}
+  }
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-list {width:min(90%,1420px);margin-inline:auto}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-script {font:400 clamp(64px,8cqw,122px)/1.02 "Allura","Segoe Script",cursive;letter-spacing:-.025em}

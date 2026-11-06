@@ -181,9 +181,7 @@
       if (stage && rail && stage.offsetHeight < story.offsetHeight) {
         const rect = story.getBoundingClientRect();
         const progress = clamp(-rect.top / (rect.height - stage.offsetHeight));
-        const start = stage.clientWidth;
-        const end = Math.min(0, start - rail.scrollWidth);
-        const railX = start + (end - start) * clamp(progress / .95);
+        const railX = stage.clientWidth * (1 - clamp(progress / .9));
         stage.style.setProperty("--rail-x", railX + "px");
       }
       recipes.forEach((image, i) => {
