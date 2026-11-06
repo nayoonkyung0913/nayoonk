@@ -54,6 +54,7 @@
   function mount(root) {
     const get = s => root.querySelector(s);
     const hero = get(".hero"), art = get(".hero-art"), photo = get(".texture-photo");
+    const spoonScene = photo?.closest(".kz-spoon-scroll");
     const track = get(".gallery-track"), flavors = get(".flavors");
     const belt = track?.querySelector(".gallery-belt");
     const group = belt?.querySelector(':scope > .gallery-group:not([aria-hidden="true"])');
@@ -164,8 +165,16 @@
         art.style.setProperty("--hy", progress * 70 + "px");
         art.style.setProperty("--hr", (-7 + progress * 18) + "deg");
       }
-      const p = clamp((height * .95 - t.top) / (height * .60));
-      photo.style.setProperty("--ts", String(.62 + p * (2 - p) * .46));
+      if (spoonScene) {
+        const scene = spoonScene.getBoundingClientRect();
+        const stage = photo.parentElement.getBoundingClientRect();
+        const progress = clamp(-scene.top / Math.max(1, scene.height - stage.height));
+        const travel = (scene.width + t.width) / 2;
+        photo.style.setProperty("--spoon-x", (travel * (1 - progress)).toFixed(2) + "px");
+      } else {
+        const p = clamp((height * .95 - t.top) / (height * .60));
+        photo.style.setProperty("--ts", String(.62 + p * (2 - p) * .46));
+      }
       recipes.forEach((image, i) => {
         const progress = clamp((height - boxes[i].top) / (height + boxes[i].height));
         const angle = Math.sin(progress * 2 * Math.PI) * 20 * (Number(image.dataset.recipeDirection) || 0);

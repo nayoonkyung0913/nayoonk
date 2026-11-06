@@ -1,9 +1,6 @@
-<section aria-label="카작 카다이프의 식감" style="padding:clamp(40px,7vw,104px) 0 0;">
-  <h2 style="margin:0 6% clamp(16px,3vw,40px); color:inherit; font-family:inherit; font-size:clamp(32px,5.5vw,72px); font-weight:800; letter-spacing:-0.055em; line-height:1.15; text-align:left;">
-    크림 사이사이,<br>바삭한 카다이프.
-  </h2>
-  <img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-pistachio-spoon.png"
-       alt="피스타치오 크림에 감싸인 카다이프 조각이 보이는 스푼 한 가득"
-       width="1672" height="941" loading="lazy" decoding="async"
-       style="display:block; width:100%; max-width:1120px; height:auto; margin:0 0 0 auto; border:0;">
-</section>
+<section class="texture kz-spoon-scroll" id="kz-texture" aria-labelledby="kz-spoon-title">
+        <div class="kz-spoon-stage">
+            <h2 class="title" id="kz-spoon-title">크림 사이사이,<br>바삭한 카다이프.</h2>
+            <div class="texture-photo kz-spoon-image"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-pistachio-spoon.png" alt="피스타치오 크림에 감싸인 카다이프 조각이 담긴 스푼" width="1672" height="941"></div>
+        </div>
+    </section>

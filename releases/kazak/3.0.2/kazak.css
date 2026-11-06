@@ -410,3 +410,48 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > :is(.eyebrow, h3),
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon :is(.kz-recipe-script, h3),
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-head { text-align: center; }
+
+/* Pin the texture scene while scroll position moves its transparent spoon. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll {
+  height: 175svh;
+  background: #a52f0d;
+  color: #fff5d8;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(12px, 3vh, 38px);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage .title {
+  margin: 0 6%;
+  color: #fff5d8;
+  text-align: left;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll .kz-spoon-image {
+  display: block;
+  width: min(94%, 1440px, 118svh);
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  margin: 0 auto;
+  transform: translateX(var(--spoon-x, 0px));
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-spoon-image { transform: none; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-spoon-scroll { height: auto; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-spoon-stage { position: relative; height: auto; padding: clamp(45px,7vw,100px) 0; }
+@container kz-detail (max-width: 700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll { height: 135svh; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage { height: 78svh; }
+}
