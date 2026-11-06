@@ -554,8 +554,9 @@
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
-    scrollbar-width: thin;
+    scrollbar-width: none;
   }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-grid::-webkit-scrollbar { display: none; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card {
     scroll-snap-align: start;
   }
@@ -626,4 +627,12 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-swipe {display:block;margin:14px 0 0;font-size:14px;}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-grid {grid-auto-columns:80%;margin-top:24px;}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {height:clamp(155px,48cqw,240px);}
+}
+@container kz-detail (min-width: 1024px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {
+    padding-block: clamp(120px, 11cqw, 180px);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {
+    height: clamp(245px, 23cqw, 340px);
+  }
 }
