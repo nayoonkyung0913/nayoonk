@@ -49,7 +49,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture-photo .photo{width:92%;height:90%;aspect-ratio:auto;background-size:contain;background-position:center bottom;transform:scale(var(--ts,1));transform-origin:center bottom;will-change:transform}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture h2,:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture .eyebrow{position:relative;z-index:2}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredients{display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:60px;align-items:center}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient h3{font-size:25px;margin-top:20px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient strong{font-size:60px;letter-spacing:-.06em;color:var(--orange)}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .ingredient p{font-size:15px}:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .note{font-size:12px;opacity:.65;margin-top:25px}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{background:#e94619;color:#1b100c;padding:190px 0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process{background:#ffffe6;color:#1b100c;padding:190px 0}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid {
   display: grid;
   gap: clamp(30px, 5.2cqw, 76px);
@@ -96,7 +96,7 @@
 /* 상품정보: 원본 접이식 표 */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info {
   --kz-ink: #271d17;
-  --kz-info-background: #fff;
+  --kz-info-background: #ffffe6;
   --kz-red: #d94720;
   --kz-gutter: clamp(18px, 4.8%, 84px);
   container: kz-product-info / inline-size;
