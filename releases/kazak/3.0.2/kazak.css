@@ -109,9 +109,9 @@
   font-weight: 780; font-size: clamp(36px,5.6cqw,85px); line-height: 1; letter-spacing: -.08em; color: var(--kz-ink);
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-dot { color: var(--kz-red); }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info { display: grid; grid-template-columns: minmax(0,.77fr) minmax(0,1.23fr); gap: clamp(28px,5cqw,78px); padding: clamp(56px,7cqw,110px) var(--kz-gutter); background: var(--kz-cream); }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info { display: grid; grid-template-columns: minmax(0,1fr); gap: clamp(28px,5cqw,78px); padding: clamp(56px,7cqw,110px) var(--kz-gutter); background: var(--kz-cream); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-head p { margin-top: 15px; font-size: clamp(16px,1.45cqw,22px); }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-list { min-width: 0; border-top: 1px solid var(--kz-ink); }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-list { width: min(100%, 820px); justify-self: center; min-width: 0; border-top: 1px solid var(--kz-ink); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-label { margin: 0; border-bottom: 1px solid #bfb399; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-label summary {
   display: flex; justify-content: space-between; gap: 1em; align-items: center; padding: clamp(17px,2cqw,28px) 0;
@@ -333,11 +333,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process {
     --kz-process-inset: clamp(24px, 5.5cqw, 130px);
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process > .wrap > :is(.eyebrow, .title),
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > :is(.eyebrow, h3) {
-    margin-inline-start: calc(var(--kz-process-inset) + (100% - 100cqw) / 2);
-  }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3 { padding-inline: var(--kz-process-inset); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid .photo { width: 25cqw; justify-self: end; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) .photo { justify-self: start; }
+
 
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] :is(.kz-size-comparison, .recipes) > .wrap {
     width: min(1720px, calc(100% - 2 * clamp(18px, 3.2cqw, 60px)));
@@ -364,6 +363,8 @@
     grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
     gap: 0;
   }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe > .photo { width: 30cqw; justify-self: start; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe:nth-child(even) > .photo { justify-self: end; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe-card { margin-inline: clamp(22px, 5.5cqw, 100px); }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe > .kz-asset img { object-fit: contain; }
 }
@@ -401,3 +402,11 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-visual { width: 90%; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon .copy { margin-top: 12px; }
 }
+
+/* Center section headings independently of their cards and images. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .title,
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-caption,
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process > .wrap > .eyebrow,
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > :is(.eyebrow, h3),
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon :is(.kz-recipe-script, h3),
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-product-info .kz-info-head { text-align: center; }
