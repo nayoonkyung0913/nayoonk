@@ -715,7 +715,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair > .kz-jar-small {
   /* Align the visible bases inside the two differently padded transparent PNGs. */
   transform-origin: 50% 80.3%;
-  transform: translateY(8.5%) scale(1.06);
+  transform: translateY(8.5%) scale(1.17);
 }
 
 /* Center the ingredient, matched jars and flavor copy as one composition. */
