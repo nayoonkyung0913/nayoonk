@@ -464,7 +464,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps .photo { width: 100%; height: auto; aspect-ratio: 4/3; overflow: hidden; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps .photo img { width: 100%; height: 100%; object-fit: cover; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps h3 { display: flex; align-items: baseline; gap: .4em; border-top: 1px solid currentColor; padding: 12px 0 0; margin: 14px 0 0; font-size: clamp(20px, 2.1cqw, 32px); }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps small { font-size: .65em; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps small { font-size: .65em; color: #000; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making { margin-top: clamp(54px, 7cqw, 100px); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making > :is(h3,p) { text-align: center; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-centered .kz-making-grid { width: 100%; margin-inline: auto; }
