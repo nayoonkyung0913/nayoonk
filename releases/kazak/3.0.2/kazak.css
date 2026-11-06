@@ -598,3 +598,13 @@
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-card {grid-column:auto;}
 }
+/* Use the shorter studio photograph on narrow detail pages. */
+@container kz-detail (max-width:760px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-pistachio-panorama-"] {
+    content:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-spoon-texture-studio-223c194b.png");
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 2;
+    transform:translate(-48%,-60%);
+  }
+}
