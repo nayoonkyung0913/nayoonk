@@ -537,7 +537,7 @@
   }
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-list {width:min(90%,1420px);margin-inline:auto}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-script {font:400 clamp(64px,8cqw,122px)/1.02 "Allura","Segoe Script",cursive;letter-spacing:-.025em}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .kz-recipe-script {color:#e94619;font:400 clamp(64px,8cqw,122px)/1.02 "Allura","Segoe Script",cursive;letter-spacing:-.025em}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe-card .kz-recipe-script {font-size:clamp(50px,6.3cqw,94px)}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .title, :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .recipes .recipe h3 {font-family:"Gowun Batang","Batang",serif;font-weight:700}
 @media(prefers-reduced-motion:reduce){:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout > img {transition:none}}
@@ -651,5 +651,40 @@
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel .kz-flavor-visual .photo {
     max-width:590px;
+  }
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,32%);
+  gap: clamp(8px,1.4cqw,20px);
+  align-items: center;
+  text-align: left;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details .kz-flavor-garnish {
+  position: relative;
+  inset: auto;
+  width: 100%;
+}
+
+@container kz-detail (min-width:1024px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps {
+    --step-gap: clamp(44px,4.6cqw,72px);
+    column-gap: var(--step-gap);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps article {
+    position: relative;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-steps article:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: calc(100% + 8px);
+    top: 0;
+    margin-top: 37.5%;
+    transform: translateY(-50%);
+    width: calc(var(--step-gap) - 16px);
+    height: 12px;
+    background: #e94619;
+    clip-path: polygon(0 42%,calc(100% - 8px) 42%,calc(100% - 12px) 0,calc(100% - 9px) 0,100% 50%,calc(100% - 9px) 100%,calc(100% - 12px) 100%,calc(100% - 8px) 58%,0 58%);
+    pointer-events: none;
   }
 }

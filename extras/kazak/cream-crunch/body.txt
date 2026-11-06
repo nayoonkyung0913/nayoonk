@@ -291,9 +291,8 @@
 			<div class="flavor-stage">
 				<article aria-labelledby="kz-tab-0" class="flavor-panel" data-color="#e8edbd" id="kz-panel-0">
 					<div class="kz-flavor-visual">
-						<div class="photo" style="aspect-ratio:363/355;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/31.png" alt="피스타치오" class="fr-fic fr-dii"></div>
-						<div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-pistachio"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-pistachio.png" alt="피스타치오 알과 껍질" class="fr-fic fr-dii"></div></div>
-					<div>
+						<div class="photo" style="aspect-ratio:1;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-pistachio-cb69ed23.png" alt="피스타치오" class="fr-fic fr-dii"></div></div>
+                    <div class="kz-flavor-details"><div>
 
 						<p class="en">PISTACHIO</p>
 
@@ -301,14 +300,13 @@
 
 						<p class="copy">고소하고 진한 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p>
-					</div>
+						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+                        <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-pistachio"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-pistachio.png" alt="피스타치오 알과 껍질" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-1" class="flavor-panel" data-color="#ffd45e" id="kz-panel-1">
 					<div class="kz-flavor-visual">
-						<div class="photo" style="aspect-ratio:363/356;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/27.png" alt="황치즈" class="fr-fic fr-dii"></div>
-						<div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cheese"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cheese.png" alt="황치즈 큐브 연출" class="fr-fic fr-dii"></div></div>
-					<div>
+						<div class="photo" style="aspect-ratio:1;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-cheese-a41f7e3e.png" alt="황치즈" class="fr-fic fr-dii"></div></div>
+                    <div class="kz-flavor-details"><div>
 
 						<p class="en">YELLOW CHEESE</p>
 
@@ -316,14 +314,13 @@
 
 						<p class="copy">짭조름하고 깊은 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p>
-					</div>
+						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+                        <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cheese"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cheese.png" alt="황치즈 큐브 연출" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-2" class="flavor-panel" data-color="#f9c9d7" id="kz-panel-2">
 					<div class="kz-flavor-visual">
-						<div class="photo" style="aspect-ratio:363/355;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/29.png" alt="딸기우유" class="fr-fic fr-dii"></div>
-						<div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-strawberry"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-strawberry.png" alt="통딸기와 반으로 자른 딸기" class="fr-fic fr-dii"></div></div>
-					<div>
+						<div class="photo" style="aspect-ratio:1;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-strawberry-7bf8ab85.png" alt="딸기우유" class="fr-fic fr-dii"></div></div>
+                    <div class="kz-flavor-details"><div>
 
 						<p class="en">STRAWBERRY MILK</p>
 
@@ -331,14 +328,13 @@
 
 						<p class="copy">달콤하고 부드러운 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p>
-					</div>
+						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+                        <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-strawberry"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-strawberry.png" alt="통딸기와 반으로 자른 딸기" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-3" class="flavor-panel" data-color="#db9f7d" id="kz-panel-3">
 					<div class="kz-flavor-visual">
-						<div class="photo" style="aspect-ratio:363/350;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/30.png" alt="헤이즐넛" class="fr-fic fr-dii"></div>
-						<div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-hazelnut"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-hazelnut.png" alt="헤이즐넛과 코코아" class="fr-fic fr-dii"></div></div>
-					<div>
+						<div class="photo" style="aspect-ratio:1;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-hazelnut-941363d2.png" alt="헤이즐넛" class="fr-fic fr-dii"></div></div>
+                    <div class="kz-flavor-details"><div>
 
 						<p class="en">HAZELNUT</p>
 
@@ -346,14 +342,13 @@
 
 						<p class="copy">진하고 풍부한 초콜릿 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p>
-					</div>
+						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+                        <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-hazelnut"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-hazelnut.png" alt="헤이즐넛과 코코아" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-4" class="flavor-panel" data-color="#e6c5a2" id="kz-panel-4">
 					<div class="kz-flavor-visual">
-						<div class="photo" style="aspect-ratio:363/350;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/28.png" alt="시나몬쿠키" class="fr-fic fr-dii"></div>
-						<div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cinnamon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cinnamon.png" alt="시나몬쿠키와 시나몬 스틱 연출" class="fr-fic fr-dii"></div></div>
-					<div>
+						<div class="photo" style="aspect-ratio:1;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-cinnamon-7bd2ee3e.png" alt="시나몬쿠키" class="fr-fic fr-dii"></div></div>
+                    <div class="kz-flavor-details"><div>
 
 						<p class="en">CINNAMON COOKIE</p>
 
@@ -361,8 +356,8 @@
 
 						<p class="copy">향긋하고 달콤한 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p>
-					</div>
+						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+                        <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cinnamon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cinnamon.png" alt="시나몬쿠키와 시나몬 스틱 연출" class="fr-fic fr-dii"></div></div>
 				</article>
 			</div></div>
 	</section>
