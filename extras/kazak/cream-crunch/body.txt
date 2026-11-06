@@ -80,7 +80,7 @@
 	<section class="texture kz-spoon-scroll" id="kz-texture" aria-labelledby="kz-spoon-title">
         <div class="kz-spoon-stage">
             <h2 class="title" id="kz-spoon-title">크림 사이사이,<br>바삭한 카다이프.</h2>
-            <div class="texture-photo kz-spoon-image"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-spoon-texture-d5e60a15.png" alt="피스타치오 크림에 감싸인 카다이프 조각이 담긴 스푼" width="1536" height="1024"></div>
+            <div class="texture-photo kz-spoon-image"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-spoon-texture-studio-223c194b.png" alt="피스타치오 크림에 감싸인 카다이프 조각이 담긴 스푼" width="1536" height="1024"></div>
         </div>
     </section>
 	<section aria-labelledby="kz-core-title" class="wrap pad center kz-core" id="kz-ingredients">
