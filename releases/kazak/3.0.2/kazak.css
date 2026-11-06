@@ -243,6 +243,10 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient h3 { margin: 18px 0 8px; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making { margin-top: clamp(52px, 9cqw, 125px); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > h3 { font-size: clamp(28px, 5cqw, 58px); line-height: 1.18; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making > h3,
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card h3 { font-weight: 800; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .kz-making .enter { animation: none; }
+
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card { min-width: 0; background: var(--kz-making-color, #ffe8a4); }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card .kz-asset { aspect-ratio: 16 / 10; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-copy { padding: 20px; }
@@ -320,11 +324,11 @@
     margin-inline: calc((100% - 100cqw) / 2);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article {
-    grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     gap: 0;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) {
-    grid-template-columns: minmax(0, 56fr) minmax(0, 44fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process {
     --kz-process-inset: clamp(24px, 5.5cqw, 130px);
@@ -353,11 +357,11 @@
   }
 
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(odd) {
-    grid-template-columns: minmax(0, 54fr) minmax(0, 46fr);
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
     gap: 0;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(even) {
-    grid-template-columns: minmax(0, 46fr) minmax(0, 54fr);
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
     gap: 0;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe-card { margin-inline: clamp(22px, 5.5cqw, 100px); }
@@ -369,6 +373,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-grid .kz-making-card { grid-column: auto; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-copy { padding: 16px; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card h3 { font-size: clamp(20px, 2.2cqw, 29px); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card.enter:nth-child(2) { animation-delay: .06s; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card.enter:nth-child(3) { animation-delay: .12s; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card.enter:nth-child(4) { animation-delay: .18s; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-card.enter:nth-child(5) { animation-delay: .24s; }
 }
 
 @container kz-detail (max-width: 700px) {

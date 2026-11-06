@@ -205,7 +205,10 @@
     const enters = "IntersectionObserver" in window ? new IntersectionObserver(entries => {
       for (const e of entries) if (e.isIntersecting) { if (!paused()) e.target.classList.add("enter"); enters.unobserve(e.target); }
     }, { threshold: .15 }) : null;
-    if (enters) root.querySelectorAll(".ingredient,.process-grid article,.recipe-card").forEach(el => enters.observe(el));
+    if (enters) {
+      root.querySelectorAll(".ingredient, .process-grid article, .recipe-card, .kz-making > h3, .kz-making-card")
+        .forEach(el => enters.observe(el));
+    }
     root.classList.add("enhanced");
     root.dataset.ready = "1";
     choose(0, false);
