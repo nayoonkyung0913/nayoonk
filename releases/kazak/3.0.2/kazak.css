@@ -717,3 +717,37 @@
   transform-origin: 50% 80.3%;
   transform: translateY(8.5%) scale(1.06);
 }
+
+/* Center the ingredient, matched jars and flavor copy as one composition. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
+  grid-template-columns: minmax(0,20fr) minmax(0,48fr) minmax(0,32fr);
+  grid-template-areas: "ingredient jars description";
+  gap: clamp(10px,2cqw,28px);
+  width: min(100%,1160px);
+  margin-inline: auto;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair {
+  grid-area: jars;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details {
+  display: contents;
+  container-type: normal;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {
+  grid-area: description;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
+  grid-area: ingredient;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details h3 {
+  font-size: clamp(28px,4.7cqw,64px);
+}
+@container kz-detail (max-width:700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
+    grid-template-columns: minmax(0,30fr) minmax(0,70fr);
+    grid-template-areas: "ingredient jars" "description description";
+    row-gap: 22px;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {width:100%;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {text-align:center;}
+}
