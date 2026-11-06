@@ -493,7 +493,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-ingredient-cutout[data-image-slot="milk-base"] > img { width: 70%; }
 
 /* Full spoon, ingredient detail, and scroll-driven flavor tasting strip. */
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage .title {position:absolute;top:clamp(16px,5svh,64px);left:0;z-index:1}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-stage .title {position:absolute;top:calc(clamp(16px,5svh,64px) + 24px);left:0;z-index:1}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-scroll .kz-spoon-image {position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;margin:0;pointer-events:none}
 /* The visible cream mound is centered at (24%, 61%) in this PNG. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img {position:absolute;left:50%;top:50%;width:clamp(112%,176svh,178%);max-width:none;height:auto;max-height:none;transform:translate(-24%,-61%)}
@@ -609,7 +609,7 @@
     transform:translate(-48%,-60%);
   }
 }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {background:#ffffe6;color:#3c281a;}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {background:#ffffe6;color:#000;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide > .wrap {width:min(92%,1320px);margin-inline:auto;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-head {text-align:center;}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-head .title {margin:.12em 0 0;}
@@ -655,7 +655,7 @@
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details {
   display: grid;
-  grid-template-columns: minmax(0,1fr) minmax(0,42%);
+  grid-template-columns: minmax(0,1fr) minmax(0,48%);
   gap: clamp(8px,1.4cqw,20px);
   align-items: center;
   text-align: left;
@@ -679,5 +679,23 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavor-panel {
     grid-template-rows: max-content 1fr;
     align-content: start;
+  }
+}
+
+@container kz-detail (min-width:701px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details {
+    container-type: inline-size;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details h3 {
+    font-size: min(10cqw,68px);
+    white-space: nowrap;
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .tabbar button {
+    white-space: nowrap;
+  }
+}
+@container kz-detail (max-width:700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-details h3 {
+    font-size: min(8.5cqw,40px);
   }
 }
