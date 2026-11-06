@@ -301,7 +301,7 @@
 
 						<p class="copy">고소하고 진한 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+						<p class="note">KAZAK KATAIFI SPREAD</p>
 					</div>
 				</article>
 				<article aria-labelledby="kz-tab-1" class="flavor-panel" data-color="#ffd45e" id="kz-panel-1">
@@ -316,7 +316,7 @@
 
 						<p class="copy">짭조름하고 깊은 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+						<p class="note">KAZAK KATAIFI SPREAD</p>
 					</div>
 				</article>
 				<article aria-labelledby="kz-tab-2" class="flavor-panel" data-color="#f9c9d7" id="kz-panel-2">
@@ -331,7 +331,7 @@
 
 						<p class="copy">달콤하고 부드러운 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+						<p class="note">KAZAK KATAIFI SPREAD</p>
 					</div>
 				</article>
 				<article aria-labelledby="kz-tab-3" class="flavor-panel" data-color="#db9f7d" id="kz-panel-3">
@@ -346,7 +346,7 @@
 
 						<p class="copy">진하고 풍부한 초콜릿 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+						<p class="note">KAZAK KATAIFI SPREAD</p>
 					</div>
 				</article>
 				<article aria-labelledby="kz-tab-4" class="flavor-panel" data-color="#e6c5a2" id="kz-panel-4">
@@ -361,7 +361,7 @@
 
 						<p class="copy">향긋하고 달콤한 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD / 450g</p>
+						<p class="note">KAZAK KATAIFI SPREAD</p>
 					</div>
 				</article>
 			</div></div>
