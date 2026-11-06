@@ -319,19 +319,24 @@
 }
 
 @container kz-detail (width > 700px) {
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article,
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe {
-    --kz-pair-gap: clamp(24px, 4cqw, 64px);
-    gap: var(--kz-pair-gap);
-    margin-inline: auto;
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid {
+    width: 100cqw;
+    margin-inline: calc((100% - 100cqw) / 2);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article {
-    width: min(100%, calc(25cqw + clamp(210px, 26cqw, 390px) + var(--kz-pair-gap)));
-    grid-template-columns: minmax(0, 1fr) 25cqw;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) {
-    grid-template-columns: 25cqw minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process {
+    --kz-process-inset: clamp(24px, 5.5cqw, 130px);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid h3 { padding-inline: var(--kz-process-inset); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid .photo { width: 25cqw; justify-self: end; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .process-grid > article:nth-child(even) .photo { justify-self: start; }
+
 
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] :is(.kz-size-comparison, .recipes) > .wrap {
     width: min(1720px, calc(100% - 2 * clamp(18px, 3.2cqw, 60px)));
@@ -344,21 +349,23 @@
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .texture-photo .photo { width: 100%; height: 94%; }
 
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-grid {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-making-grid,
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list {
     width: 100cqw;
     margin-inline: calc((100% - 100cqw) / 2);
   }
 
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe {
-    width: min(100%, calc(30cqw + clamp(215px, 29cqw, 420px) + var(--kz-pair-gap)));
-  }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(odd) {
-    grid-template-columns: 30cqw minmax(0, 1fr);
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    gap: 0;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list > .recipe:nth-child(even) {
-    grid-template-columns: minmax(0, 1fr) 30cqw;
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+    gap: 0;
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe-card { padding: clamp(16px, 2.5cqw, 38px); }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe > .photo { width: 30cqw; justify-self: start; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe:nth-child(even) > .photo { justify-self: end; }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe-card { margin-inline: clamp(22px, 5.5cqw, 100px); }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .recipe > .kz-asset img { object-fit: contain; }
 }
 
