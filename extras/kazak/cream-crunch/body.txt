@@ -271,6 +271,14 @@
 						<p class="copy">바삭한 크래커 위에 카작을 얹어 한입씩.</p>
 					</div>
 				</article>
+                <article class="recipe kz-recipe-spoon" id="kz-just-spoon">
+                    <div class="kz-asset photo" data-image-slot="recipe-spoon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-just-spoon-c4402268.png" alt="카작 피스타치오 병에서 카다이프 크림을 한 스푼 떠낸 모습" loading="lazy" width="1058" height="1487"></div>
+                    <div class="recipe-card">
+                        <p class="kz-recipe-script" lang="en">Just a spoon</p>
+                        <h3>그냥 한 스푼,<br>이대로 맛있게.</h3>
+                        <p class="copy">숟가락으로 푹 떠서 한입.<br>진한 크림과 바삭한 카다이프를<br>가장 온전히 즐기는 방법.</p>
+                    </div>
+                </article>
 			</div>
 		</div>
 	</section>

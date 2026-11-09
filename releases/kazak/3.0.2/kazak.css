@@ -777,19 +777,13 @@
   }
 }
 
-/* Soft wave lettering in the hero. */
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-type[data-wave-ready] {
-  top:15%;font-size:clamp(42px,14.8cqw,213px);pointer-events:none;
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .kz-recipe-spoon > .photo {
+  aspect-ratio: 2 / 3;
+  width: min(100%,420px);
+  justify-self:center;
+  background:transparent;
 }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-wave-line {white-space:nowrap;line-height:1;}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-wave-line + .kz-wave-line {font-size:.49em;letter-spacing:-.045em;margin-top:.52em;}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-wave-line b {
-  display:inline-block;font:inherit;
-  transform:translateY(var(--wave-y)) rotate(var(--wave-turn));
-  animation:kz-letter-ripple 5s ease-in-out infinite;
-  animation-delay:var(--wave-delay);
-}
-@keyframes kz-letter-ripple {
-  0%,100% {translate:0 -.035em;}
-  50% {translate:0 .035em;}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-spoon > .photo img {object-fit:contain;}
+@container kz-detail (max-width:700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .kz-recipe-spoon > .photo {width:min(80%,300px);}
 }
