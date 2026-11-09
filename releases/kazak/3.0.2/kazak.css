@@ -756,13 +756,13 @@
     /* Compensate for the mini jar's transparent padding and enlargement. */
     transform:translateX(-3.5%);
   }
-  /* Share the jars' grid cell so the ingredient sits over the large jar's base. */
+  /* Share the jars' grid cell and overlap the lower-left side of the large jar. */
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
     grid-area:jars;
     align-self:end;
     justify-self:start;
     width:35%;
-    margin-left:12%;
+    margin-left:2%;
     transform:translateY(12%);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {text-align:center;}
@@ -824,4 +824,14 @@
 @media(prefers-reduced-motion:reduce){
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:clamp(640px,100svh,900px)}
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{position:relative}
+}
+/* Desktop hero fills the screen, including displays taller than 900px. */
+@container kz-detail (min-width:701px){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:180svh}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{height:100svh}
+}
+@media(prefers-reduced-motion:reduce){
+ @container kz-detail (min-width:701px){
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:100svh}
+ }
 }
