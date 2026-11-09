@@ -5,7 +5,9 @@
 		</div>
 		<div aria-hidden="true" class="hero-type">CRUNCH INTO<span>COLORFUL EVERYDAY.&nbsp;</span></div>
 		<div class="hero-art">
-			<div class="photo" style="aspect-ratio:725/1037;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/1.png" alt="카작 다섯 가지 맛 연출 이미지" class="fr-fic fr-dii"></div></div>
+			<div class="photo" style="aspect-ratio:725/1037;"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/1.png" alt="카작 피스타치오 450g" class="fr-fic fr-dii"></div>
+            <img class="kz-hero-mini" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-mini-pistachio-tall-2d3249ce.png" alt="카작 피스타치오 150g" width="1254" height="1254">
+        </div>
 		<div class="hero-caption">
 
 			<h1>부드러움에 바삭함을 더해.

@@ -758,3 +758,21 @@
     grid-template-areas: "ingredient jars . description";
   }
 }
+
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-art:has(.kz-hero-mini) {
+  translate: -25% 0;
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-mini {
+  position: absolute;
+  left: 85%;
+  bottom: 4%;
+  width: 65%;
+  height: auto;
+  max-width: none;
+  transform: rotate(10deg);
+}
+@container kz-detail (max-width:700px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .hero-art:has(.kz-hero-mini) {
+    width: clamp(170px,53cqw,235px);
+  }
+}
