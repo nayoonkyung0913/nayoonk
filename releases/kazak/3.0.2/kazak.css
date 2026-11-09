@@ -751,3 +751,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {width:100%;}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {text-align:center;}
 }
+
+@container kz-detail (min-width:701px) {
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
+    grid-template-columns: minmax(0,20fr) minmax(0,48fr) clamp(24px,3cqw,44px) minmax(0,32fr);
+    grid-template-areas: "ingredient jars . description";
+  }
+}
