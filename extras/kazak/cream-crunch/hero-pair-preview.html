@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>카작 · 두 용량을 하나로 모은 메인 시안</title>
+<style>
+body{margin:0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero{height:1050px;min-height:0;max-height:none}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-type{top:65px;font-size:clamp(76px,14cqw,202px)}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero .hero-art{top:232px;left:50%;width:min(84cqw,740px);aspect-ratio:1.17;translate:none;transform:translateX(-50%);will-change:auto}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero .hero-art > .photo{position:absolute;left:0;bottom:0;width:66%;aspect-ratio:675 / 896;transform:rotate(-5deg);transform-origin:50% 90%}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero .hero-art > .kz-hero-mini{position:absolute;left:46%;bottom:-7%;width:57%;height:auto;max-width:none;transform:rotate(3deg);transform-origin:50% 80%}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption{bottom:42px;left:5%;right:5%;text-align:center}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption h1{font-size:clamp(25px,2.5cqw,34px);line-height:1.35}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption a{margin-top:10px}
+@container kz-detail (max-width:700px){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero{height:clamp(710px,calc(400px + 90cqw),850px)}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-type{top:58px;font-size:15cqw}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero .hero-art{top:215px;width:96cqw;aspect-ratio:1.17}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption{bottom:35px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption h1{font-size:24px}
+}
+</style>
+<main></main>
+<script defer src="../../../releases/loader/1.0.0/kazak-loader.js"></script>
+<script>
+fetch('body.txt').then(r=>{if(!r.ok)throw Error('본문 로딩 실패');return r.text()}).then(html=>{
+ const main=document.querySelector('main');main.innerHTML=html;
+ const root=main.querySelector('[data-kazak-version]');root.setAttribute('data-hero-preview','pair');
+ root.querySelector('.hero-art > .photo').removeAttribute('style');
+}).catch(()=>{document.querySelector('main').textContent='미리보기를 불러오지 못했습니다.'});
+</script>
+</html>
