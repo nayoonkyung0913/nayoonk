@@ -64,6 +64,20 @@
     const panels = flavors ? Array.from(flavors.querySelectorAll(".flavor-panel")) : [];
     if (!hero || !art || !photo || !group?.children.length || !panels.length) return;
 
+    // Upgrade existing Imweb editor HTML without requiring it to be pasted again.
+    let heroScene = null;
+    if (!root.hasAttribute("data-hero-preview") && art.querySelector(".kz-hero-mini")) {
+      heroScene = hero.closest(".kz-hero-meet");
+      if (!heroScene) {
+        heroScene = document.createElement("div");
+        heroScene.className = "kz-hero-meet";
+        hero.before(heroScene);
+        heroScene.append(hero);
+      }
+      const jarPhoto = art.querySelector(":scope > .photo");
+      if (jarPhoto) jarPhoto.style.aspectRatio = "675 / 896";
+    }
+
     const { tabs, bar, controls, motion } = getControls(root, { track, flavors, panels });
     const arrows = Array.from(controls.querySelectorAll("button[data-slide]"));
     const galleryCards = Array.from(group.children);
@@ -156,6 +170,20 @@
         rotation();
       }, { signal });
     });
+    function paintHero() {
+      if (!heroScene || !root.isConnected) return;
+      const rect = heroScene.getBoundingClientRect();
+      const width = hero.clientWidth, groupWidth = art.clientWidth;
+      const range = Math.max(1, heroScene.offsetHeight - hero.offsetHeight);
+      const progress = paused() ? 1 : clamp(-rect.top / (range * .8));
+      const remain = 1 - progress * progress * (3 - 2 * progress);
+      const left = (width - groupWidth) / 2;
+      art.style.setProperty("--meet-large-x", (-(left + groupWidth * .66 - width * .10) * remain).toFixed(2) + "px");
+      art.style.setProperty("--meet-small-x", ((width * .90 - left - groupWidth * .46) * remain).toFixed(2) + "px");
+      art.style.setProperty("--meet-large-angle", (-4 - 6 * remain).toFixed(2) + "deg");
+      art.style.setProperty("--meet-small-angle", (3 + 7 * remain).toFixed(2) + "deg");
+      heroScene.dataset.progress = progress.toFixed(3);
+    }
     function paint() {
       frame = 0;
       if (paused() || !root.isConnected) return;
@@ -163,7 +191,8 @@
       const h = hero.getBoundingClientRect();
       const t = photo.getBoundingClientRect();
       const boxes = recipes.map(image => image.getBoundingClientRect());
-      if (h.height && h.bottom > 0 && h.top < height) {
+      if (heroScene) paintHero();
+      else if (h.height && h.bottom > 0 && h.top < height) {
         const progress = clamp(-h.top / h.height);
         art.style.setProperty("--hy", progress * 70 + "px");
         art.style.setProperty("--hr", (-7 + progress * 18) + "deg");
@@ -195,6 +224,7 @@
       root.classList.toggle("is-paused", paused());
       motion.setAttribute("aria-pressed", String(paused()));
       motion.textContent = paused() ? "움직임 켜기" : "움직임 멈추기";
+      paintHero();
       if (paused()) {
         art.style.setProperty("--hy", "0px"); art.style.setProperty("--hr", "-7deg");
         photo.style.setProperty("--ts", "1");
@@ -232,13 +262,16 @@
     choose(0, false);
     sync();
 
-    const needed = [hero, art, photo, track, group, clone, flavors, bar, motion, ...tabs, ...panels, ...galleryCards, ...arrows];
+    const heroObserver = heroScene && "ResizeObserver" in window ? new ResizeObserver(paintHero) : null;
+    if (heroObserver) { heroObserver.observe(hero); heroObserver.observe(art); }
+    const needed = [hero, art, photo, track, group, clone, flavors, bar, motion, ...tabs, ...panels, ...galleryCards, ...arrows, ...(heroScene ? [heroScene] : [])];
     active.set(root, {
       complete: () => needed.every(el => root.contains(el)) && group.children.length === galleryCards.length &&
         flavors.querySelectorAll(".flavor-panel").length === panels.length,
       remove() {
         controller.abort(); clearInterval(timer); cancelAnimationFrame(frame); enters?.disconnect();
         layoutObserver?.disconnect(); cancelAnimationFrame(layoutFrame);
+        heroObserver?.disconnect();
         root.style.removeProperty("--kz-viewport-width");
         root.style.removeProperty("--kz-viewport-offset");
         clone.remove();

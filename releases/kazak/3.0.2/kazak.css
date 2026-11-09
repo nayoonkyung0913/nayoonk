@@ -527,10 +527,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-card { grid-column:auto; animation:none; }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-asset { aspect-ratio:4 / 5; max-height:37svh; }
   @container kz-detail (max-width:760px) {
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70cqw;width:max-content;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid {grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70cqw,42svh);width:max-content;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card {grid-column:auto;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-making-card:nth-child(n+4) {grid-column:auto;}
-    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-asset {aspect-ratio:1.5; max-height:34svh;}
+    :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-grid .kz-asset {aspect-ratio:4 / 5; max-height:none;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy {padding:6px;}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy h3 {font-size:clamp(16px,4.2cqw,23px);}
     :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced:not(.is-paused) .kz-flavor-story .kz-making-copy p {margin-top:4px;font-size:13px;line-height:1.35;}
@@ -595,9 +595,10 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-rail-line {display:block;}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-rail-title {text-align:center;font-size:clamp(32px,9cqw,60px);}
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-grid {
-    display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:70cqw;overflow-x:auto;
+    display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70cqw,42svh);overflow-x:auto;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-card {grid-column:auto;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-story .kz-making-card .kz-asset {aspect-ratio:4 / 5;max-height:none;}
 }
 /* Use the shorter studio photograph on narrow detail pages. */
 @container kz-detail (max-width:760px) {
@@ -744,11 +745,26 @@
 }
 @container kz-detail (max-width:700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
-    grid-template-columns: minmax(0,30fr) minmax(0,70fr);
-    grid-template-areas: "ingredient jars" "description description";
-    row-gap: 22px;
+    grid-template-columns: minmax(0,1fr);
+    grid-template-areas: "jars" "description";
+    row-gap: 32px;
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {width:100%;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {
+    width:90%;
+    justify-self:center;
+    margin:0;
+    /* Compensate for the mini jar's transparent padding and enlargement. */
+    transform:translateX(-3.5%);
+  }
+  /* Share the jars' grid cell so the ingredient sits over the large jar's base. */
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
+    grid-area:jars;
+    align-self:end;
+    justify-self:start;
+    width:35%;
+    margin-left:12%;
+    transform:translateY(12%);
+  }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {text-align:center;}
 }
 
@@ -786,4 +802,26 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-spoon > .photo img {object-fit:contain;}
 @container kz-detail (max-width:700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-recipe-list .kz-recipe-spoon > .photo {width:min(80%,300px);}
+}
+
+
+/* Approved hero: independent jars converge during a pinned scroll scene. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:calc(clamp(640px,100svh,900px) + 80svh);position:relative}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{position:sticky;top:0;height:clamp(640px,100svh,900px);min-height:0;max-height:none;overflow:clip}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{top:6%;font-size:clamp(76px,14cqw,194px)}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{top:23%;left:50%;width:min(76cqw,600px,64svh);aspect-ratio:1.17;translate:none;transform:translateX(-50%);will-change:auto}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art > .photo{position:absolute;left:0;bottom:0;width:66%;aspect-ratio:675 / 896;transform:translateX(var(--meet-large-x,0px)) rotate(var(--meet-large-angle,-4deg));transform-origin:50% 90%;will-change:transform}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art > .kz-hero-mini{position:absolute;left:46%;bottom:-7%;width:57%;height:auto;max-width:none;transform:translateX(var(--meet-small-x,0px)) rotate(var(--meet-small-angle,3deg));transform-origin:50% 80%;will-change:transform}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption{bottom:35px;left:5%;right:5%;text-align:center}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption h1{font-size:clamp(24px,2.5cqw,32px);line-height:1.35}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption a{margin-top:10px}
+@container kz-detail (max-width:700px){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{top:8%;font-size:15cqw}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{top:29%;width:min(86cqw,440px,64svh)}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption{bottom:30px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption h1{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:clamp(640px,100svh,900px)}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{position:relative}
 }
