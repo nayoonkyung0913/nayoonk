@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>카작 · 중용량 중심 메인 시안</title>
+<style>
+body{margin:0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero{height:1040px;min-height:0;max-height:none}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-type{top:84px;font-size:clamp(76px,14cqw,202px)}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-art{top:228px;left:50%;width:420px;translate:none;transform:translateX(-50%) rotate(var(--focus-angle,-3deg));will-change:transform}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-focus-footer{position:absolute;bottom:42px;left:6%;right:6%;max-width:1100px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:40px;text-align:left}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption{position:static;flex:1}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption h1{font-size:clamp(24px,2.6cqw,34px);line-height:1.4}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption a{margin-top:12px;padding-left:0}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note{display:flex;align-items:center;gap:8px;flex:none;color:inherit}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note img{position:static;display:block;width:142px;height:142px;object-fit:contain;max-width:none;transform:none}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note small{display:block;font-size:12px;letter-spacing:.08em;margin-bottom:6px;opacity:.85}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note strong{display:block;font-size:23px;line-height:1.35;font-weight:800;letter-spacing:-.04em}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note span{display:block;margin-top:6px;font-size:14px}
+@container kz-detail (max-width:700px){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero{height:920px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-type{top:76px;font-size:15cqw}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-art{top:220px;width:min(69cqw,280px)}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-focus-footer{bottom:25px;flex-direction:column;gap:15px;text-align:center}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption h1{font-size:24px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-caption a{margin-top:8px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note{text-align:left;gap:8px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note img{width:100px;height:100px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note strong{font-size:19px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note small{font-size:10px;margin-bottom:3px}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-size-note span{font-size:12px;margin-top:3px}
+}
+@media(prefers-reduced-motion:reduce){
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"][data-hero-preview] .hero-art{transform:translateX(-50%) rotate(-3deg)}
+}
+</style>
+<main></main>
+<script defer src="../../../releases/loader/1.0.0/kazak-loader.js"></script>
+<script>
+fetch('body.txt').then(r=>{if(!r.ok)throw Error('본문 로딩 실패');return r.text()}).then(html=>{
+ const main=document.querySelector('main');
+ main.innerHTML=html;
+ const root=main.querySelector('[data-kazak-version]');
+ root.setAttribute('data-hero-preview','focus');
+ const hero=root.querySelector('.hero');
+ const mini=hero.querySelector('.kz-hero-mini');
+ const caption=hero.querySelector('.hero-caption');
+ const footer=document.createElement('div');footer.className='hero-focus-footer';
+ const sizes=document.createElement('a');sizes.className='hero-size-note';
+ sizes.href='#kz-sizes';
+ mini.removeAttribute('class');
+ sizes.append(mini);
+ const copy=document.createElement('div');
+ copy.innerHTML='<small>CHOOSE YOUR SIZE</small><strong>150g · 450g</strong><span>취향에 맞는 카작을 만나보세요 →</span>';
+ sizes.append(copy);footer.append(caption,sizes);hero.append(footer);
+ let pending=false;
+ const reduced=matchMedia('(prefers-reduced-motion:reduce)');
+ function paint(){pending=false;const rect=hero.getBoundingClientRect();const progress=Math.max(0,Math.min(1,-rect.top/rect.height));hero.style.setProperty('--focus-angle',(reduced.matches?-3:-3+progress*4)+'deg');}
+ addEventListener('scroll',()=>{if(!pending){pending=true;requestAnimationFrame(paint)}},{passive:true});
+ reduced.addEventListener('change',paint);paint();
+}).catch(()=>{document.querySelector('main').textContent='미리보기를 불러오지 못했습니다.'});
+</script>
+</html>
