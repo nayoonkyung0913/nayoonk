@@ -51,6 +51,28 @@
     return { tabs, bar, controls, motion };
   }
 
+  function waveHeading(root) {
+    const heading = root.querySelector(".hero-type");
+    if (!heading || heading.dataset.waveReady) return;
+    const subtitle = heading.querySelector("span");
+    const lines = [Array.from(heading.childNodes).filter(n => n.nodeType === 3).map(n => n.textContent).join("").trim(), subtitle?.textContent.trim()].filter(Boolean);
+    heading.replaceChildren(...lines.map((text, row) => {
+      const line = document.createElement("div");
+      line.className = "kz-wave-line";
+      Array.from(text).forEach((char, index) => {
+        const letter = document.createElement("b");
+        letter.textContent = char === " " ? "\u00a0" : char;
+        const phase = index / Math.max(1, text.length - 1) * Math.PI * 2 + row * .7;
+        letter.style.setProperty("--wave-y", (Math.sin(phase) * .16).toFixed(3) + "em");
+        letter.style.setProperty("--wave-turn", (Math.cos(phase) * 5).toFixed(2) + "deg");
+        letter.style.setProperty("--wave-delay", (-index * .22 - row).toFixed(2) + "s");
+        line.appendChild(letter);
+      });
+      return line;
+    }));
+    heading.dataset.waveReady = "true";
+  }
+
   function mount(root) {
     const get = s => root.querySelector(s);
     const hero = get(".hero"), art = get(".hero-art"), photo = get(".texture-photo");
@@ -64,6 +86,7 @@
     const panels = flavors ? Array.from(flavors.querySelectorAll(".flavor-panel")) : [];
     if (!hero || !art || !photo || !group?.children.length || !panels.length) return;
 
+    waveHeading(root);
     const { tabs, bar, controls, motion } = getControls(root, { track, flavors, panels });
     const arrows = Array.from(controls.querySelectorAll("button[data-slide]"));
     const galleryCards = Array.from(group.children);
