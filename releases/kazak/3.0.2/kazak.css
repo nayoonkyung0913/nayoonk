@@ -221,12 +221,26 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card .kz-asset > img,
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-garnish > img { object-fit: contain; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core {
+  --kz-milk-wave-height:clamp(160px,25cqw,360px);
+  position:relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   min-height: 86vh;
   min-height: 86svh;
   padding-block: clamp(72px, 10cqw, 145px);
+  padding-bottom:calc(var(--kz-milk-wave-height) * .8 + 24px);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core::after {
+  content:"";
+  position:absolute;
+  left:50%;
+  bottom:0;
+  width:100cqw;
+  height:var(--kz-milk-wave-height);
+  transform:translateX(-50%);
+  pointer-events:none;
+  background:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-wave-b2db981b.png") center bottom / cover no-repeat;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredients { align-items: start; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient > .photo,
@@ -842,13 +856,25 @@
 /* Desktop hero fills the screen, including displays taller than 900px. */
 @container kz-detail (min-width:701px){
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet{height:180svh}
- :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{height:100svh}
- :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{top:25%;width:min(80cqw,690px,68svh)}
-}
-/* Keep the enlarged jars above the caption on shorter desktop screens. */
-@media(max-height:850px){
- @container kz-detail (min-width:701px){
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{top:24%;width:min(80cqw,690px,65.5svh)}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero{
+   height:100svh;
+   grid-template-rows:auto minmax(0,1fr) auto;
+   row-gap:20px;
+   padding:4svh 0 35px;
+ }
+ /* Reserve separate rows so products never cover the headline or caption. */
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{
+   position:relative;top:auto;
+   font-size:clamp(76px,min(14cqw,16svh),194px);
+ }
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{
+   position:relative;top:auto;left:auto;
+   height:100%;width:auto;min-height:0;
+   max-width:min(80cqw,690px);
+   transform:none;align-self:stretch;
+ }
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption{
+   position:relative;inset:auto;width:90%;
  }
 }
 @media(prefers-reduced-motion:reduce){
