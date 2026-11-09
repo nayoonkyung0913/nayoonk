@@ -562,7 +562,7 @@
 /* Center the cream on the new spoon photograph while showing the rim. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-spoon-image > img[src*="kazak-spoon-texture-"] { width:104%; transform:translate(-48%,-60%); }
 
-/* Let touch users browse sizes one card at a time. */
+/* Let touch users browse the size cards horizontally. */
 @container kz-detail (max-width: 700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-grid {
     grid-template-columns: none;
@@ -644,8 +644,12 @@
 }
 @container kz-detail (max-width:700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-swipe {display:block;margin:14px 0 0;font-size:14px;}
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-grid {grid-auto-columns:80%;margin-top:24px;}
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {height:clamp(155px,48cqw,240px);}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-grid {grid-auto-columns:54%;gap:8px;margin-top:24px;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card {padding-inline:4px;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h3 {font-size:clamp(44px,13cqw,64px);}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card h4 {font-size:clamp(16px,4.4cqw,19px);}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card p {display:none;}
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide .kz-size-card .kz-asset {height:clamp(150px,42cqw,200px);}
 }
 @container kz-detail (min-width: 1024px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-guide {
