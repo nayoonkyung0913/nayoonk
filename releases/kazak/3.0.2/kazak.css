@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jua&display=swap");
-@font-face { font-family:"Allura"; src:url("fonts/allura.ttf") format("truetype"); font-weight:400; font-display:swap }
-@font-face { font-family:"Gowun Batang"; src:url("fonts/gowunbatang.ttf") format("truetype"); font-weight:700; font-display:swap }
+@font-face { font-family:"Allura"; src:url("fonts/allura-full.woff2") format("woff2"); font-weight:400; font-display:swap }
+@font-face { font-family:"Gowun Batang"; src:url("fonts/gowunbatang-bold-full.woff2") format("woff2"); font-weight:700; font-display:swap }
 @font-face { font-family: "Kazak Pretendard 3.0.2"; src: url("../3.0.1/pretendard-variable.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
 /* Only the marked description extends beyond the shop's content column. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] {
