@@ -221,28 +221,32 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card .kz-asset > img,
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-garnish > img { object-fit: contain; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core {
-  --kz-milk-wave-height:clamp(160px,25cqw,360px);
+  --kz-milk-wave-height:clamp(100px,12cqw,190px);
   position:relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 86vh;
   min-height: 86svh;
   padding-block: clamp(72px, 10cqw, 145px);
-  padding-bottom:calc(var(--kz-milk-wave-height) * .8 + 24px);
+  padding-bottom:0;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core::after {
   content:"";
-  position:absolute;
-  left:50%;
-  bottom:0;
+  position:relative;
+  align-self:center;
+  flex:0 0 var(--kz-milk-wave-height);
   width:100cqw;
   height:var(--kz-milk-wave-height);
-  transform:translateX(-50%);
+  margin-top:auto;
   pointer-events:none;
-  background:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-wave-b2db981b.png") center bottom / cover no-repeat;
+  background:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-wave-b2db981b.png") center bottom / 100% 100% no-repeat;
 }
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredients { align-items: start; }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredients {
+  align-items:start;
+  /* The milk is an in-flow footer, with space even for wrapped descriptions. */
+  margin-bottom:clamp(36px,5cqw,64px);
+}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient > .photo,
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredient > .kz-asset {
   width: 100%;
@@ -785,8 +789,10 @@
 @container kz-detail (min-width:701px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
     grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
-    grid-template-areas: "jars description";
+    grid-template-rows:auto auto;
+    grid-template-areas: "jars description" "jars ingredient";
     column-gap:clamp(48px,7cqw,100px);
+    row-gap:12px;
     width:min(100%,1040px);
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-jar-pair {
@@ -794,12 +800,15 @@
     justify-self:center;
     margin:0;
   }
-  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
-    grid-area:jars;
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {
     align-self:end;
-    justify-self:center;
-    width:min(38%,200px);
-    transform:translate(-90%,12%);
+  }
+  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
+    grid-area:ingredient;
+    align-self:start;
+    justify-self:end;
+    width:min(48%,200px);
+    transform:none;
   }
 }
 
@@ -844,7 +853,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption h1{font-size:clamp(24px,2.5cqw,32px);line-height:1.35}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption a{margin-top:10px}
 @container kz-detail (max-width:700px){
- :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{top:8%;font-size:15cqw}
+ :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{top:calc(8% + 14px);font-size:15cqw}
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero .hero-art{top:29%;width:min(86cqw,440px,64svh)}
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption{bottom:30px}
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-caption h1{font-size:24px}
@@ -860,7 +869,7 @@
    height:100svh;
    grid-template-rows:auto minmax(0,1fr) auto;
    row-gap:20px;
-   padding:4svh 0 35px;
+   padding:calc(4svh + 14px) 0 35px;
  }
  /* Reserve separate rows so products never cover the headline or caption. */
  :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-hero-meet .hero-type{
