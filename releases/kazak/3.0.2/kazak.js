@@ -286,7 +286,15 @@
     const state = active.get(root);
     const eligible = root.isConnected && root.matches(selector);
     if (state && (!eligible || !state.complete())) state.remove();
-    if (eligible && !active.has(root)) mount(root);
+    if (eligible) {
+      // Update already-pasted Imweb bodies for the shared 150g / 450g / 4.5kg page.
+      const sizes = "150g, 450g, 4.5kg";
+      root.querySelectorAll(".kz-product-info dt").forEach(label => {
+        const value = label.nextElementSibling;
+        if (label.textContent.replace(/\s/g, "") === "총내용량" && value?.tagName === "DD" && value.textContent !== sizes) value.textContent = sizes;
+      });
+      if (!active.has(root)) mount(root);
+    }
   }
   const watcher = new MutationObserver(records => {
     const roots = new Set();

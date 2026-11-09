@@ -221,7 +221,7 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-size-card .kz-asset > img,
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-flavor-garnish > img { object-fit: contain; }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core {
-  --kz-milk-wave-height:clamp(100px,12cqw,190px);
+  --kz-milk-wave-height:clamp(160px,18cqw,280px);
   position:relative;
   display: flex;
   flex-direction: column;
@@ -240,7 +240,7 @@
   height:var(--kz-milk-wave-height);
   margin-top:auto;
   pointer-events:none;
-  background:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-wave-b2db981b.png") center bottom / 100% 100% no-repeat;
+  background:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-milk-wave-b2db981b.png") center bottom / 100% 125% no-repeat;
 }
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-core .ingredients {
   align-items:start;
@@ -761,6 +761,9 @@
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details h3 {
   font-size: clamp(28px,4.7cqw,64px);
 }
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .kz-flavor-details .note {
+  display:none;
+}
 @container kz-detail (max-width:700px) {
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
     grid-template-columns: minmax(0,1fr);
@@ -774,14 +777,9 @@
     /* Compensate for the mini jar's transparent padding and enlargement. */
     transform:translateX(-3.5%);
   }
-  /* Share the jars' grid cell and overlap the lower-left side of the large jar. */
+  /* Mobile keeps the paired products and flavor copy without ingredient props. */
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
-    grid-area:jars;
-    align-self:end;
-    justify-self:start;
-    width:35%;
-    margin-left:2%;
-    transform:translateY(12%);
+    display:none;
   }
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details > :first-child {text-align:center;}
 }
@@ -806,7 +804,7 @@
   :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair + .kz-flavor-details .kz-flavor-garnish {
     grid-area:ingredient;
     align-self:start;
-    justify-self:end;
+    justify-self:start;
     width:min(48%,200px);
     transform:none;
   }

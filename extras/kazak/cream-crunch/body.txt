@@ -312,7 +312,7 @@
 
 						<p class="copy">고소하고 진한 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+						</div>
                         <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-pistachio"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-pistachio.png" alt="피스타치오 알과 껍질" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-1" class="flavor-panel" data-color="#ffd45e" id="kz-panel-1">
@@ -328,7 +328,7 @@
 
 						<p class="copy">짭조름하고 깊은 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+						</div>
                         <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cheese"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cheese.png" alt="황치즈 큐브 연출" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-2" class="flavor-panel" data-color="#f9c9d7" id="kz-panel-2">
@@ -344,7 +344,7 @@
 
 						<p class="copy">달콤하고 부드러운 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+						</div>
                         <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-strawberry"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-strawberry.png" alt="통딸기와 반으로 자른 딸기" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-3" class="flavor-panel" data-color="#db9f7d" id="kz-panel-3">
@@ -360,7 +360,7 @@
 
 						<p class="copy">진하고 풍부한 초콜릿 풍미</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+						</div>
                         <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-hazelnut"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-hazelnut.png" alt="헤이즐넛과 코코아" class="fr-fic fr-dii"></div></div>
 				</article>
 				<article aria-labelledby="kz-tab-4" class="flavor-panel" data-color="#e6c5a2" id="kz-panel-4">
@@ -376,7 +376,7 @@
 
 						<p class="copy">향긋하고 달콤한 맛</p>
 
-						<p class="note">KAZAK KATAIFI SPREAD</p></div>
+						</div>
                         <div class="kz-asset kz-flavor-garnish" data-image-slot="flavor-cinnamon"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/flavor-cinnamon.png" alt="시나몬쿠키와 시나몬 스틱 연출" class="fr-fic fr-dii"></div></div>
 				</article>
 			</div></div>
@@ -405,7 +405,7 @@
 							</div>
 							<div>
 								<dt>총내용량</dt>
-								<dd>450g</dd>
+								<dd>150g, 450g, 4.5kg</dd>
 							</div>
 							<div>
 								<dt>품목보고번호</dt>
@@ -502,7 +502,7 @@
 							</div>
 							<div>
 								<dt>총내용량</dt>
-								<dd>450g</dd>
+								<dd>150g, 450g, 4.5kg</dd>
 							</div>
 							<div>
 								<dt>품목보고번호</dt>
@@ -597,7 +597,7 @@
 							</div>
 							<div>
 								<dt>총내용량</dt>
-								<dd>450g</dd>
+								<dd>150g, 450g, 4.5kg</dd>
 							</div>
 							<div>
 								<dt>품목보고번호</dt>
@@ -694,7 +694,7 @@
 							</div>
 							<div>
 								<dt>총내용량</dt>
-								<dd>450g</dd>
+								<dd>150g, 450g, 4.5kg</dd>
 							</div>
 							<div>
 								<dt>품목보고번호</dt>
@@ -791,7 +791,7 @@
 							</div>
 							<div>
 								<dt>총내용량</dt>
-								<dd>450g</dd>
+								<dd>150g, 450g, 4.5kg</dd>
 							</div>
 							<div>
 								<dt>품목보고번호</dt>
