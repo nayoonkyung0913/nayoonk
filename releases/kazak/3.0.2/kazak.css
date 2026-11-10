@@ -35,7 +35,7 @@
 @keyframes kazak-3-0-2-gallery-loop{to{transform:translateX(-50%)}}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].is-paused .gallery-belt{animation-play-state:paused}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-controls{display:flex;justify-content:space-between;align-items:center;width:88%;margin:15px auto 0;font-size:11px;letter-spacing:.14em;gap:12px;flex-wrap:wrap}
-:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-controls button{border:1px solid;border-radius:50%;background:none;width:42px;height:42px;font-size:20px;margin-left:8px}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-controls button{display:none!important}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .gallery-controls .motion{display:none;width:auto;height:42px;border-radius:30px;padding:0 14px;font-size:12px;vertical-align:middle}
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"].enhanced .gallery-controls .motion{display:inline-block}
 @media(prefers-reduced-motion:reduce){
