@@ -8,28 +8,28 @@
     "bytes": 757494
   },
   {
-    "source": "assets/v3/gallery-breakfast.png",
-    "name": "gallery-breakfast-c2be8968d713.png",
-    "remote": "/web/upload/squeeze-peanut/gallery-breakfast-c2be8968d713.png",
-    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-breakfast-c2be8968d713.png",
-    "sha256": "c2be8968d713711dd13a995e0e347a07e47c7e944f9fa61ec6d8973f77b8753e",
-    "bytes": 2465259
+    "source": "assets/v3/gallery-toast-orange.png",
+    "name": "gallery-toast-orange-48bf185f0761.png",
+    "remote": "/web/upload/squeeze-peanut/gallery-toast-orange-48bf185f0761.png",
+    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-toast-orange-48bf185f0761.png",
+    "sha256": "48bf185f0761d2afab688dbd7b15d7a2d69c3044a8a6332a01fd6040c893a3ab",
+    "bytes": 1824827
   },
   {
-    "source": "assets/v3/gallery-bread.png",
-    "name": "gallery-bread-cb781474d8be.png",
-    "remote": "/web/upload/squeeze-peanut/gallery-bread-cb781474d8be.png",
-    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-bread-cb781474d8be.png",
-    "sha256": "cb781474d8be466e4ff10790e853dbc1f709033908964f47a8aa656c89272ab4",
-    "bytes": 2855788
+    "source": "assets/v3/gallery-apple-yellow.png",
+    "name": "gallery-apple-yellow-daf2b4602830.png",
+    "remote": "/web/upload/squeeze-peanut/gallery-apple-yellow-daf2b4602830.png",
+    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-apple-yellow-daf2b4602830.png",
+    "sha256": "daf2b460283044d240d3e87065357d7817bd473cd524ae27e38f152f6e61357e",
+    "bytes": 2066726
   },
   {
-    "source": "assets/v3/gallery-bowl.png",
-    "name": "gallery-bowl-7716525f7346.png",
-    "remote": "/web/upload/squeeze-peanut/gallery-bowl-7716525f7346.png",
-    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-bowl-7716525f7346.png",
-    "sha256": "7716525f7346ca061885c4e8e9b6891fa7326f0c65765e18c97c81de16d4fb50",
-    "bytes": 2395016
+    "source": "assets/v3/gallery-smoothie-red.png",
+    "name": "gallery-smoothie-red-2a754f1c7844.png",
+    "remote": "/web/upload/squeeze-peanut/gallery-smoothie-red-2a754f1c7844.png",
+    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-smoothie-red-2a754f1c7844.png",
+    "sha256": "2a754f1c7844c1f8f9e604f16c25db73fa9ae1cd04660d3e18281d69853c9b68",
+    "bytes": 2018734
   },
   {
     "source": "assets/v3/peanuts.png",
@@ -56,12 +56,12 @@
     "bytes": 944999
   },
   {
-    "source": "assets/v3/peanut-mountain-red.png",
-    "name": "peanut-mountain-red-45580a431c70.png",
-    "remote": "/web/upload/squeeze-peanut/peanut-mountain-red-45580a431c70.png",
-    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/peanut-mountain-red-45580a431c70.png",
-    "sha256": "45580a431c70dff9e8ea0f2e1e33cb7bd5b36f23efd190afce9990cb54571a20",
-    "bytes": 2039121
+    "source": "assets/v3/peanut-mountain-cutout-shadow.png",
+    "name": "peanut-mountain-cutout-shadow-0dc3630df2e4.png",
+    "remote": "/web/upload/squeeze-peanut/peanut-mountain-cutout-shadow-0dc3630df2e4.png",
+    "url": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/peanut-mountain-cutout-shadow-0dc3630df2e4.png",
+    "sha256": "0dc3630df2e4b82d0559839ee0c8f2892a5cee590928f0af3d6bc20e9b1be8c1",
+    "bytes": 1597552
   },
   {
     "source": "assets/v3/step-shake.png",
