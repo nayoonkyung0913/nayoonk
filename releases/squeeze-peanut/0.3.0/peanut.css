@@ -1,0 +1,1242 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Jua&display=swap");
+@font-face { font-family:"Allura"; src:url("fonts/allura-full.woff2") format("woff2"); font-weight:400; font-display:swap }
+@font-face { font-family:"Gowun Batang"; src:url("fonts/gowunbatang-bold-full.woff2") format("woff2"); font-weight:700; font-display:swap }
+@font-face { font-family: "Squeeze Peanut Pretendard 0.3.0"; src: url("fonts/pretendard-variable.woff2") format("woff2"); font-style: normal; font-weight: 100 900; font-display: swap; }
+/* Only the marked description extends beyond the shop's content column. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] {
+  display: block;
+  box-sizing: border-box;
+  max-width: none;
+  min-width: 0;
+  margin-left: var(--pb-viewport-offset, 0px);
+  margin-right: 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"]{--orange:#E7CDA5;--cream:#FFF9ED;--pb-yellow-bg:#F7EEDC;--ink:#2c1a11;--red:#51402F;color:var(--ink);background:var(--pb-yellow-bg);font-family:"Squeeze Peanut Pretendard 0.3.0",-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;line-height:1.6;word-break:keep-all;position:relative;isolation:isolate;width:var(--pb-viewport-width,100%);overflow:clip;container:pb-detail / inline-size}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] *{box-sizing:border-box}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] h1,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] h2,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] h3,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] p,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] figure{margin:0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] button,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] a{font:inherit;color:inherit}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] button{cursor:pointer}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] a{text-decoration:none}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] button:focus-visible,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] a:focus-visible,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] summary:focus-visible{outline:3px solid #111;outline-offset:5px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .photo{width:100%;display:block;position:relative}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .photo>img{position:absolute;inset:0;display:block;width:100%;height:100%;max-width:none;margin:0;border:0;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card .photo>img,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid .photo>img,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe>.photo>img{object-fit:cover}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo .photo>img{object-position:center bottom}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .wrap{width:min(1180px,88%);margin:auto}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .eyebrow{font-size:clamp(18px,1.45cqw,22px);font-weight:700;letter-spacing:.14em;margin-bottom:22px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .title{font-size:clamp(30px,5.6vw,75px);font-weight:800;line-height:1.18;letter-spacing:-.055em}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .copy{font-size:clamp(15px,1.5vw,19px);line-height:1.85;margin-top:24px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .center{text-align:center}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pad{padding:110px 0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero{background:var(--orange);min-height:850px;height:110vh;max-height:1200px;position:relative;display:grid;place-items:center;text-align:center;color:#FFF9ED}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .brandbar{position:absolute;top:24px;left:5%;right:5%;display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;z-index:3}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .brandbar b{font-size:24px;letter-spacing:-.06em}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-type{position:absolute;top:14%;left:0;width:100%;font-size:clamp(76px,16vw,230px);line-height:.85;letter-spacing:-.075em;font-weight:900}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-type span{display:block;font-size:.49em;letter-spacing:-.045em;margin-top:.35em}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art{position:absolute;top:30%;width:clamp(210px,30vw,370px);transform:translateY(var(--hy,0px)) rotate(var(--hr,-7deg));will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption{position:absolute;bottom:5%;left:5%;right:5%}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption h1{font-size:clamp(21px,2.7vw,36px);font-weight:700;line-height:1.4;letter-spacing:-.04em}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption a{display:inline-block;margin-top:18px;font-size:11px;letter-spacing:.15em;border-bottom:1px solid;padding:7px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .intro{padding:110px 20px 65px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .intro .copy{max-width:540px;margin:25px auto 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-links{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:35px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-links a{border:1px solid #2c1a1155;border-radius:999px;padding:9px 22px;font-size:12px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery{padding:10px 0 90px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-track{--gallery-gap:clamp(12px,2vw,24px);overflow:hidden;scrollbar-width:none;padding:25px 0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-track::-webkit-scrollbar{display:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-belt{display:flex;width:max-content}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .gallery-belt{animation:peanut-gallery-loop 64s linear infinite}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-group{display:flex;align-items:stretch;flex:none;gap:var(--gallery-gap);padding-right:var(--gallery-gap)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card{flex:none;width:max(220px,35vw)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card .photo{aspect-ratio:4/3;height:auto;background-size:cover}
+@keyframes peanut-gallery-loop{to{transform:translateX(-50%)}}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .gallery-belt{animation-play-state:paused}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls{display:flex;justify-content:space-between;align-items:center;width:88%;margin:15px auto 0;font-size:11px;letter-spacing:.14em;gap:12px;flex-wrap:wrap}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls button{border:1px solid;border-radius:50%;background:none;width:42px;height:42px;font-size:20px;margin-left:8px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls .motion{display:none;width:auto;height:42px;border-radius:30px;padding:0 14px;font-size:12px;vertical-align:middle}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .gallery-controls .motion{display:inline-block}
+@media(prefers-reduced-motion:reduce){
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-track{overflow-x:auto}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-group[aria-hidden=true]{display:none}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls .motion{display:none!important}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture{position:relative;background:var(--orange);color:var(--cream)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-sticky{padding:clamp(44px,7vw,90px) 5% 0;text-align:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo{width:min(100%,760px);height:clamp(260px,68svh,620px);margin:clamp(24px,5vw,56px) auto 0;display:grid;place-items:end center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo .photo{width:92%;height:90%;aspect-ratio:auto;background-size:contain;background-position:center bottom;transform:scale(var(--ts,1));transform-origin:center bottom;will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture h2,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture .eyebrow{position:relative;z-index:2}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredients{display:grid;grid-template-columns:1fr 1fr;gap:7%;margin-top:60px;align-items:center}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient h3{font-size:25px;margin-top:20px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient strong{font-size:60px;letter-spacing:-.06em;color:var(--orange)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient p{font-size:15px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .note{font-size:12px;opacity:.65;margin-top:25px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process{background:#FBF4E7;color:#1b100c;padding:190px 0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid {
+  display: grid;
+  gap: clamp(30px, 5.2cqw, 76px);
+  margin-top: clamp(30px, 5cqw, 64px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+  align-items: center;
+  gap: clamp(18px, 4cqw, 58px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) {
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid .photo {
+  grid-area: 1 / 2;
+  aspect-ratio: 16 / 10;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid h3 {
+  grid-area: 1 / 1;
+  font-size: clamp(22px, 3.3cqw, 47px);
+  line-height: 1.14;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) .photo { grid-column: 1; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) h3 { grid-column: 2; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid small {
+  display: block;
+  margin-bottom: 10px;
+  font-size: clamp(12px, 1.4cqw, 18px);
+  letter-spacing: .12em;
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ticker{overflow:hidden;background:var(--red);color:var(--cream);padding:23px 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ticker-run{display:flex;width:max-content;animation:kazak-3-0-2-ticker 30s linear infinite}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ticker span{font-size:clamp(30px,5vw,60px);font-weight:800;letter-spacing:-.04em;white-space:nowrap;padding-right:50px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ticker:hover .ticker-run,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .ticker-run{animation-play-state:paused}@keyframes kazak-3-0-2-ticker{to{transform:translateX(-50%)}}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes{padding:100px 0;background:var(--pb-yellow-bg);background-image:radial-gradient(#e6c4a3 .8px,transparent .8px);background-size:20px 20px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe{display:grid;grid-template-columns:1.1fr 1fr;gap:9%;align-items:center;margin-top:80px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe>.photo{aspect-ratio:4/3;background-size:cover;background-position:center;transform:rotate(var(--pb-recipe-angle,0deg));transform-origin:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .recipe>.photo{transform:none}
+@media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe>.photo{transform:none}}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:nth-child(odd){grid-template-columns:1fr 1.1fr}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:nth-child(odd) .photo{order:2}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe-card{background:var(--pb-yellow-bg);padding:40px;transform:rotate(var(--card-rotate,4deg));transition:transform .35s}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:nth-child(odd) .recipe-card{--card-rotate:-4deg}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:hover .recipe-card{transform:rotate(0deg)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe h3{font-size:clamp(26px,3.2vw,45px);line-height:1.2;letter-spacing:-.04em}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe .copy{font-size:15px;margin-top:18px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors{padding:200px 0;transition:background .5s;background:var(--flavor-bg,#E9DDC7)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:35px auto 50px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar button{background:none;border:1px solid #2c1a1155;border-radius:999px;padding:12px 22px;font-size:14px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar button[aria-selected=true]{background:var(--ink);color:var(--cream);border-color:var(--ink)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10%;margin-bottom:45px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .photo{max-width:480px;margin:auto}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel h3{font-size:clamp(36px,6vw,80px);letter-spacing:-.06em;line-height:1.15}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .en{font-size:13px;letter-spacing:.13em;margin-bottom:20px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel[hidden]{display:none!important}
+/* 맛을 바꿔도 가장 큰 패널의 높이를 유지합니다. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .flavor-stage{display:grid;min-width:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .flavor-stage>.flavor-panel{grid-area:1/1;min-width:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .flavor-stage>.flavor-panel[hidden]{display:grid!important;visibility:hidden;pointer-events:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar{display:none}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .tabbar{display:flex}
+/* 상품정보: 원본 접이식 표 */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info {
+  --pb-ink: #271d17;
+  --pb-info-background: #FBF4E7;
+  --pb-red: #8B6848;
+  --pb-gutter: clamp(18px, 4.8%, 84px);
+  container: pb-product-info / inline-size;
+  color: var(--pb-ink);
+  text-align: left;
+  line-height: 1.45;
+  overflow-wrap: break-word;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info :where(h2,p,dl,dt,dd,ul,li) {margin:0;padding:0;font:inherit;color:inherit;text-align:inherit;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info summary {font-family:inherit;line-height:1.2;letter-spacing:inherit;text-transform:none;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info-head h2 {
+  font-weight: 780; font-size: clamp(36px,5.6cqw,85px); line-height: 1; letter-spacing: -.08em; color: var(--pb-ink);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-dot { color: var(--pb-red); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info { display: grid; grid-template-columns: minmax(0,1fr); gap: clamp(28px,5cqw,78px); padding: clamp(56px,7cqw,110px) var(--pb-gutter); background: var(--pb-info-background); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info-head p { margin-top: 15px; font-size: clamp(16px,1.45cqw,22px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info-list { width: min(100%, 820px); justify-self: center; min-width: 0; border-top: 1px solid var(--pb-ink); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label { margin: 0; border-bottom: 1px solid #bfb399; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label summary {
+  display: flex; justify-content: space-between; gap: 1em; align-items: center; padding: clamp(17px,2cqw,28px) 0;
+  color: var(--pb-ink); cursor: pointer; list-style: none; font-size: clamp(18px,1.8cqw,28px); font-weight: 650;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label summary::-webkit-details-marker { display: none; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label summary::after { content: "+"; font-weight: 400; font-size: 1.3em; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label[open] > summary::after { content: "−"; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label-body { padding: 0 0 22px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label-body p { font-size: 15px; line-height: 1.6; margin-bottom: 10px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-specs { margin: 0 0 22px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-specs > div { display: grid; grid-template-columns: minmax(78px,24%) minmax(0,1fr); gap: 12px; padding: 9px 0; border-top: 1px solid #ded5bf; font-size: clamp(14px,1.12cqw,17px); line-height: 1.6; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-specs dt { font-weight: 680; color: #493a2d; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-specs dd { word-break: normal; overflow-wrap: anywhere; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition { width: 100%; min-width: 0; table-layout: fixed; border: 0; border-collapse: collapse; margin: 0; background: none; font: inherit; font-size: clamp(13px,1.12cqw,17px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition th, :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition td { width: auto; padding: 7px 6px; color: inherit; background: transparent; border: 0; border-bottom: 1px solid #d6cbb5; text-align: right; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition th:first-child { text-align:left; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition caption { padding: 0 0 7px; color: inherit; font-size: 1.08em; font-weight: 720; text-align: left; caption-side: top; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition thead { background: #eee3c9; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition tbody th { font-weight: 500; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label-body .pb-note { margin: 8px 0; color: #645748; font-size: 13px; line-height: 1.5; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-cautions { padding-left: 1.15em; margin: 0; list-style: disc; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-cautions li { margin: 0 0 .4em; }
+@container pb-product-info (max-width: 680px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info {grid-template-columns:1fr;}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .enter{animation:kazak-3-0-2-enter .8s ease-out both}@keyframes kazak-3-0-2-enter{from{opacity:.25;transform:translateY(26px)}to{opacity:1;transform:translateY(0)}}
+@container pb-detail (max-width: 700px) {:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pad{padding:70px 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero{height:860px;min-height:0;max-height:none}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-type{top:14%;font-size:18cqw}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art{top:36%;width:235px;transform:translateY(clamp(0px,var(--hy,0px),30px)) rotate(var(--hr,-7deg))}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption{bottom:5%}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .intro{padding:70px 6% 40px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .title{font-size:clamp(34px,9.5cqw,46px)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .copy{font-size:18px;line-height:1.65}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card{width:72cqw}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery{padding-bottom:45px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredients{grid-template-columns:1fr;gap:45px;margin-top:35px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient .photo{max-width:380px;margin:auto}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient strong{font-size:48px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process{padding:65px 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes{padding:65px 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:nth-child(odd){grid-template-columns:1fr;gap:32px;margin-top:52px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe:nth-child(odd) .photo{order:0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe-card{padding:27px;width:90%;margin:auto}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors{padding:65px 0}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar{gap:7px;margin:25px auto 35px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar button{font-size:16px;min-height:44px;padding:9px 14px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel{grid-template-columns:1fr;gap:35px;text-align:center}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .photo{width:80%;max-width:340px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel h3{font-size:40px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .brandbar{font-size:12px;letter-spacing:.08em;align-items:center;gap:8px}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .brandbar b{font-size:23px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .eyebrow{font-size:17px;letter-spacing:.10em}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption h1{font-size:clamp(24px,6.5cqw,31px)}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption a{font-size:14px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-links a{font-size:15px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls{font-size:14px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls button{display:none!important}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ingredient p,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe .copy{font-size:18px;line-height:1.65}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe h3{font-size:clamp(28px,7.7cqw,36px)}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe>.photo{width:90%;margin-inline:auto}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .note,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .en,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid small{font-size:15px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info{grid-template-columns:1fr}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info-head p,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label-body p{font-size:17px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label summary{font-size:20px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-specs > div{font-size:16px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-label-body .pb-note{font-size:15px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-sticky{padding-top:38px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo{height:clamp(180px,34svh,300px);margin-top:clamp(12px,4cqw,24px)}
+}
+@media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] *,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] *::before,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art{transform:rotate(-5deg)}:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo .photo{transform:none;will-change:auto}}
+
+/* The feedback sections use the same viewport and motion behavior as 3.0.1. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-comparison {
+  padding: clamp(60px, 8cqw, 120px) 0;
+  background: var(--pb-yellow-bg);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-grid,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid {
+  display: grid;
+  gap: clamp(16px, 3cqw, 36px);
+  margin-top: clamp(24px, 5cqw, 54px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-grid { grid-template-columns: repeat(auto-fit, minmax(min(100%, 245px), 1fr)); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card { grid-column: span 2; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card:where(:nth-child(n + 4)) { grid-column: span 3; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card {
+  display: grid;
+  align-content: start;
+  gap: 12px;
+  padding: clamp(16px, 3cqw, 34px);
+  background: transparent;
+  border: 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card h3,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card h3,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient h3 { font-size: clamp(22px, 3.1cqw, 35px); line-height: 1.2; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-asset {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-width: 0;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-asset > img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  margin: 0;
+  object-fit: cover;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-asset-placeholder {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  background: repeating-linear-gradient(-45deg, #fff8 0 12px, #2c1a110a 12px 24px), #f6dfaa;
+  color: #4d2f21;
+  text-align: center;
+  font-size: clamp(13px, 1.5cqw, 16px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card .pb-asset > img,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-garnish > img { object-fit: contain; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core {
+  --pb-milk-wave-height:clamp(160px,18cqw,280px);
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 86vh;
+  min-height: 86svh;
+  padding-block: clamp(72px, 10cqw, 145px);
+  padding-bottom:0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core::after {
+  content:"";
+  position:relative;
+  align-self:center;
+  flex:0 0 var(--pb-milk-wave-height);
+  width:100cqw;
+  height:var(--pb-milk-wave-height);
+  margin-top:auto;
+  pointer-events:none;
+  background:none center bottom / 100% 125% no-repeat;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredients {
+  align-items:start;
+  /* The milk is an in-flow footer, with space even for wrapped descriptions. */
+  margin-bottom:clamp(36px,5cqw,64px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient > .photo,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient > .pb-asset {
+  width: 100%;
+  max-width: none;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  background: transparent;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient img { transition: transform .6s cubic-bezier(.2,.7,.25,1); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient > :is(.photo, .pb-asset):hover img { transform: scale(1.12); }
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient h3 { margin: 18px 0 8px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making { margin-top: clamp(52px, 9cqw, 125px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making > h3 { font-size: clamp(28px, 5cqw, 58px); line-height: 1.18; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making > h3,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card h3 { font-weight: 800; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-making .enter { animation: none; }
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card { min-width: 0; background: var(--pb-making-color, #FBDDAA); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card .pb-asset { aspect-ratio: 16 / 10; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-copy { padding: 20px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-copy p { margin-top: 8px; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-copy p span { padding: 0 .12em; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-milk-wave { display: none !important; }
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-script {
+  font-family: "Caveat", "Brush Script MT", "Segoe Script", cursive;
+  font-size: clamp(38px, 6.4cqw, 98px);
+  font-style: italic;
+  font-weight: 700;
+  line-height: .95;
+  letter-spacing: -.045em;
+  color: #775436;
+  margin-bottom: .18em;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .title,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe h3,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon h3 {
+  font-family: "Jua", "Squeeze Peanut Pretendard 0.3.0", sans-serif;
+  font-weight: 400;
+  letter-spacing: -.04em;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe-card { min-width: 0; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe-card .pb-recipe-script { font-size: clamp(34px, 5.4cqw, 76px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe:nth-child(odd) > .photo { order: 0; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe:nth-child(even) > .photo { order: 2; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+  align-items: center;
+  gap: clamp(24px, 6cqw, 80px);
+  padding: clamp(22px, 5cqw, 66px);
+  margin-top: clamp(54px, 10cqw, 142px);
+  background: #CAB190;
+  color: #24160c;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon .pb-recipe-script { color: #fff3c6; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon h3 { font-size: clamp(34px, 6.2cqw, 76px); line-height: 1.08; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-visual {
+  position: relative;
+  width: 100%;
+  max-width: 540px;
+  min-width: 0;
+  margin-inline: auto;
+  padding-inline-end: 24%;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .pb-flavor-visual .photo { width: 100%; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-garnish {
+  position: absolute;
+  z-index: 1;
+  inset: auto 0 -3% auto;
+  width: 53%;
+  aspect-ratio: 1;
+  border: 1px solid transparent;
+  pointer-events: none;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-garnish > img {
+  inset: 7%;
+  width: 86%;
+  height: 86%;
+  filter: drop-shadow(0 8px 7px #39251535);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-garnish .pb-asset-placeholder {
+  background: none;
+  font-size: clamp(12px, 1.35cqw, 17px);
+  font-weight: 650;
+  padding: 14%;
+}
+
+@container pb-detail (width > 700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid {
+    width: 100cqw;
+    margin-inline: calc((100% - 100cqw) / 2);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process {
+    --pb-process-inset: clamp(24px, 5.5cqw, 130px);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid h3 { padding-inline: var(--pb-process-inset); }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid .photo { width: 25cqw; justify-self: end; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) .photo { justify-self: start; }
+
+
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] :is(.pb-size-comparison, .recipes) > .wrap {
+    width: min(1720px, calc(100% - 2 * clamp(18px, 3.2cqw, 60px)));
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card { padding: clamp(12px, 2cqw, 32px); }
+
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo {
+    width: min(100%, 1220px);
+    height: clamp(320px, 81svh, 820px);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .texture-photo .photo { width: 100%; height: 94%; }
+
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid,
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list {
+    width: 100cqw;
+    margin-inline: calc((100% - 100cqw) / 2);
+  }
+
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list > .recipe:nth-child(odd) {
+    grid-template-columns: minmax(0, 48fr) minmax(0, 52fr);
+    gap: 0;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list > .recipe:nth-child(even) {
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
+    gap: 0;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe > .photo { width: 30cqw; justify-self: start; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe:nth-child(even) > .photo { justify-self: end; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe-card { margin-inline: clamp(22px, 5.5cqw, 100px); }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe > .pb-asset img { object-fit: contain; }
+}
+
+@container pb-detail (min-width: 1100px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: clamp(12px, 1.6cqw, 24px); }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid .pb-making-card { grid-column: auto; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-copy { padding: 16px; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card h3 { font-size: clamp(20px, 2.2cqw, 29px); }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card.enter:nth-child(2) { animation-delay: .06s; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card.enter:nth-child(3) { animation-delay: .12s; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card.enter:nth-child(4) { animation-delay: .18s; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-card.enter:nth-child(5) { animation-delay: .24s; }
+}
+
+@container pb-detail (max-width: 700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article,
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 12px;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(n) h3 { grid-area: 1 / 1; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(n) .photo {
+    grid-area: 2 / 1;
+    width: 92%;
+    justify-self: end;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid > article:nth-child(even) .photo { justify-self: start; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process-grid small { display: inline; margin-inline-end: 6px; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-grid,
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid,
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon { grid-template-columns: minmax(0, 1fr); }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-grid .pb-making-card { grid-column: auto; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe:nth-child(even) > .photo { order: 0; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-visual { width: 90%; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon .copy { margin-top: 12px; }
+}
+
+/* Center section headings independently of their cards and images. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .title,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process > .wrap > .eyebrow,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making > :is(.eyebrow, h3),
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon :is(.pb-recipe-script, h3),
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-info-head { text-align: center; }
+
+/* Pin the texture scene while scroll position moves its transparent spoon. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-scroll {
+  height: 175svh;
+  background: #332A23;
+  color: #fff5d8;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-stage {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+  overflow: clip;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(12px, 3vh, 38px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-stage .title {
+  margin: 0 6%;
+  color: #fff5d8;
+  text-align: left;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-scroll .pb-spoon-image {
+  display: block;
+  width: min(94%, 1440px, 118svh);
+  height: auto;
+  aspect-ratio: 1672 / 941;
+  margin: 0 auto;
+  transform: translateX(var(--spoon-x, 0px));
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img {
+  display: block;
+  float: none;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-spoon-image { transform: none; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-spoon-scroll { height: auto; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-spoon-stage { position: relative; height: auto; padding: clamp(45px,7vw,100px) 0; }
+@container pb-detail (max-width: 700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-scroll { height: 135svh; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-stage { height: 78svh; }
+}
+
+/* Keep process photos and captions together in the middle of the page. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-centered > .wrap { width: min(1320px, 90%); margin-inline: auto; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(14px, 2.4cqw, 34px); margin: clamp(32px, 4cqw, 60px) auto 0; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps article { min-width: 0; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps .photo { width: 100%; height: auto; aspect-ratio: 4/3; overflow: hidden; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps .photo img { width: 100%; height: 100%; object-fit: cover; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps h3 { display: flex; align-items: baseline; gap: .4em; border-top: 1px solid currentColor; padding: 12px 0 0; margin: 14px 0 0; font-size: clamp(20px, 2.1cqw, 32px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps small { font-size: .65em; color: #000; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-centered .pb-making { margin-top: clamp(54px, 7cqw, 100px); }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-centered .pb-making > :is(h3,p) { text-align: center; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-making-centered .pb-making-grid { width: 100%; margin-inline: auto; }
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core [data-image-slot="milk-base"] > img { object-fit: contain; }
+@container pb-detail (max-width: 700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps { grid-template-columns: minmax(0,1fr); gap: 32px; max-width: 500px; }
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .pb-ingredient-cutout {
+  width: 100%;
+  aspect-ratio: 2 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: transparent;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .pb-ingredient-cutout > img {
+  position: static;
+  display: block;
+  float: none;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+/* Balance the visible ingredient area, accounting for each PNG's clear edges. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-ingredient-cutout[data-image-slot="milk-base"] > img { width: 70%; }
+
+/* Full spoon, ingredient detail, and scroll-driven flavor tasting strip. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-stage .title {position:absolute;top:calc(clamp(16px,5svh,64px) + 36px);left:0;z-index:1}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-scroll .pb-spoon-image {position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;margin:0;pointer-events:none}
+/* The visible cream mound is centered at (24%, 61%) in this PNG. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img {position:absolute;left:50%;top:50%;width:clamp(112%,176svh,178%);max-width:none;height:auto;max-height:none;transform:translate(-24%,-61%)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-spoon-scroll .pb-spoon-stage {height:90svh;min-height:400px;padding:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredient h3, :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps h3 {font-weight:800}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-steps h3 {border:0; padding-top:0}
+@media (hover:hover) and (pointer:fine) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-ingredient-cutout > img {transition:transform .32s ease; transform-origin:center bottom}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-ingredient-cutout:hover > img {transform:scale(1.12)}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story h3.pb-rail-title {font-weight:800;font-size:clamp(50px,8cqw,112px);line-height:1.04;letter-spacing:-.065em;margin:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .eyebrow {margin-bottom:.8em}
+@media (min-height:560px) and (prefers-reduced-motion:no-preference) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story {
+    height:220svh;
+    width:100cqw;
+    margin-inline:calc((100% - 100cqw) / 2);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-rail-stage {position:sticky;top:0;height:100svh;display:flex;flex-direction:column;justify-content:center;overflow:clip}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-rail-stage > :is(.pb-rail-title, .eyebrow) {
+    text-align:center;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-grid {
+    display:grid;
+    width:100%;
+    grid-template-columns:repeat(5,minmax(0,1fr));
+    gap:clamp(6px,1cqw,18px);
+    margin:clamp(12px,2.5svh,32px) 0 0;
+    transform:translateX(var(--rail-x,0px));
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-card { grid-column:auto; animation:none; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-asset { aspect-ratio:4 / 5; max-height:37svh; }
+  @container pb-detail (max-width:760px) {
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-grid {grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70cqw,42svh);width:max-content;}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-grid .pb-making-card {grid-column:auto;}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-grid .pb-making-card:nth-child(n+4) {grid-column:auto;}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-grid .pb-asset {aspect-ratio:4 / 5; max-height:none;}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-copy {padding:6px;}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-copy h3 {font-size:clamp(16px,4.2cqw,23px);}
+    :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-flavor-story .pb-making-copy p {margin-top:4px;font-size:13px;line-height:1.35;}
+  }
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .pb-recipe-list {width:min(90%,1420px);margin-inline:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .pb-recipe-script {color:#8B6848;font:400 clamp(64px,8cqw,122px)/1.02 "Allura","Segoe Script",cursive;letter-spacing:-.025em}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .recipe-card .pb-recipe-script {font-size:clamp(50px,6.3cqw,94px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .title, :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipes .recipe h3 {font-family:"Gowun Batang","Batang",serif;font-weight:700}
+@media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-ingredient-cutout > img {transition:none}}
+/* Center the cream on the new spoon photograph while showing the rim. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img[src*="kazak-spoon-texture-"] { width:104%; transform:translate(-48%,-60%); }
+
+/* Let touch users browse the size cards horizontally. */
+@container pb-detail (max-width: 700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-grid {
+    grid-template-columns: none;
+    grid-auto-flow: column;
+    grid-auto-columns: 84%;
+    gap: 14px;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-grid::-webkit-scrollbar { display: none; }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card {
+    scroll-snap-align: start;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-card:last-child {
+    scroll-snap-align: end;
+  }
+}
+/* Keep the approved food photograph intact and lengthen only the silver neck. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"]) {
+  --studio-spoon-width: 73.5%;
+  --studio-spoon-top: calc(50% + clamp(10px, 1.8svh, 20px));
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img[src*="kazak-spoon-texture-studio-"] {
+  width: var(--studio-spoon-width);
+  top: var(--studio-spoon-top);
+  clip-path: inset(0 16% 0 0);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image:has(> img[src*="kazak-spoon-texture-studio-"])::after {
+  content: "";
+  position: absolute;
+  top: var(--studio-spoon-top);
+  left: 50%;
+  width: var(--studio-spoon-width);
+  aspect-ratio: 3 / 2;
+  background: url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-breakfast-c2be8968d713.png") center / contain no-repeat;
+  clip-path: inset(0 0 0 83.96%);
+  transform-origin: 84% 50%;
+  transform: translate(-48%, -60%) scaleX(2.2);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img[src*="truffle-texture-detail-"] {
+  width:109%;
+  top:calc(50% + clamp(10px,1.8svh,20px));
+  transform:translate(-18%,-53%);
+}
+@container pb-detail (max-width:760px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-rail-line {display:block;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-rail-title {text-align:center;font-size:clamp(32px,9cqw,60px);}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .pb-making-grid {
+    display:grid;grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70cqw,42svh);overflow-x:auto;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .pb-making-card {grid-column:auto;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .pb-making-card .pb-asset {aspect-ratio:4 / 5;max-height:none;}
+}
+/* Use the shorter studio photograph on narrow detail pages. */
+@container pb-detail (max-width:760px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-spoon-image > img[src*="truffle-texture-detail-"] {
+    content:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-breakfast-c2be8968d713.png");
+    width:100%;
+    height:auto;
+    aspect-ratio:3 / 2;
+    transform:translate(-48%,-60%);
+  }
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide {background:#FBF4E7;color:#000;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide > .wrap {width:min(92%,1320px);margin-inline:auto;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-head {text-align:center;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-head .title {margin:.12em 0 0;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-swipe {display:none;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card {text-align:center;align-items:start;justify-items:center;gap:0;padding:10px 8px;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h3 {font-size:clamp(60px,7.6cqw,108px);font-weight:850;letter-spacing:-.075em;line-height:1;color:#8B6848;white-space:nowrap;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h3 small {font-size:.43em;margin-left:.1em;letter-spacing:-.04em;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset {width:100%;height:clamp(150px,19cqw,260px);margin:12px 0 16px;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h4 {font-size:clamp(20px,2.1cqw,30px);font-weight:800;line-height:1.25;}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card p {max-width:22em;margin:8px auto 0;font-size:clamp(15px,1.25cqw,18px);line-height:1.5;word-break:keep-all;}
+@container pb-detail (min-width:701px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-grid {grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(12px,2.4cqw,40px);}
+}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-swipe {display:block;margin:14px 0 0;font-size:14px;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-grid {grid-auto-columns:54%;gap:8px;margin-top:24px;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card {padding-inline:4px;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h3 {font-size:clamp(44px,13cqw,64px);}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h4 {font-size:clamp(16px,4.4cqw,19px);}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card p {display:none;}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset {height:clamp(150px,42cqw,200px);}
+}
+@container pb-detail (min-width: 1024px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide {
+    padding-block: clamp(120px, 11cqw, 180px);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset {
+    height: clamp(245px, 23cqw, 340px);
+  }
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors :is(.flavor-panel h3, .tabbar button) {
+  font-weight:800;
+}
+@container pb-detail (min-width:1024px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel {
+    grid-template-columns:minmax(0,1.17fr) minmax(0,1fr);
+    column-gap:6%;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-flavor-visual {
+    max-width:650px;
+    padding-inline-end:10%;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .pb-flavor-visual .photo {
+    max-width:590px;
+  }
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) minmax(0,48%);
+  gap: clamp(8px,1.4cqw,20px);
+  align-items: center;
+  text-align: left;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details .pb-flavor-garnish {
+  position: relative;
+  inset: auto;
+  width: 100%;
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details .pb-flavor-garnish > img {
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel .pb-flavor-visual .photo {
+  aspect-ratio: 1 !important; /* Earlier Imweb bodies specify different ratios inline. */
+}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavor-panel {
+    grid-template-rows: max-content 1fr;
+    align-content: start;
+  }
+}
+
+@container pb-detail (min-width:701px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details {
+    container-type: inline-size;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details h3 {
+    font-size: min(10cqw,68px);
+    white-space: nowrap;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .tabbar button {
+    white-space: nowrap;
+  }
+}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details h3 {
+    font-size: min(8.5cqw,40px);
+  }
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair {
+  display: grid;
+  grid-template-columns: 59% 41%;
+  align-items: end;
+  padding: 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair > .pb-jar-small {
+  /* Align the visible bases inside the two differently padded transparent PNGs. */
+  transform-origin: 50% 80.3%;
+  transform: translate(4%,8.5%) scale(1.404);
+}
+
+/* Center the ingredient, matched jars and flavor copy as one composition. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair) {
+  grid-template-columns: minmax(0,20fr) minmax(0,48fr) minmax(0,32fr);
+  grid-template-areas: "ingredient jars description";
+  gap: clamp(10px,2cqw,28px);
+  width: min(100%,1160px);
+  margin-inline: auto;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair {
+  grid-area: jars;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details {
+  display: contents;
+  container-type: normal;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details > :first-child {
+  grid-area: description;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details .pb-flavor-garnish {
+  grid-area: ingredient;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details h3 {
+  font-size: clamp(28px,4.7cqw,64px);
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-flavor-details .note {
+  display:none;
+}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair) {
+    grid-template-columns: minmax(0,1fr);
+    grid-template-areas: "jars" "description";
+    row-gap: 32px;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair {
+    width:90%;
+    justify-self:center;
+    margin:0;
+    /* Compensate for the mini jar's transparent padding and enlargement. */
+    transform:translateX(-3.5%);
+  }
+  /* Mobile keeps the paired products and flavor copy without ingredient props. */
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details .pb-flavor-garnish {
+    display:none;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details > :first-child {text-align:center;}
+}
+
+@container pb-detail (min-width:701px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair) {
+    grid-template-columns: minmax(0,1.4fr) minmax(0,1fr);
+    grid-template-rows:auto auto;
+    grid-template-areas: "jars description" "jars ingredient";
+    column-gap:clamp(48px,7cqw,100px);
+    row-gap:12px;
+    width:min(100%,1040px);
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair {
+    width:min(100%,520px);
+    justify-self:center;
+    margin:0;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details > :first-child {
+    align-self:end;
+  }
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair + .pb-flavor-details .pb-flavor-garnish {
+    grid-area:ingredient;
+    align-self:start;
+    justify-self:start;
+    width:min(48%,200px);
+    transform:none;
+  }
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art:has(.pb-hero-mini) {
+  translate: -25% 0;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-mini {
+  position: absolute;
+  left: 85%;
+  bottom: 4%;
+  width: 65%;
+  height: auto;
+  max-width: none;
+  transform: rotate(10deg);
+}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art:has(.pb-hero-mini) {
+    width: clamp(170px,53cqw,235px);
+  }
+}
+
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .pb-recipe-spoon > .photo {
+  aspect-ratio: 2 / 3;
+  width: min(100%,420px);
+  justify-self:center;
+  background:transparent;
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-spoon > .photo img {object-fit:contain;}
+@container pb-detail (max-width:700px) {
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .pb-recipe-spoon > .photo {width:min(80%,300px);}
+}
+
+
+/* Approved hero: independent jars converge during a pinned scroll scene. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet{height:calc(clamp(640px,100svh,900px) + 80svh);position:relative}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero{position:sticky;top:0;height:clamp(640px,100svh,900px);min-height:0;max-height:none;overflow:clip}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-type{top:6%;font-size:clamp(76px,14cqw,194px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art{top:23%;left:50%;width:min(76cqw,600px,64svh);aspect-ratio:1.17;translate:none;transform:translateX(-50%);will-change:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art > .photo{position:absolute;left:0;bottom:0;width:66%;aspect-ratio:675 / 896;transform:translateX(var(--meet-large-x,0px)) rotate(var(--meet-large-angle,-4deg));transform-origin:50% 90%;will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art > .pb-hero-mini{position:absolute;left:46%;bottom:-7%;width:57%;height:auto;max-width:none;transform:translateX(var(--meet-small-x,0px)) rotate(var(--meet-small-angle,3deg));transform-origin:50% 80%;will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption{bottom:35px;left:5%;right:5%;text-align:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption h1{font-size:clamp(24px,2.5cqw,32px);line-height:1.35}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption a{margin-top:10px}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-type{top:calc(8% + 14px);font-size:15cqw}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art{top:29%;width:min(86cqw,440px,64svh)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption{bottom:30px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption h1{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet{height:clamp(640px,100svh,900px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero{position:relative}
+}
+/* Desktop hero fills the screen, including displays taller than 900px. */
+@container pb-detail (min-width:701px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet{height:180svh}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero{
+   height:100svh;
+   grid-template-rows:auto minmax(0,1fr) auto;
+   row-gap:20px;
+   padding:calc(4svh + 14px) 0 35px;
+ }
+ /* Reserve separate rows so products never cover the headline or caption. */
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-type{
+   position:relative;top:auto;
+   font-size:clamp(76px,min(14cqw,16svh),194px);
+ }
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art{
+   position:relative;top:auto;left:auto;
+   height:100%;width:auto;min-height:0;
+   max-width:min(80cqw,690px);
+   transform:none;align-self:stretch;
+ }
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption{
+   position:relative;inset:auto;width:90%;
+ }
+}
+@media(prefers-reduced-motion:reduce){
+ @container pb-detail (min-width:701px){
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet{height:100svh}
+ }
+}
+
+/* Content adaptation only: two 280g products; white-background source photographs. */
+@container pb-detail (min-width:701px){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-grid{grid-template-columns:repeat(2,minmax(0,1fr));}}
+[data-squeeze-peanut-version="0.3.0"] img[src*="-product-"]{clip-path:polygon(38% 5.6%,62% 5.6%,63% 6.7%,62.3% 9%,63.2% 18.6%,67.2% 20.7%,68.6% 26%,69.6% 78%,68.5% 91%,64.7% 97.2%,31.1% 94%,29.7% 87%,29.7% 56%,31.7% 22.4%,37.5% 20%,37.5% 9%);}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core::after{background-image:url("https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/squeeze-peanut/gallery-breakfast-c2be8968d713.png");mask-image:none;mask-position:center bottom;mask-size:100% 125%;mask-repeat:no-repeat;}
+
+/* Squeeze Peanut palette and the two user-requested motion adaptations. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"]{--orange:#E7CDA5;--cream:#FFF9ED;--pb-yellow-bg:#F7EEDC;--ink:#30261F;--red:#51402F}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero{color:#392C22;background:#E7CDA5}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-caption a{color:inherit;border-color:#725942}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-script{color:#775436}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core::after{background-color:#FBDDAA}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .ticker{background:#51402F;color:#FFF9ED}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-scroll{height:220svh;position:relative;background:#332A23;color:#FFF9ED;--sauce-offset:0;--sauce-visible:1;--bottle-squeeze:1}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .pb-squeeze-scroll{--sauce-offset:1000;--sauce-visible:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage{position:sticky;top:0;height:100svh;min-height:560px;overflow:clip}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage .pb-squeeze-visual{position:absolute;inset:0;margin:0;width:100%;height:100%;max-height:none;transform:none;pointer-events:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-svg{width:min(100%,142svh);height:100%;display:block;margin:auto;overflow:visible}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-mobile{display:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-sauce-mask{stroke-dashoffset:var(--sauce-offset)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-sauce-flow{opacity:var(--sauce-visible)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-bottle{transform:scaleX(var(--bottle-squeeze));transform-box:fill-box;transform-origin:center bottom}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy{position:absolute;left:51%;top:21%;width:43%;z-index:2}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .eyebrow{font-size:clamp(12px,1.2cqw,18px);color:#CAB190;margin-bottom:24px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title{font-size:clamp(38px,5.7cqw,82px);line-height:1.15;color:#FFF9ED;margin:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title strong{color:#FBDDAA;font-weight:inherit}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .copy{font-size:clamp(18px,2.1cqw,28px);margin-top:32px;line-height:1.55;color:#E8D8C0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-caption{font-size:clamp(14px,1.3cqw,18px);margin-top:18px;color:#CAB190}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-cue{position:absolute;bottom:3%;right:6%;display:flex;gap:18px;align-items:center;font-size:11px;letter-spacing:.14em;color:#D8C3A5}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .process.pb-making-centered{padding:0;background:#FBF4E7}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story{margin-top:0;padding-block:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .pb-rail-title{font-weight:800;font-size:clamp(44px,6.2cqw,88px);line-height:1.12;letter-spacing:-.06em;margin:0;text-align:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-use-step{font-size:12px;letter-spacing:.12em;margin:0 0 8px;color:#70573E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy{padding:18px 22px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy h3{font-size:clamp(25px,3cqw,40px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy p:last-child{font-size:clamp(14px,1.4cqw,19px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-card{grid-column:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:90%;margin-inline:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-rail-stage>.eyebrow{text-align:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-asset{aspect-ratio:4/5}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-caution-title{font-size:18px;margin:30px 0 14px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition{font-variant-numeric:tabular-nums;font-size:clamp(12px,1.12cqw,17px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition th,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition td{padding:9px 3px;overflow-wrap:normal;word-break:keep-all}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition th:first-child{width:24%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition caption span{display:inline-block;margin:6px 0 10px;font-weight:500}
+@media(min-height:560px) and (prefers-reduced-motion:no-preference){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story{margin:0;width:100%;height:220svh}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:min(94%,1200px);align-self:center}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-asset{max-height:40svh}
+}
+@container pb-detail (max-width:760px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage{min-height:560px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-desktop{display:none}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-mobile{display:block;width:100%;height:100%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy{left:49%;top:13%;width:48%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .eyebrow{font-size:9px;letter-spacing:.04em;margin-bottom:14px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title{font-size:clamp(25px,6.5cqw,42px);line-height:1.25;letter-spacing:-.065em}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .copy{font-size:clamp(13px,3.5cqw,19px);margin-top:18px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-caption{font-size:11px;margin-top:12px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-cue{font-size:9px;bottom:5%;right:7%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-story .pb-rail-title{font-size:clamp(30px,8.4cqw,56px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-grid{grid-template-columns:1fr;gap:24px;width:88%;margin:30px auto}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy{padding:16px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy h3{font-size:25px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-copy p:last-child{font-size:15px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition{font-size:12px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition th,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-product-info .pb-nutrition td{padding:8px 2px}
+ @media(min-height:560px) and (prefers-reduced-motion:no-preference){
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-grid{grid-template-columns:none;grid-auto-flow:column;grid-auto-columns:min(70cqw,42svh);width:max-content;align-self:flex-start}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-asset{max-height:none}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-copy{padding:14px}
+  :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-copy h3{font-size:23px}
+ }
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-squeeze-scroll{height:auto;--sauce-offset:0!important;--sauce-visible:1!important;--bottle-squeeze:1!important}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-squeeze-stage{position:relative}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-use-story{padding:70px 0}
+@media(prefers-reduced-motion:reduce),(max-height:559px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-scroll{height:auto;--sauce-offset:0!important;--sauce-visible:1!important;--bottle-squeeze:1!important}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage{position:relative}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story{padding:70px 0}
+}
+
+/* Actual sleeve proportions, photographic sauce, and food-focused presentation. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .hero-art img{object-fit:contain;clip-path:none;mix-blend-mode:normal}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.photo{width:46%;height:100%;aspect-ratio:auto;left:4%;bottom:0;background:transparent;overflow:visible}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.photo>img{width:100%;height:100%;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.pb-hero-mini{left:51%;bottom:0;width:46%;height:100%;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card .photo img{object-fit:cover}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h3{font-size:clamp(32px,4.4cqw,64px);letter-spacing:-.055em;line-height:1.14;white-space:normal;color:#51402F}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset{height:clamp(230px,27cqw,380px);margin:12px 0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset img{object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset{position:relative;height:clamp(290px,32cqw,460px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset>img:first-child{position:absolute;width:72%;height:80%;left:0;bottom:0;top:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset>img.pb-use-product{position:absolute;width:42%;height:96%;left:auto;right:0;top:0;object-fit:contain;clip-path:none;mix-blend-mode:normal;z-index:1}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-scroll{--pour-crop:0%;background:#49382B}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced .pb-squeeze-scroll{--pour-crop:37%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy{left:7%;top:24%;width:48%;text-align:left}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title{font-size:clamp(46px,6.8cqw,100px);line-height:1.17;text-align:left}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .copy{font-size:clamp(24px,2.65cqw,38px);margin-top:34px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-caption{font-size:clamp(16px,1.65cqw,23px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage .pb-squeeze-visual{inset:0 0 0 auto;width:48%;height:100%;overflow:visible}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-photo{position:absolute;height:160%;width:80svh;max-width:none;top:-55%;left:50%;transform:translateX(-50%);object-fit:contain;clip-path:inset(63% 0 var(--pour-crop) 0);will-change:clip-path}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-bottle{clip-path:polygon(0 0,100% 0,100% 67%,52% 67%,52% 63%,0 63%);will-change:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-cue{right:7%;font-size:12px;letter-spacing:.02em}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .pb-ingredient-cutout{aspect-ratio:3/2;align-items:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .pb-ingredient-cutout>img{width:100%;height:100%;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-card .pb-photo-closeup{aspect-ratio:4/3;max-height:none;overflow:hidden}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-card .pb-photo-closeup{aspect-ratio:4/3;max-height:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-photo-closeup>img{position:absolute;inset:auto;max-width:none;height:auto;object-fit:initial;transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-closeup-1>img{width:320%;height:640%;left:-61.25%;top:-195%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-closeup-2>img{width:284.444%;height:568.888%;left:-153.333%;top:-322.963%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-closeup-3>img{width:196.923%;height:393.846%;left:-50.769%;top:-243.077%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe>.photo{width:100%;aspect-ratio:1;max-height:620px;background:transparent;box-shadow:none;overflow:visible}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe>.photo>img{width:100%;height:100%;object-fit:contain;position:absolute;inset:0;clip-path:none;mix-blend-mode:normal;filter:drop-shadow(0 18px 14px #49382B10)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe>.photo{transform:rotate(var(--pb-recipe-angle,0deg));transform-origin:center;will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe-card,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe:hover .recipe-card{transform:none;transition:none;animation:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-pairing{display:flex;align-items:center;gap:16px;margin-top:26px;padding-top:20px;border-top:1px solid #72594226;text-align:left}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-pairing>img{position:static;width:64px;height:128px;object-fit:contain;clip-path:none;mix-blend-mode:normal;transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-pairing p{margin:0;display:grid;gap:6px;font-family:inherit}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-pairing span{font-size:12px;color:#806951;line-height:1.4}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-pairing strong{font-size:18px;color:#49382B;line-height:1.4;word-break:keep-all}
+@media(min-height:560px) and (prefers-reduced-motion:no-preference){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-grid{margin-inline:0;align-self:flex-start}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-recipe-list .recipe>.photo{transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair{display:block;width:100%;height:560px;transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair>.pb-jar-large{width:100%;height:100%;object-fit:contain;clip-path:none;mix-blend-mode:normal}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair+.pb-flavor-details .pb-flavor-garnish{display:block;width:min(100%,350px);aspect-ratio:3/2;transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-flavor-details .pb-flavor-garnish>img{object-fit:contain;filter:none}
+@container pb-detail (min-width:701px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair){grid-template-columns:1fr 1fr;grid-template-areas:"jars description" "jars ingredient";column-gap:7%;row-gap:8px;max-width:1040px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair+.pb-flavor-details .pb-flavor-garnish{width:min(100%,350px)}
+}
+@container pb-detail (max-width:760px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy{left:5%;top:32%;width:54%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title{font-size:clamp(26px,7.1cqw,46px);letter-spacing:-.06em}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .copy{font-size:clamp(16px,4.1cqw,25px);margin-top:24px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-caption{font-size:clamp(12px,3.1cqw,16px);line-height:1.65}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage .pb-squeeze-visual{width:45%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-photo{height:145%;width:72.5svh;top:-45%;left:63%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-cue{font-size:10px;right:6%;bottom:5%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-card .pb-photo-closeup{aspect-ratio:4/3;max-height:none}
+}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card h3{font-size:clamp(27px,7.4cqw,40px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card .pb-asset{height:clamp(180px,52cqw,270px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-size-guide .pb-size-card p{display:block;font-size:14px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .ingredients{gap:32px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-core .pb-ingredient-cutout{height:230px;aspect-ratio:auto}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe>.photo{width:110%;max-width:none;justify-self:center;max-height:470px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair){grid-template-columns:1fr;grid-template-areas:"jars" "description" "ingredient";row-gap:24px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-pair{height:440px;width:100%;transform:none}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair+.pb-flavor-details .pb-flavor-garnish{display:block;grid-area:ingredient;width:min(90%,310px);justify-self:center;margin:0 auto}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].is-paused .pb-squeeze-scroll{--pour-crop:0%!important}
+@media(prefers-reduced-motion:reduce),(max-height:559px){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-scroll{--pour-crop:0%!important}}
+@media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe>.photo{transform:none}}
+
+/* Food-first landscape photography; original product photo pixels. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-card .photo img{object-fit:cover;width:100%;height:100%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-use-story .pb-making-card .pb-step-photo,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"].enhanced:not(.is-paused) .pb-use-story .pb-making-card .pb-step-photo{aspect-ratio:4/3;max-height:none;overflow:hidden;position:relative}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-step-photo>img{position:absolute;inset:0;width:100%;height:100%;max-width:100%;object-fit:cover;transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors{--flavor-bg:#49443E;--flavor-ink:#FFF7E9;--ink:var(--flavor-ink);--cream:var(--flavor-bg);background:var(--flavor-bg);color:var(--flavor-ink);transition:background-color .45s,color .45s}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors :is(.title,.eyebrow,.copy,.en,h3){color:var(--flavor-ink)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .tabbar button{border-color:currentColor;color:var(--flavor-ink);background:transparent}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .tabbar button[aria-selected=true]{background:var(--flavor-ink);border-color:var(--flavor-ink);color:var(--flavor-bg)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .pb-jar-large{filter:drop-shadow(0 22px 18px #00000024)}
+
+/* 0.3.0: keep the full product silhouette; reveal only the separate sauce layer. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-photo{clip-path:inset(0 0 var(--pour-crop) 0)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-bottle{clip-path:none;will-change:auto}
+@media(min-width:701px){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .gallery-controls button{display:none!important}}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .flavors .flavor-panel:has(.pb-jar-pair){grid-template-areas:"jars" "description";grid-template-rows:auto auto}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-jar-pair+.pb-flavor-details .pb-flavor-garnish{grid-area:jars;align-self:end;justify-self:end;width:clamp(96px,32cqw,140px);height:auto;aspect-ratio:3/2;margin:0 2% 16px 0;z-index:2;pointer-events:none}
+}
+
+/* 0.3.0: give mobile squeeze copy a larger, lower reading area. */
+@container pb-detail (max-width:760px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy{left:6%;top:50%;width:80%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .title{font-size:clamp(34px,10.2cqw,56px);line-height:1.2;letter-spacing:-.055em}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-copy .copy{font-size:clamp(18px,5.2cqw,26px);line-height:1.55;margin-top:22px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-caption{font-size:clamp(15px,4.2cqw,20px);line-height:1.65;margin-top:16px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-squeeze-stage .pb-squeeze-visual{width:100%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-photo{height:110%;width:auto;aspect-ratio:1/2;top:-28%;left:95%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-pour-photo:not(.pb-pour-bottle){transform:translateX(-50%) scaleY(1.5);transform-origin:50% 63%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] :is(h1,h2,h3,h4,.copy,.pb-squeeze-caption,.pb-making-copy p){word-break:keep-all;overflow-wrap:normal;text-wrap:balance}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-mobile-line{display:block}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-rail-line{display:block}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .recipe-card .copy{font-size:clamp(16px,4.5cqw,20px);line-height:1.75}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-recipe-list .recipe-card{padding-inline:12px;margin-inline:12px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] :is(.pb-flavor-details h3,.pb-size-card h4,.tabbar button,.pb-recipe-pairing strong){white-space:nowrap}
+}
+
+/* 0.3.0: show both labels immediately, then settle the staggered products. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.photo{transform:translate3d(0,var(--meet-large-y,0px),0) rotate(var(--meet-large-angle,0deg));transform-origin:50% 50%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.pb-hero-mini{transform:translate3d(0,var(--meet-small-y,0px),0) rotate(var(--meet-small-angle,0deg));transform-origin:50% 50%}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art{top:23%;width:94cqw;height:54%;aspect-ratio:auto}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.photo{left:0;width:50%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art>.pb-hero-mini{left:50%;width:50%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption{bottom:6%}
+}
+@container pb-detail (min-width:701px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero .hero-art{max-width:min(86cqw,840px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-type{font-size:clamp(76px,min(13cqw,14svh),180px)}
+}
+
+/* Text appears once the products have cleared its path. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-type,
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"] .pb-hero-meet .hero-caption{opacity:var(--hero-copy-opacity,1)}
+
+/* Product-specific content adaptations; shared section sizing and scroll rules remain in peanut.css. */
+
+/* Peanut red and the existing beige alternate by section. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product]{--orange:#BC0012;--red:#BC0012;--cream:#FFF7E8;--pb-yellow-bg:#FBF4E7;--ink:#43231E;background:#FBF4E7;color:#43231E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .hero{background:#BC0012;color:#FFF7E8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .hero-caption a{border-color:#FFF7E8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] :is(.intro,.gallery,.pb-size-guide){background:#FBF4E7;color:#43231E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-guide{background:#E8D1B0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-guide .pb-size-card h3{color:#8F1720}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-scroll{background:#850B1A}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-copy .title{color:#FFF7E8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-copy .title strong{color:#FFE1B2}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-copy .copy{color:#FFF0D9}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-caption{color:#EFD4BD}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .process.pb-making-centered{background:#FBF4E7;color:#43231E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package{background:#EEE1C8;color:#43231E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package h2{color:#8F1720}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .ticker{background:#BC0012;color:#FFF7E8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipes{background-color:#FBF4E7;background-image:radial-gradient(#DDBDA9 .8px,transparent .8px);color:#43231E}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipe-card{background:#FBF4E7}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-recipe-script{color:#A51A25}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .flavors{--flavor-bg:#A80B1B;--flavor-ink:#FFF7E8;background:var(--flavor-bg);color:var(--flavor-ink)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-product-info{--pb-info-background:#FBF4E7;--pb-ink:#43231E;--pb-red:#BC0012}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-guide .pb-size-card .pb-asset>img:first-child{inset:0;width:100%;height:100%;object-fit:contain}
+/* Easy Mayo 0.5.7 sticky reveal: aligned fixed bottle and progressively revealed sauce. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-squeeze-stage .pb-squeeze-visual{transform:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-pour-photo.pb-pour-bottle{clip-path:inset(0 0 37% 0)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-pour-photo.pb-pour-flow{clip-path:inset(63% 0 var(--pour-crop,0%) 0)}
+/* Closer framing makes each action readable in the original three-card rail. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-making-card .pb-step-photo img{object-fit:cover;padding:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-making-card:nth-child(1) .pb-step-photo img{object-position:50% 28%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-making-card:nth-child(2) .pb-step-photo img{object-position:50% 22%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-making-card:nth-child(3) .pb-step-photo img{object-position:50% 50%}
+/* A full-width ingredient landscape, with no product in this section. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-peanut-mountain{position:relative;isolation:isolate;overflow:hidden;display:block;background:#bc0012;color:#fff7e8;width:100%;max-width:none;margin:0;padding:0;min-height:0;height:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-peanut-mountain .pb-mountain-image{position:relative;inset:auto;width:100%;height:clamp(320px,33cqw,560px);margin-top:32px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-image::before{content:"";position:absolute;inset:0 0 auto;height:8%;background:linear-gradient(#bc0012,transparent);pointer-events:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-image img{width:100%;height:100%;object-fit:cover;object-position:center bottom;display:block}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy{grid-area:copy;position:relative;z-index:1;padding:clamp(100px,8cqw,140px) 24px 0;text-align:center}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .eyebrow{color:#ffe6b4;margin:0 0 20px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .title{color:#fff7e8;font-size:clamp(36px,5.6cqw,80px);line-height:1.13;margin:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .copy{color:#fff0d6;font-size:clamp(16px,1.6cqw,22px);line-height:1.65;margin:22px 0 0}
+@container pb-detail (max-width:760px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-peanut-mountain .pb-mountain-image{height:clamp(300px,80cqw,440px);margin-top:28px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy{padding:90px 24px 0}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .eyebrow{font-size:11px;letter-spacing:.12em;margin-bottom:20px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .title{font-size:clamp(34px,9.2cqw,62px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy .copy{font-size:16px;line-height:1.65;margin-top:24px}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .tabbar{display:none!important}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .hero-art>.photo{mix-blend-mode:normal}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-art>.photo{left:0;width:100%;height:100%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-art{top:24%;height:55%;width:min(90cqw,820px);max-width:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero-type{font-size:clamp(58px,11.5cqw,158px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero-type span{font-size:.40em}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero-caption{bottom:5%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-core::after{display:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-card .pb-asset{background:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-card .pb-asset img{object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo{width:min(75cqw,650px);height:min(52svh,510px);margin:0 auto;flex:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo .photo{width:100%;height:100%;background:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo .photo::after{display:none}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo img{object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .title{text-align:center;font-size:clamp(34px,5.5cqw,72px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .title strong{color:#e7cda5}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-texture-caption{text-align:center;color:#fff5d8;margin:0 20px;font-size:clamp(15px,1.6cqw,20px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-core .pb-ingredient-cutout{height:clamp(160px,25cqw,300px)}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-core .pb-ingredient-cutout img{width:100%;height:100%;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-step-photo{background:#fff7e8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-making-card .pb-step-photo img{object-fit:cover;padding:0;box-sizing:border-box}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package{padding:55px 0;background:#EEE1C8}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package h2{font-size:28px;font-weight:800;letter-spacing:-.04em;margin:0 0 22px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package p{font-size:17px;line-height:1.9}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package p+p{margin-top:16px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipe .pb-food-photo{background:none;aspect-ratio:1/1}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipe .pb-food-photo img{object-fit:contain;width:100%;height:100%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipe-card{min-width:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-recipe-list .recipe-card .copy{max-width:480px;margin-inline:auto}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-recipe-script{line-height:1.12}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .flavor-stage{margin-top:60px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-visual.pb-jar-pair{width:100%;height:520px;min-height:0}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-jar-pair .pb-jar-large{position:relative;inset:auto;width:100%;height:100%;object-fit:contain;transform:none;mix-blend-mode:normal}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details .pb-flavor-garnish{position:relative;inset:auto;align-self:flex-start;width:min(260px,80%);height:145px;margin-top:24px}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-garnish img{width:100%;height:100%;object-fit:contain}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-nutrition th,:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-nutrition td{width:auto}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero-type{font-size:clamp(37px,10.5cqw,74px)}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-art{top:22%;height:55%;width:100cqw}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero-caption{bottom:5%}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo{height:42svh;width:88cqw}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package{padding:36px 0}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package h2{font-size:24px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package p{font-size:15px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-package br{display:none}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .flavor-stage{margin-top:30px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-visual.pb-jar-pair{height:440px;width:100%;margin:0}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details{position:relative;display:block;padding-right:0;width:100%;text-align:left}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details .pb-flavor-garnish{position:absolute;right:0;left:auto;bottom:0;top:auto;width:110px;height:90px;margin:0}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details .copy{padding-right:0;font-size:18px}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details h3{font-size:clamp(28px,4.7cqw,64px);white-space:normal}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .recipe-card .pb-recipe-script{font-size:clamp(34px,9cqw,55px)}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo{transform:translateX(var(--spoon-x,0px));will-change:transform}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .title{position:relative;inset:auto;margin:0 6%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product].is-paused .pb-spoon-stage .texture-photo{transform:none}
+@media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-spoon-stage .texture-photo{transform:none}}
+/* A single bottle occupies the complete product row rather than half of a paired layout. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-art{position:absolute;left:50%;top:29%;height:47svh;width:min(90cqw,820px);aspect-ratio:auto;transform:translateX(-50%)}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet{height:180svh}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero{height:100svh}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-art{top:18%;height:50svh;width:100cqw}
+ @media(prefers-reduced-motion:reduce){:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet{height:100svh}}
+}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-type{position:absolute;top:7%;left:0;width:100%}
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-hero-meet .hero .hero-caption{position:absolute;top:auto;bottom:5%;left:5%;right:5%;width:auto}
+
+/* Desktop viewport height and mobile garnish alignment. */
+@container pb-detail (min-width:761px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-peanut-mountain{display:flex;flex-direction:column;min-height:100svh}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-mountain-copy{flex:0 0 auto}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-peanut-mountain .pb-mountain-image{flex:1 0 auto;min-height:clamp(320px,33cqw,560px)}
+}
+@container pb-detail (max-width:700px){
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details{display:contents}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details>div:first-child{grid-area:description;text-align:center}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details .pb-flavor-garnish{position:relative;inset:auto;grid-area:jars;align-self:end;justify-self:end;width:clamp(96px,32cqw,140px);height:auto;aspect-ratio:3/2;margin:0 2% 16px 0;z-index:2}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-details .copy{padding-right:0}
+ :is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-flavor-visual.pb-jar-pair>.pb-jar-large{object-fit:cover}
+}
+/* Ingredient and texture cutouts share the same uncropped framing. */
+:is(#pb-v3,[data-squeeze-peanut-version])[data-squeeze-peanut-version="0.3.0"][data-single-product] .pb-size-guide .pb-size-card h4{white-space:normal;text-wrap:balance}
