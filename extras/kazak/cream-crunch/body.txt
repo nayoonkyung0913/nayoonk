@@ -365,8 +365,8 @@
 				</article>
 				<article aria-labelledby="kz-tab-4" class="flavor-panel" data-color="#e6c5a2" id="kz-panel-4">
 					<div class="kz-flavor-visual kz-jar-pair">
-                        <img class="kz-jar-large" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-jar-cinnamon-7bd2ee3e.png" alt="카작 시나몬쿠키 450g" width="448" height="600">
-                        <img class="kz-jar-small" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-mini-cinnamon-tall-ebef8bad.png" alt="카작 시나몬쿠키 150g" width="1254" height="1254">
+                        <img class="kz-jar-large" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-cinnamon-450g-41073b8a.png" alt="카작 시나몬쿠키 450g" width="1254" height="1254" data-kz-cinnamon-cutout="450g">
+                        <img class="kz-jar-small" src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-cinnamon-150g-de267c8b.png" alt="카작 시나몬쿠키 150g" width="1254" height="1254" data-kz-cinnamon-cutout="150g">
                     </div>
                     <div class="kz-flavor-details"><div>
 

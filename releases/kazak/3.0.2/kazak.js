@@ -12,6 +12,10 @@
     "size-small": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-b3676f11.png",
     "size-medium": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-53dae24e.png"
   };
+  const cinnamonFlavorImages = [
+    { className: "kz-jar-large", size: "450g", src: "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-cinnamon-450g-41073b8a.png" },
+    { className: "kz-jar-small", size: "150g", src: "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-cinnamon-150g-de267c8b.png" }
+  ];
   let nextId = 0;
 
   function button(parent, label, name, value) {
@@ -297,6 +301,18 @@
           if (image.getAttribute("src") !== src) image.setAttribute("src", src);
         });
       }
+      // Apply the approved cinnamon cutouts to already-pasted flavor panels.
+      root.querySelectorAll('.flavors [data-image-slot="flavor-cinnamon"]').forEach(marker => {
+        const panel = marker.closest(".flavor-panel");
+        for (const { className, size, src } of cinnamonFlavorImages) {
+          const image = panel?.querySelector(".kz-jar-pair > ." + className);
+          if (!image) continue;
+          if (image.getAttribute("src") !== src) image.setAttribute("src", src);
+          image.setAttribute("width", "1254");
+          image.setAttribute("height", "1254");
+          image.dataset.kzCinnamonCutout = size;
+        }
+      });
       // Update already-pasted Imweb bodies for the shared 150g / 450g / 4.5kg page.
       const sizes = "150g, 450g, 4.5kg";
       root.querySelectorAll(".kz-product-info dt").forEach(label => {

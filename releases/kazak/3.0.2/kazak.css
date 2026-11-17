@@ -740,6 +740,17 @@
   transform-origin: 50% 80.3%;
   transform: translate(4%,8.5%) scale(1.404);
 }
+/* Preserve the paired display size and baseline with the approved square PNGs. */
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair > [data-kz-cinnamon-cutout="450g"] {
+  aspect-ratio: 448 / 600;
+  object-fit: cover;
+  object-position: center;
+  transform-origin: 50% 100%;
+  transform: translateY(4.7%) scale(1.126);
+}
+:is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .kz-jar-pair > [data-kz-cinnamon-cutout="150g"] {
+  transform: translate(4%,12.5%) scale(1.53);
+}
 
 /* Center the ingredient, matched jars and flavor copy as one composition. */
 :is(#kz-v3,[data-kazak-version])[data-kazak-version="3.0.2"] .flavors .flavor-panel:has(.kz-jar-pair) {
