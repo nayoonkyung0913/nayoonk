@@ -54,13 +54,13 @@
     <div class="kz-size-grid" tabindex="0" role="region" aria-label="세 가지 용량 비교">
       <article class="kz-size-card">
         <h3>150<small>g</small></h3>
-        <div class="kz-asset" data-image-slot="size-small"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-f7f5fd85.png" loading="lazy" alt="카작 피스타치오 소용량 150g 용기"></div>
+        <div class="kz-asset" data-image-slot="size-small"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-b3676f11.png" loading="lazy" alt="카작 피스타치오 소용량 150g 용기"></div>
         <h4>처음 맛보는 한 병</h4>
         <p>좋아하는 맛을 가볍게 시작하고 싶을 때.</p>
       </article>
       <article class="kz-size-card">
         <h3>450<small>g</small></h3>
-        <div class="kz-asset" data-image-slot="size-medium"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-44339059.png" loading="lazy" alt="카작 피스타치오 중용량 450g 용기"></div>
+        <div class="kz-asset" data-image-slot="size-medium"><img src="https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-53dae24e.png" loading="lazy" alt="카작 피스타치오 중용량 450g 용기"></div>
         <h4>매일 즐기는 한 병</h4>
         <p>아침 토스트부터 오후 와플까지, 자주 꺼내 먹을 때.</p>
       </article>

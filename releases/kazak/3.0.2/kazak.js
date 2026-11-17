@@ -8,6 +8,10 @@
   const active = new Map();
   const reduced = matchMedia("(prefers-reduced-motion: reduce)");
   const clamp = value => Math.max(0, Math.min(1, value));
+  const sizeGuideImages = {
+    "size-small": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-small-b3676f11.png",
+    "size-medium": "https://ecimg.cafe24img.com/pg3547b37711334091/nayoonk/web/upload/kazak-size-medium-53dae24e.png"
+  };
   let nextId = 0;
 
   function button(parent, label, name, value) {
@@ -287,6 +291,12 @@
     const eligible = root.isConnected && root.matches(selector);
     if (state && (!eligible || !state.complete())) state.remove();
     if (eligible) {
+      // Replace size-guide photos in existing Imweb bodies, including delayed inserts.
+      for (const [slot, src] of Object.entries(sizeGuideImages)) {
+        root.querySelectorAll('#kz-sizes [data-image-slot="' + slot + '"] img').forEach(image => {
+          if (image.getAttribute("src") !== src) image.setAttribute("src", src);
+        });
+      }
       // Update already-pasted Imweb bodies for the shared 150g / 450g / 4.5kg page.
       const sizes = "150g, 450g, 4.5kg";
       root.querySelectorAll(".kz-product-info dt").forEach(label => {
