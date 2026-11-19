@@ -1238,7 +1238,7 @@
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .flavors .tabbar button{font-size:14px;padding:8px 10px;white-space:normal}
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .flavors .flavor-panel:has(.wd-jar-pair){grid-template-columns:1fr;grid-template-areas:"jars" "description";gap:30px}
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .flavors .wd-jar-pair{height:auto;max-width:500px;width:100%;transform:none}
- :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .wd-jar-pair+.wd-flavor-details{display:grid;grid-template-columns:1fr;grid-area:description;text-align:center}
+ :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .wd-jar-pair+.wd-flavor-details{display:block;grid-area:description;text-align:center}
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .wd-jar-pair+.wd-flavor-details h3{font-size:clamp(27px,7.3cqw,38px);white-space:normal}
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .wd-jar-pair+.wd-flavor-details .wd-flavor-garnish{position:static;width:130px;height:130px;grid-area:auto;justify-self:center;margin:24px auto 0;aspect-ratio:1}
  :is(#wd-v3,[data-wetz-drop-version])[data-wetz-drop-version="1.0.0"] .wd-flavor-details .copy{font-size:19px;margin-top:16px}
