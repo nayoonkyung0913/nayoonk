@@ -1,0 +1,34 @@
+/* Shared typography for the five MINES product descriptions. */
+@font-face{
+ font-family:"MINES Pretendard";
+ src:url("fonts/pretendard-variable.woff2") format("woff2");
+ font-weight:100 900;
+ font-style:normal;
+ font-display:swap;
+}
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]),
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) *,
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) *::before,
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) *::after{
+ font-family:"MINES Pretendard",Pretendard,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+}
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) :is(.kz-recipe-script,.em-recipe-script,.cb-recipe-script,.pb-recipe-script,.wd-recipe-script){
+ font-style:normal!important;
+ font-weight:700!important;
+}
+:is([data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) :is(.eyebrow,.en,.hero-caption a,.gallery-controls>span,.brandbar>span){
+ font-weight:700!important;
+}
+/* Defend the original shared banner size against Imweb's mobile 14px rule. */
+:is(#kz-v3,#em-v3,#cb-v3,#cb-detail,#pb-v3,#wd-v3,[data-kazak-version],[data-easy-mayo-version],[data-crunchbut-version],[data-squeeze-peanut-version],[data-wetz-drop-version]) .ticker span{
+ font-size:clamp(30px,5vw,60px)!important;
+ line-height:1.6!important;
+ font-weight:800;
+ letter-spacing:-.04em;
+}
+/* Pretendard's wider letterforms must fit the peanut page's desktop text column. */
+@container pb-detail (min-width:701px){
+ :is(#pb-v3,[data-squeeze-peanut-version]) .recipe-card .pb-recipe-script{
+  font-size:clamp(32px,4.4cqw,80px)!important;
+ }
+}
